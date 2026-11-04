@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "feature": "pp_preflight",
+  "topology": {
+    "tp": 4,
+    "dp": 1,
+    "pp": 2,
+    "ep": true
+  },
+  "stage_layer_ranges": [
+    [
+      0,
+      4
+    ],
+    [
+      4,
+      8
+    ]
+  ],
+  "stage_moe_layers": [
+    [
+      3
+    ],
+    [
+      4,
+      5,
+      6,
+      7
+    ]
+  ],
+  "indexer_types": null,
+  "use_index_cache": false,
+  "full_attention_layers": [
+    3,
+    7
+  ],
+  "supports_pp_source": "vllm/models/step5/model.py:2814 SupportsPP; make_layers at 2481; IntermediateTensors at 2533",
+  "capacity": "Largest stage 49.5 GiB expert weights / EP4 = 12.375 GiB, plus nonexpert weights / TP4 and 12 GiB reserve fits 0.4 service budget.",
+  "combination": "PCP=1,DCP=1,SP disabled,FULL_DECODE_ONLY; no sparse KV offload",
+  "dsa_geometry": {
+    "total_kv_heads": 4,
+    "local_kv_heads": 1,
+    "requirement": "exactly one local KV head",
+    "source": "/home/yyy/vllm-ascend-main/vllm_ascend/models/step5/model.py:245"
+  }
+}

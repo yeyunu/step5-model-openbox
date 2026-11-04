@@ -1,0 +1,104 @@
+diff --git a/tests/ut/patch/platform/test_patch_fused_moe.py b/tests/ut/patch/platform/test_patch_fused_moe.py
+--- a/tests/ut/patch/platform/test_patch_fused_moe.py
++++ b/tests/ut/patch/platform/test_patch_fused_moe.py
+@@ -6,6 +6,11 @@
+ 
+ import torch
+ from vllm.model_executor.layers.fused_moe.routed_experts import RoutedExperts
++from vllm.model_executor.model_loader.reload.layerwise import (
++    get_layerwise_info,
++    initialize_layerwise_reload,
++    record_metadata_for_reloading,
++)
+ 
+ from vllm_ascend.distributed.eplb.eplb_state import AscendEplbLayerState
+ from vllm_ascend.ops.fused_moe.routed_experts import AscendRoutedExperts
+@@ -225,3 +230,45 @@ def test_factory_composes_custom_routed_experts_with_ascend_contract():
+     assert kwargs["routed_experts_args"]["n_shared_experts"] == 2
+     assert patch_fused_moe._adapt_routed_experts_cls(_CustomRoutedExperts) is adapted_cls
+     assert patch_fused_moe._adapt_routed_experts_cls(AscendRoutedExperts) is AscendRoutedExperts
++
++
++def test_reload_releases_completed_module_without_receiving_expert_map():
++    """A runtime map must neither become meta nor retain incoming weights."""
++    model = torch.nn.ModuleList([torch.nn.Module() for _ in range(2)])
++    mappings = []
++    pointers = []
++    for layer in model:
++        layer.register_parameter("w1", torch.nn.Parameter(torch.zeros(4, 4)))
++        layer.register_parameter("w2", torch.nn.Parameter(torch.zeros(4, 4)))
++        mapping = torch.arange(352, dtype=torch.int32) % 88
++        layer.register_buffer("expert_ids_per_ep_rank", mapping, persistent=False)
++        mappings.append(mapping)
++        pointers.append((layer.w1.data_ptr(), layer.w2.data_ptr()))
++
++    record_metadata_for_reloading(model)
++    initialize_layerwise_reload(model)
++
++    with torch.no_grad():
++        for index, layer in enumerate(model):
++            assert layer.expert_ids_per_ep_rank is mappings[index]
++            first = torch.full((4, 4), float(index + 1))
++            second = torch.full((4, 4), float(index + 2))
++            info = get_layerwise_info(layer)
++            layer.w1.weight_loader(layer.w1, first)
++            assert layer.w1.is_meta
++            assert len(info.loaded_weights) == 1
++
++            layer.w2.weight_loader(layer.w2, second)
++            # Completion is per module, before another module or global finish.
++            assert not layer.w1.is_meta
++            assert not layer.w2.is_meta
++            torch.testing.assert_close(layer.w1, first)
++            torch.testing.assert_close(layer.w2, second)
++            assert (layer.w1.data_ptr(), layer.w2.data_ptr()) == pointers[index]
++            assert layer.expert_ids_per_ep_rank is mappings[index]
++            torch.testing.assert_close(layer.expert_ids_per_ep_rank, torch.arange(352, dtype=torch.int32) % 88)
++            assert "expert_ids_per_ep_rank" not in layer.state_dict()
++            assert info.loaded_weights == []
++            if index == 0:
++                assert model[1].w1.is_meta
++                assert model[1].w2.is_meta
+diff --git a/vllm_ascend/patch/__init__.py b/vllm_ascend/patch/__init__.py
+--- a/vllm_ascend/patch/__init__.py
++++ b/vllm_ascend/patch/__init__.py
+@@ -211,6 +211,19 @@
+ #       a backend-neutral router configuration object or MoE factory extension
+ #       hook that carries vision routing metadata into the Ascend runner.
+ #
++#   3. `vllm.model_executor.model_loader.reload.meta` skip sets
++#    Why:
++#       Ascend generates expert_ids_per_ep_rank locally. Counting this buffer
++#       as an incoming weight prevents completed MoE modules from releasing
++#       received tensors, and replacing it with meta loses the routing map.
++#    How:
++#       Add only expert_ids_per_ep_rank to SKIP_LOAD_TENSORS and SKIP_TENSORS.
++#       Keep its non-persistent buffer registration for sleep/wake restoration.
++#    Related PR (if no, explain why):
++#       No vLLM PR linked; this integrates an Ascend-generated routing buffer.
++#    Future Plan:
++#       Use an upstream per-buffer reload policy when one is available.
++#
+ # ** File: platform/patch_glm53_reasoning.py**
+ # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ #   1. `vllm.parser.glm47_moe.Glm47MoeParser.__init__`
+diff --git a/vllm_ascend/patch/platform/patch_fused_moe.py b/vllm_ascend/patch/platform/patch_fused_moe.py
+--- a/vllm_ascend/patch/platform/patch_fused_moe.py
++++ b/vllm_ascend/patch/platform/patch_fused_moe.py
+@@ -38,11 +38,16 @@
+ import vllm.model_executor.layers.fused_moe.layer as _fused_moe_layer
+ from vllm.config import get_current_vllm_config
+ from vllm.model_executor.layers.fused_moe.router.fused_moe_router import FusedMoERouter
++from vllm.model_executor.model_loader.reload import meta
+ 
+ from vllm_ascend.ascend_config import get_ascend_config
+ from vllm_ascend.distributed.eplb.eplb_state import AscendEplbLayerState
+ from vllm_ascend.ops.fused_moe.router.router_factory import create_ascend_fused_moe_router
+ 
++# This routing buffer is generated on the inference side, not reloaded.
++meta.SKIP_LOAD_TENSORS.add("expert_ids_per_ep_rank")
++meta.SKIP_TENSORS.add("expert_ids_per_ep_rank")
++
+ _EPLB_ROUTER_ADAPTED = "_vllm_ascend_eplb_router_adapted"
+ 
+ # Capture the real original before fused_moe.py's module-level code runs.

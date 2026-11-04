@@ -1,0 +1,6 @@
+{
+  "feature": "cp_pcp",
+  "status": "blocked",
+  "error": "Current ModelRunner V1 rejects PCP > 1",
+  "evidence": "/home/yyy/vllm-ascend-main/vllm_ascend/platform.py:1500"
+}

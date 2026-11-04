@@ -1,0 +1,233 @@
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+<frozen runpy>:128: RuntimeWarning: 'torch.distributed.run' found in sys.modules after import of package 'torch.distributed', but prior to execution of 'torch.distributed.run'; this may result in unpredictable behaviour
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+[verification command] /home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/mechanism_runner.py ipc --evidence /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/events.jsonl --server-url http://127.0.0.1:8930 --report /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json --max-tokens 8 --timeout 1200 --served-model-name step5-8layer --prompts-json /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/prompts.json --checkpoint /data/Step-5-Preview-BF16-8layer --devices 0,1,2,3,4,5,6,7 --packed-buffer-mb 4352
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+/usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+  @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+[Gloo] Rank [Gloo] Rank 1 is connected to 07 is connected to  peer ranks. 7Expected number of connected peer ranks is :  peer ranks. 7Expected number of connected peer ranks is : 
+7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[W1030 05:31:43.258834870 ProcessGroupHCCL.cpp:1294] Warning: The watchdog timeout 1200000ms(which is set by init_process_group) is less than or equal to HCCL execution timeout 1836000ms! The plog may not be recorded. (function ProcessGroupHCCL)
+[Gloo] Rank 0 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 1 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 2 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 3 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 4 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 6 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 5 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[Gloo] Rank 7 is connected to 7 peer ranks. Expected number of connected peer ranks is : 7
+[rank 0] 读取提示词
+[rank 2] 读取提示词
+[rank 6] 读取提示词[rank 5] 读取提示词
+
+[rank 7] 读取提示词
+[rank 1] 读取提示词
+[rank 4] 读取提示词
+[rank 3] 读取提示词
+[rank 7] 查询服务拓扑
+[rank 5] 查询服务拓扑
+[rank 3] 查询服务拓扑
+[rank 6] 查询服务拓扑
+[rank 4] 查询服务拓扑
+[rank 2] 查询服务拓扑[rank 1] 查询服务拓扑
+
+[rank 0] 查询服务拓扑
+{"time": 1793338303.1219676, "method": "GET", "endpoint": "/get_world_size?include_dp=true", "elapsed": 0.0138562899956014, "error": null}
+[rank 5] 生成更新前输出
+[rank 4] 生成更新前输出
+[rank 6] 生成更新前输出
+[rank 7] 生成更新前输出
+[rank 2] 生成更新前输出
+[rank 1] 生成更新前输出
+[rank 0] 生成更新前输出
+[rank 3] 生成更新前输出
+{"time": 1793338304.3376029, "method": "POST", "endpoint": "/collective_rpc", "elapsed": 0.1236958899826277, "error": null}
+[rank 2] 扫描 checkpoint manifest
+[rank 1] 扫描 checkpoint manifest
+[rank 3] 扫描 checkpoint manifest
+[rank 4] 扫描 checkpoint manifest[rank 7] 扫描 checkpoint manifest
+
+[rank 0] 扫描 checkpoint manifest[rank 5] 扫描 checkpoint manifest
+
+[rank 6] 扫描 checkpoint manifest
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:52] Available plugins for group vllm.platform_plugins:
+INFO 10-30 05:31:44 [__init__.py:54] - ascend -> vllm_ascend:register
+INFO 10-30 05:31:44 [__init__.py:57] All plugins in this group will be loaded. Set `VLLM_PLUGINS` to control which plugins to load.
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [__init__.py:237] Platform plugin ascend is activated
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 6] 休眠 level-2
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 2] 休眠 level-2
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 7] 休眠 level-2
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 5] 休眠 level-2
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 3] 休眠 level-2
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 0] 休眠 level-2
+[rank 1] 休眠 level-2
+INFO 10-30 05:31:44 [platform.py:70] Breakable CUDAGraph on Ascend is opt-in; using VLLM_USE_BREAKABLE_CUDAGRAPH=0.
+[rank 4] 休眠 level-2
+{"time": 1793338305.4714034, "method": "POST", "endpoint": "/sleep?level=2&mode=abort", "elapsed": 0.7437031799927354, "error": null}
+{"time": 1793338305.4733517, "method": "GET", "endpoint": "/is_sleeping", "elapsed": 0.001836630020989105, "error": null}
+{"time": 1793338305.4760668, "method": "POST", "endpoint": "/collective_rpc", "elapsed": 0.0026344000070821494, "error": null}
+[rank 3] 准备 checkpoint producer
+[rank 4] 准备 checkpoint producer
+[rank 1] 准备 checkpoint producer[rank 2] 准备 checkpoint producer[rank 5] 准备 checkpoint producer
+
+
+[rank 6] 准备 checkpoint producer
+[rank 7] 准备 checkpoint producer
+[rank 0] 准备 checkpoint producer
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+INFO 10-30 05:31:48 [factory.py:201] Creating weight transfer trainer engine: NPUIPCTrainerWeightTransferEngine
+[rank 1] 唤醒权重分配
+[rank 2] 唤醒权重分配
+[rank 4] 唤醒权重分配[rank 5] 唤醒权重分配[rank 3] 唤醒权重分配
+[rank 0] 唤醒权重分配
+[rank 6] 唤醒权重分配
+
+
+[rank 7] 唤醒权重分配
+{"time": 1793338309.228989, "method": "POST", "endpoint": "/wake_up?tags=weights", "elapsed": 0.30600060999859124, "error": null}
+[rank 5] 发送 checkpoint 权重流[rank 6] 发送 checkpoint 权重流
+
+[rank 7] 发送 checkpoint 权重流
+[rank 1] 发送 checkpoint 权重流
+[rank 0] 发送 checkpoint 权重流
+[rank 4] 发送 checkpoint 权重流[rank 2] 发送 checkpoint 权重流
+
+[rank 3] 发送 checkpoint 权重流
+[rank 2] 唤醒 KV cache
+[rank 3] 唤醒 KV cache
+[rank 5] 唤醒 KV cache
+[rank 6] 唤醒 KV cache
+[rank 0] 唤醒 KV cache
+[rank 7] 唤醒 KV cache
+[rank 4] 唤醒 KV cache
+[rank 1] 唤醒 KV cache
+{"time": 1793338376.3297904, "method": "POST", "endpoint": "/wake_up?tags=kv_cache", "elapsed": 0.03279839997412637, "error": null}
+[rank 1] 验证更新后输出
+[rank 3] 验证更新后输出[rank 2] 验证更新后输出[rank 0] 验证更新后输出
+
+
+[rank 4] 验证更新后输出
+[rank 7] 验证更新后输出
+[rank 6] 验证更新后输出
+[rank 5] 验证更新后输出
+{"time": 1793338376.7351236, "method": "POST", "endpoint": "/collective_rpc", "elapsed": 0.1340840799966827, "error": null}
+[rank4]:[W1030 05:32:56.941696320 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank1]:[W1030 05:32:56.941713410 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank2]:[W1030 05:32:56.941723710 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank3]:[W1030 05:32:56.941739690 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank6]:[W1030 05:32:56.941748720 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank5]:[W1030 05:32:56.941752120 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank7]:[W1030 05:32:56.941792430 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[rank0]:[W1030 05:32:56.941799110 ProcessGroup.hpp:940] Warning: No backend of type 0 found for Process Group with name undefined. Assuming no hooks are registered. (function hasHooks)
+[report] /home/yyy/model_openbox/upstream-retest-20261030/mechanism-226/ipc/report.json: mechanism_passed
+[W1030 05:32:59.446693430 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:32:59.647342010 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:32:59.666567980 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:32:59.676725810 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:32:59.172315010 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:33:00.163749560 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:33:01.474867830 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]
+[W1030 05:33:01.681858680 NPUIPCTypes.cpp:23] Producer process has been terminated before all shared NPU tensors released. See Note [Sharing NPU tensors]

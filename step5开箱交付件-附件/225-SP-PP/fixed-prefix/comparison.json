@@ -1,0 +1,94 @@
+[
+ {
+  "versus": [
+   "off-a",
+   "off-b"
+  ],
+  "n": 64,
+  "mean": 0.0,
+  "median": 0.0,
+  "max": 0.0,
+  "nonzero": 0,
+  "worst": {
+   "prompt": "The future of AI is",
+   "endpoint": "/v1/completions",
+   "position": 1,
+   "id": 107045,
+   "values": [
+    -4.975212097167969,
+    -4.975212097167969
+   ]
+  },
+  "free_generation_identical": 8,
+  "free_lp_max_same_trajectory": 0.0
+ },
+ {
+  "versus": [
+   "off-a",
+   "off-cold"
+  ],
+  "n": 64,
+  "mean": 0.0,
+  "median": 0.0,
+  "max": 0.0,
+  "nonzero": 0,
+  "worst": {
+   "prompt": "The future of AI is",
+   "endpoint": "/v1/completions",
+   "position": 1,
+   "id": 107045,
+   "values": [
+    -4.975212097167969,
+    -4.975212097167969
+   ]
+  },
+  "free_generation_identical": 8,
+  "free_lp_max_same_trajectory": 0.0
+ },
+ {
+  "versus": [
+   "off-a",
+   "on"
+  ],
+  "n": 64,
+  "mean": 0.07899428904056549,
+  "median": 0.04310441017150879,
+  "max": 0.5058128833770752,
+  "nonzero": 64,
+  "worst": {
+   "prompt": "你好",
+   "endpoint": "/v1/chat/completions",
+   "position": 1,
+   "id": 48287,
+   "values": [
+    -3.5158894062042236,
+    -4.021702289581299
+   ]
+  },
+  "free_generation_identical": 3,
+  "free_lp_max_same_trajectory": 0.41037845611572266
+ },
+ {
+  "versus": [
+   "off-cold",
+   "on"
+  ],
+  "n": 64,
+  "mean": 0.07899428904056549,
+  "median": 0.04310441017150879,
+  "max": 0.5058128833770752,
+  "nonzero": 64,
+  "worst": {
+   "prompt": "你好",
+   "endpoint": "/v1/chat/completions",
+   "position": 1,
+   "id": 48287,
+   "values": [
+    -3.5158894062042236,
+    -4.021702289581299
+   ]
+  },
+  "free_generation_identical": 3,
+  "free_lp_max_same_trajectory": 0.41037845611572266
+ }
+]

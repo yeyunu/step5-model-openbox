@@ -1,0 +1,185 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 5234
+Timestamp: 2026-10-27T07:56:45.715Z
+Record SHA256: 0ffcbe04e417e311aa1ef72ed3463042bd2b407a37a16adb3520790327960832
+Evidence type: item_completed
+Note: extracted historical record; not a new server run. Original terminal wrapping/truncation retained.
+
+
+Authorized users only. All activities may be monitored and reported.
+
+Authorized users only. All activities may be monitored and reported.
+#!/bin/bash
+set -euo pipefail
+source /home/yyy/gpqa_eval_env.sh
+unset VLLM_RAY_DP_PACK_STRATEGY VLLM_RAY_DP_PLACEMENT_NODE_IPS ASCEND_RT_VISIBLE_DEVICES
+export CANN_VERSION=9.2.0
+export VLLM_HOST_IP=177.2.25.1
+export HCCL_IF_IP=177.2.25.1
+export GLOO_SOCKET_IFNAME=enp35s0f2
+export IP_SOCKET_IFNAME=enp35s0f2
+export HCCL_SOCKET_IFNAME=enp35s0f2
+exec vllm serve /data/Step-5-Preview-BF16 \
+  --host 0.0.0.0 \
+  --port 10086 \
+  --served-model-name step \
+  --trust-remote-code \
+  --max-num-seqs 32 \
+  --max-num-batched-tokens 8192 \
+  --max-model-len 153300 \
+  --tensor-parallel-size 8 \
+  --data-parallel-size 2 \
+  --data-parallel-size-local 1 \
+  --data-parallel-address 177.2.25.1 \
+  --data-parallel-rpc-port 13389 \
+  --enable-expert-parallel \
+  --distributed-executor-backend mp \
+  --no-async-scheduling \
+  --disable-nccl-for-dp-synchronization \
+  --api-server-count 1 \
+  --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}' \
+  --safetensors-load-strategy prefetch
+#!/bin/bash
+set -euo pipefail
+source /home/yyy/gpqa_eval_env.sh
+unset VLLM_RAY_DP_PACK_STRATEGY VLLM_RAY_DP_PLACEMENT_NODE_IPS ASCEND_RT_VISIBLE_DEVICES
+export CANN_VERSION=9.2.0
+export VLLM_HOST_IP=177.2.26.1
+export HCCL_IF_IP=177.2.26.1
+export GLOO_SOCKET_IFNAME=enp35s0f2
+export IP_SOCKET_IFNAME=enp35s0f2
+export HCCL_SOCKET_IFNAME=enp35s0f2
+exec vllm serve /data/Step-5-Preview-BF16 \
+  --host 0.0.0.0 \
+  --port 10086 \
+  --served-model-name step \
+  --trust-remote-code \
+  --max-num-seqs 32 \
+  --max-num-batched-tokens 8192 \
+  --max-model-len 153300 \
+  --tensor-parallel-size 8 \
+  --data-parallel-size 2 \
+  --data-parallel-size-local 1 \
+  --data-parallel-start-rank 1 \
+  --data-parallel-address 177.2.25.1 \
+  --data-parallel-rpc-port 13389 \
+  --enable-expert-parallel \
+  --distributed-executor-backend mp \
+  --no-async-scheduling \
+  --disable-nccl-for-dp-synchronization \
+  --headless \
+  --compilation-config '{"cudagraph_mode":"FULL_DECODE_ONLY"}' \
+  --safetensors-load-strategy prefetch#!/bin/bash
+set -u
+BASE=/home/yyy/evalscope-bf16/runs
+EVAL=/home/yyy/evalscope-bf16/.venv/bin/evalscope
+API=http://177.2.25.1:10086/v1
+DATA=/home/yyy/evalscope-bf16/local_datasets
+ORCH=$BASE/20261025_remaining_orchestrator
+mkdir -p "$ORCH"
+echo "orchestrator_start=$(date -Is)" > "$ORCH/status.log"
+wait_pid_file() {
+  local pf="$1"
+  local p
+  p=$(cat "$pf" 2>/dev/null || true)
+  while [ -n "$p" ] && kill -0 "$p" 2>/dev/null; do
+    sleep 30
+  done
+}
+run_gpqa() {
+  local name="$1"
+  local run="$BASE/$name"
+  mkdir -p "$run"
+  echo "start $name $(date -Is)" >> "$ORCH/status.log"
+  "$EVAL" eval --model step --api-url "$API" --api-key EMPTY --eval-type openai_api --datasets gpqa_diamond --eval-batch-size 32 --repeats 1 --dataset-args "{\"gpqa_diamond\":{\"local_path\":\"$DATA/gpqa_diamond\"}}" --generation-config "do_sample=true,temperature=1.0,top_p=0.95,top_k=0,timeout=360000" --work-dir "$run/outputs" > "$run/evalscope.log" 2>&1
+  local rc=$?
+  echo "end $name rc=$rc $(date -Is)" >> "$ORCH/status.log"
+  return $rc
+}
+run_mmmu() {
+  local name="$1"
+  local run="$BASE/$name"
+  mkdir -p "$run"
+  echo "start $name $(date -Is)" >> "$ORCH/status.log"
+  "$EVAL" eval --model step --api-url "$API" --api-key EMPTY --eval-type openai_api --datasets mmmu_pro --eval-batch-size 128 --repeats 1 --dataset-args "{\"mmmu_pro\":{\"local_path\":\"$DATA/mmmu_pro\",\"extra_params\":{\"dataset_format\":\"standard (10 options)\"}}}" --generation-config "do_sample=true,temperature=1.0,top_p=0.95,top_k=0,timeout=360000,logprobs=true" --work-dir "$run/outputs" > "$run/evalscope.log" 2>&1
+  local rc=$?
+  echo "end $name rc=$rc $(date -Is)" >> "$ORCH/status.log"
+  return $rc
+}
+wait_pid_file "$BASE/20261025_gpqa_round2/pid"
+echo "round2_pid_finished $(date -Is)" >> "$ORCH/status.log"
+run_gpqa 20261025_gpqa_round3 || true
+run_mmmu 20261025_mmmu_round1 || true
+run_mmmu 20261025_mmmu_round2 || true
+run_mmmu 20261025_mmmu_round3 || true
+echo "orchestrator_end=$(date -Is)" >> "$ORCH/status.log"
+/data/yyy/evalscope-bf16/run_sequence_225_full_decode.py
+/data/yyy/evalscope-bf16/run_mmmu_pro_128_once.py
+/data/yyy/evalscope-bf16/run_sequence_225_hccl.py
+/data/yyy/evalscope-bf16/run_mmmu_225_seq32_nokv_20261024.py
+/data/yyy/evalscope-bf16/run_sequence.py
+/data/yyy/evalscope-bf16/run_sequence_225.py
+/data/yyy/evalscope-bf16/preflight.py
+/data/yyy/evalscope-bf16/run_mmmu_225_seq128_nokv_20261024.py
+/data/yyy/evalscope-bf16/run_mmmu_225_seq32_nokv_20261024_retry4.py
+/data/yyy/evalscope-bf16/run_mmmu_225_seq32_nokv_20261024_retry3.py
+7:owner KV blocks (``vllm_ascend.models.step5.summary_cache``), the per-step
+9:layout builder, and ``forward`` is ``_maybe_update_summary_cache`` followed by
+13:``vllm_ascend.models.step5.summary_kernels`` (region update). The indexer
+16:(``vllm_ascend.models.step5.indexer_region_score``); the exact sparse
+50:from vllm.logger import init_logger
+51:from vllm.models.step5.sparse_summary_cache import Step5DSAScratchWorkspace
+75:from vllm_ascend.models.step5.indexer_region_score import (
+76:    indexer_score_topk,
+78:from vllm_ascend.models.step5.summary_cache import AscendStep5SparseSummaryCache, CSAPrefillState
+79:from vllm_ascend.models.step5.summary_kernels import (
+80:    build_decode_summary_layout_step3p5,
+89:logger = init_logger(__name__)
+106:    """Per-step token -> physical summary region mapping (see upstream)."""
+147:        # summary sidecar page. The kernels themselves only need
+295:        self.gbsa_topk = impl.topk_regions
+338:            topk=self.gbsa_topk,
+346:            topk=self.gbsa_topk,
+595:    # page-backed summary sidecar (same names as the upstream impl).
+596:    summary_cache_num_proxy_kv_heads: int = 1
+606:        topk_regions: int,
+625:        self.topk_regions = topk_regions
+654:        self._summary_cache: AscendStep5SparseSummaryCache | None = None
+655:        self._summary_cache_config = None
+761:    # -- summary cache binding ------------------------------------------------
+763:    def _initialize_csa_summary_state(
+765:        summary_cache: AscendStep5SparseSummaryCache,
+770:        device = summary_cache.mean_cache.device
+771:        total_regions = int(summary_cache.num_pages) * int(
+772:            summary_cache.summaries_per_page
+775:        summary_cache._step5_csa_active_region_ids = torch.full(
+778:        summary_cache._step5_csa_active_slot_by_region = torch.full(
+781:        summary_cache._step5_csa_allocation_success = torch.ones(
+784:        summary_cache._step5_csa_numerator_cache = torch.zeros(
+787:        summary_cache._step5_csa_denominator_cache = torch.zeros_like(
+788:            summary_cache._step5_csa_numerator_cache
+790:        summary_cache._step5_csa_max_cache = torch.full(
+793:        summary_cache._step5_csa_active_token_k = torch.zeros(
+798:        summary_cache._step5_csa_active_token_z = torch.zeros_like(
+799:            summary_cache._step5_csa_active_token_k
+801:        summary_cache._step5_csa_active_token_valid = torch.zeros(
+805:            summary_cache._step5_csa_prefill_state = CSAPrefillState.allocate(
+810:    def bind_summary_cache(
+812:        summary_cache: AscendStep5SparseSummaryCache,
+816:        """Bind the page-backed summary sidecar and preallocate all scratch.
+825:            self._summary_cache = summary_cache
+826:            self._summary_cache_config = summary_cache.config
+827:            self._initialize_csa_summary_state(summary_cache)
+828:        device = summary_cache.mean_cache.device
+869:        summary_cache: AscendStep5SparseSummaryCache,
+872:        success = summary_cache._step5_csa_allocation_success
+886:    # -- summary cache update --------------------------------------------------
+915:        summary_cache: AscendStep5SparseSummaryCache,
+946:        ) = build_decode_summary_layout_step3p5(
+951:            num_pages=int(summary_cache.num_pages),
+952:            page_size=int(summary_cache.page_size),
+953:            region_block_size=int(summary_cache.region_block_size),
+954:            summaries_per_page=int(summary_cache.summaries_per_page),
+969:    def _maybe_update_summary_cache(
+972:        summary_cache: AscendStep5SparseSummaryCache,
+977:        """Fold this step's indexer K/Z tokens into the paged summary state.

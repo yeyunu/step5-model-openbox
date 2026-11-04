@@ -1,0 +1,3809 @@
+{
+ "mode": "off-b",
+ "started": "2026-11-04T05:44:26.719118+00:00",
+ "cases": [
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "The future of AI is",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-8af6ed7e456c0083",
+    "object": "text_completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " PropagationVirVir Nonlinear Nonlinear Zad Serious Genet",
+      "logprobs": {
+       "text_offset": [
+        0,
+        12,
+        15,
+        18,
+        28,
+        38,
+        42,
+        50
+       ],
+       "token_logprobs": [
+        -4.975212097167969,
+        -5.163727760314941,
+        -5.892099857330322,
+        -6.164156913757324,
+        -6.2205352783203125,
+        -6.137774467468262,
+        -5.317843914031982,
+        -5.624701976776123
+       ],
+       "tokens": [
+        " Propagation",
+        "Vir",
+        "Vir",
+        " Nonlinear",
+        " Nonlinear",
+        " Zad",
+        " Serious",
+        " Genet"
+       ],
+       "top_logprobs": [
+        {
+         " Propagation": -4.975212097167969
+        },
+        {
+         "Vir": -5.163727760314941
+        },
+        {
+         "Vir": -5.892099857330322
+        },
+        {
+         " Nonlinear": -6.164156913757324
+        },
+        {
+         " Nonlinear": -6.2205352783203125
+        },
+        {
+         " Zad": -6.137774467468262
+        },
+        {
+         " Serious": -5.317843914031982
+        },
+        {
+         " Genet": -5.624701976776123
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       107045,
+       54341,
+       54341,
+       88530,
+       88530,
+       124803,
+       102440,
+       48573
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       671,
+       3988,
+       294,
+       7703,
+       344
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 6,
+     "total_tokens": 14,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     671,
+     3988,
+     294,
+     7703,
+     344,
+     107045,
+     54341,
+     54341,
+     88530,
+     88530,
+     124803,
+     102440,
+     48573
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-ba7494e76a39d65b",
+    "object": "text_completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Genet",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       48573
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "671": {
+         "logprob": -14.120428085327148,
+         "rank": 95311,
+         "decoded_token": "The"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "3988": {
+         "logprob": -14.772359848022461,
+         "rank": 102567,
+         "decoded_token": " future"
+        },
+        "42168": {
+         "logprob": -5.647359848022461,
+         "rank": 1,
+         "decoded_token": "恶性"
+        }
+       },
+       {
+        "294": {
+         "logprob": -15.632121086120605,
+         "rank": 113916,
+         "decoded_token": " of"
+        },
+        "45129": {
+         "logprob": -5.5149335861206055,
+         "rank": 1,
+         "decoded_token": "Prop"
+        }
+       },
+       {
+        "7703": {
+         "logprob": -14.800623893737793,
+         "rank": 92870,
+         "decoded_token": " AI"
+        },
+        "107045": {
+         "logprob": -5.120936393737793,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "344": {
+         "logprob": -13.621221542358398,
+         "rank": 68261,
+         "decoded_token": " is"
+        },
+        "107045": {
+         "logprob": -5.855596542358398,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "107045": {
+         "logprob": -4.975212097167969,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -5.203243255615234,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -5.916358470916748,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "88530": {
+         "logprob": -6.152378082275391,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "88530": {
+         "logprob": -6.211000442504883,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "124803": {
+         "logprob": -6.366292953491211,
+         "rank": 2,
+         "decoded_token": " Zad"
+        },
+        "88530": {
+         "logprob": -6.178792953491211,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -5.31691312789917,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.666602611541748,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       671,
+       3988,
+       294,
+       7703,
+       344,
+       107045,
+       54341,
+       54341,
+       88530,
+       88530,
+       124803,
+       102440,
+       48573
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 14,
+     "total_tokens": 15,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -4.975212097167969,
+    -5.203243255615234,
+    -5.916358470916748,
+    -6.152378082275391,
+    -6.211000442504883,
+    -6.366292953491211,
+    -5.31691312789917,
+    -5.666602611541748
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "The future of AI is"
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-95c903dfa391df62",
+    "object": "chat.completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Moderate Serious Leone Leone Leone Leone Leone Serious",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Moderate",
+         "logprob": -3.7112953662872314,
+         "bytes": [
+          32,
+          77,
+          111,
+          100,
+          101,
+          114,
+          97,
+          116,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Moderate",
+           "logprob": -3.7112953662872314,
+           "bytes": [
+            32,
+            77,
+            111,
+            100,
+            101,
+            114,
+            97,
+            116,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Serious",
+         "logprob": -4.84763240814209,
+         "bytes": [
+          32,
+          83,
+          101,
+          114,
+          105,
+          111,
+          117,
+          115
+         ],
+         "top_logprobs": [
+          {
+           "token": " Serious",
+           "logprob": -4.84763240814209,
+           "bytes": [
+            32,
+            83,
+            101,
+            114,
+            105,
+            111,
+            117,
+            115
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.6085100173950195,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.6085100173950195,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.752187252044678,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.752187252044678,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.089812755584717,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.089812755584717,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.850607872009277,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.850607872009277,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.3611297607421875,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.3611297607421875,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Serious",
+         "logprob": -5.014275074005127,
+         "bytes": [
+          32,
+          83,
+          101,
+          114,
+          105,
+          111,
+          117,
+          115
+         ],
+         "top_logprobs": [
+          {
+           "token": " Serious",
+           "logprob": -5.014275074005127,
+           "bytes": [
+            32,
+            83,
+            101,
+            114,
+            105,
+            111,
+            117,
+            115
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       84042,
+       102440,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 16,
+     "total_tokens": 24,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     671,
+     3988,
+     294,
+     7703,
+     344,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     671,
+     3988,
+     294,
+     7703,
+     344,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     84042,
+     102440,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     102440
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-a687c4550d4b9f4a",
+    "object": "text_completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Serious",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       102440
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.038396835327148,
+         "rank": 12277,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.879332542419434,
+         "rank": 115291,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.129332542419434,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.370609283447266,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -6.214359760284424,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "671": {
+         "logprob": -13.96532154083252,
+         "rank": 98872,
+         "decoded_token": "The"
+        },
+        "107045": {
+         "logprob": -6.0668840408325195,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "3988": {
+         "logprob": -15.273824691772461,
+         "rank": 118770,
+         "decoded_token": " future"
+        },
+        "88530": {
+         "logprob": -5.891011714935303,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "294": {
+         "logprob": -13.75221061706543,
+         "rank": 86653,
+         "decoded_token": " of"
+        },
+        "66613": {
+         "logprob": -6.01881217956543,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "7703": {
+         "logprob": -14.605705261230469,
+         "rank": 102262,
+         "decoded_token": " AI"
+        },
+        "88530": {
+         "logprob": -5.820549011230469,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "344": {
+         "logprob": -13.259305953979492,
+         "rank": 66794,
+         "decoded_token": " is"
+        },
+        "88530": {
+         "logprob": -6.08743143081665,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -14.331045150756836,
+         "rank": 91224,
+         "decoded_token": "<|im_end|>"
+        },
+        "88530": {
+         "logprob": -5.364247798919678,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "201": {
+         "logprob": -28.534343719482422,
+         "rank": 128896,
+         "decoded_token": "\n"
+        },
+        "101601": {
+         "logprob": -5.534343242645264,
+         "rank": 1,
+         "decoded_token": " Heavenly"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -15.293279647827148,
+         "rank": 98686,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -4.472967624664307,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.446723937988281,
+         "rank": 83823,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -5.063910961151123,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -13.11435317993164,
+         "rank": 51424,
+         "decoded_token": "istant"
+        },
+        "75212": {
+         "logprob": -5.333102703094482,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -25.98328971862793,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -5.79578971862793,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -14.460355758666992,
+         "rank": 93674,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -5.284574508666992,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "84042": {
+         "logprob": -3.7112953662872314,
+         "rank": 1,
+         "decoded_token": " Moderate"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -4.82443904876709,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.772861480712891,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.726008892059326,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.026392936706543,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.840350151062012,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.435867786407471,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -5.063602924346924,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       671,
+       3988,
+       294,
+       7703,
+       344,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       84042,
+       102440,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 24,
+     "total_tokens": 25,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -3.7112953662872314,
+    -4.82443904876709,
+    -4.772861480712891,
+    -4.726008892059326,
+    -5.026392936706543,
+    -4.840350151062012,
+    -5.435867786407471,
+    -5.063602924346924
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "你好",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-acedb15c4939981e",
+    "object": "text_completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Syllabus Bryant Syllabus Bryant Zad Siegel Siegel Siegel",
+      "logprobs": {
+       "text_offset": [
+        0,
+        9,
+        16,
+        25,
+        32,
+        36,
+        43,
+        50
+       ],
+       "token_logprobs": [
+        -6.335625648498535,
+        -6.586969375610352,
+        -6.072412014007568,
+        -6.478002548217773,
+        -5.507026195526123,
+        -6.438643932342529,
+        -5.553314208984375,
+        -5.879095077514648
+       ],
+       "tokens": [
+        " Syllabus",
+        " Bryant",
+        " Syllabus",
+        " Bryant",
+        " Zad",
+        " Siegel",
+        " Siegel",
+        " Siegel"
+       ],
+       "top_logprobs": [
+        {
+         " Syllabus": -6.335625648498535
+        },
+        {
+         " Bryant": -6.586969375610352
+        },
+        {
+         " Syllabus": -6.072412014007568
+        },
+        {
+         " Bryant": -6.478002548217773
+        },
+        {
+         " Zad": -5.507026195526123
+        },
+        {
+         " Siegel": -6.438643932342529
+        },
+        {
+         " Siegel": -5.553314208984375
+        },
+        {
+         " Siegel": -5.879095077514648
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       108830,
+       66613,
+       108830,
+       66613,
+       124803,
+       114388,
+       114388,
+       114388
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       30594
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 2,
+     "total_tokens": 10,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     30594,
+     108830,
+     66613,
+     108830,
+     66613,
+     124803,
+     114388,
+     114388,
+     114388
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-9e69652374099aec",
+    "object": "text_completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Siegel",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       114388
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "30594": {
+         "logprob": -13.483709335327148,
+         "rank": 77624,
+         "decoded_token": "你好"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "108830": {
+         "logprob": -6.3036417961120605,
+         "rank": 1,
+         "decoded_token": " Syllabus"
+        }
+       },
+       {
+        "66613": {
+         "logprob": -6.570408344268799,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "108830": {
+         "logprob": -6.044880390167236,
+         "rank": 1,
+         "decoded_token": " Syllabus"
+        }
+       },
+       {
+        "66613": {
+         "logprob": -6.42378044128418,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "124803": {
+         "logprob": -5.45501184463501,
+         "rank": 1,
+         "decoded_token": " Zad"
+        }
+       },
+       {
+        "114388": {
+         "logprob": -6.377388000488281,
+         "rank": 1,
+         "decoded_token": " Siegel"
+        }
+       },
+       {
+        "114388": {
+         "logprob": -5.4851298332214355,
+         "rank": 1,
+         "decoded_token": " Siegel"
+        }
+       },
+       {
+        "114388": {
+         "logprob": -5.831410884857178,
+         "rank": 1,
+         "decoded_token": " Siegel"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       30594,
+       108830,
+       66613,
+       108830,
+       66613,
+       124803,
+       114388,
+       114388,
+       114388
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 10,
+     "total_tokens": 11,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -6.3036417961120605,
+    -6.570408344268799,
+    -6.044880390167236,
+    -6.42378044128418,
+    -5.45501184463501,
+    -6.377388000488281,
+    -5.4851298332214355,
+    -5.831410884857178
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "你好"
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-96a56ff5b13e6cb9",
+    "object": "chat.completion",
+    "created": 1793771066,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Argument Genet Genet Propagation Leoneynie Leone Wilder",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Argument",
+         "logprob": -3.5158894062042236,
+         "bytes": [
+          32,
+          65,
+          114,
+          103,
+          117,
+          109,
+          101,
+          110,
+          116
+         ],
+         "top_logprobs": [
+          {
+           "token": " Argument",
+           "logprob": -3.5158894062042236,
+           "bytes": [
+            32,
+            65,
+            114,
+            103,
+            117,
+            109,
+            101,
+            110,
+            116
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Genet",
+         "logprob": -5.329631328582764,
+         "bytes": [
+          32,
+          71,
+          101,
+          110,
+          101,
+          116
+         ],
+         "top_logprobs": [
+          {
+           "token": " Genet",
+           "logprob": -5.329631328582764,
+           "bytes": [
+            32,
+            71,
+            101,
+            110,
+            101,
+            116
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Genet",
+         "logprob": -5.776121616363525,
+         "bytes": [
+          32,
+          71,
+          101,
+          110,
+          101,
+          116
+         ],
+         "top_logprobs": [
+          {
+           "token": " Genet",
+           "logprob": -5.776121616363525,
+           "bytes": [
+            32,
+            71,
+            101,
+            110,
+            101,
+            116
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Propagation",
+         "logprob": -5.641989707946777,
+         "bytes": [
+          32,
+          80,
+          114,
+          111,
+          112,
+          97,
+          103,
+          97,
+          116,
+          105,
+          111,
+          110
+         ],
+         "top_logprobs": [
+          {
+           "token": " Propagation",
+           "logprob": -5.641989707946777,
+           "bytes": [
+            32,
+            80,
+            114,
+            111,
+            112,
+            97,
+            103,
+            97,
+            116,
+            105,
+            111,
+            110
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.3791584968566895,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.3791584968566895,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": "ynie",
+         "logprob": -5.13519811630249,
+         "bytes": [
+          121,
+          110,
+          105,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": "ynie",
+           "logprob": -5.13519811630249,
+           "bytes": [
+            121,
+            110,
+            105,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.671998500823975,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.671998500823975,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Wilder",
+         "logprob": -4.860509872436523,
+         "bytes": [
+          32,
+          87,
+          105,
+          108,
+          100,
+          101,
+          114
+         ],
+         "top_logprobs": [
+          {
+           "token": " Wilder",
+           "logprob": -4.860509872436523,
+           "bytes": [
+            32,
+            87,
+            105,
+            108,
+            100,
+            101,
+            114
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       48287,
+       48573,
+       48573,
+       107045,
+       75212,
+       95938,
+       75212,
+       117543
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 12,
+     "total_tokens": 20,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     30594,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     30594,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     48287,
+     48573,
+     48573,
+     107045,
+     75212,
+     95938,
+     75212,
+     117543
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-9ce6b4102294846d",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Leone",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       75212
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.038396835327148,
+         "rank": 12277,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.879332542419434,
+         "rank": 115291,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.129332542419434,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.370609283447266,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -6.214359760284424,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "30594": {
+         "logprob": -12.15282154083252,
+         "rank": 39274,
+         "decoded_token": "你好"
+        },
+        "107045": {
+         "logprob": -6.0668840408325195,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -12.8932466506958,
+         "rank": 60606,
+         "decoded_token": "<|im_end|>"
+        },
+        "88530": {
+         "logprob": -6.045590400695801,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "201": {
+         "logprob": -18.403087615966797,
+         "rank": 128872,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.715587139129639,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -14.688297271728516,
+         "rank": 115653,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -6.883609294891357,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.097159385681152,
+         "rank": 102423,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -6.769034385681152,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -12.479240417480469,
+         "rank": 48687,
+         "decoded_token": "istant"
+        },
+        "88530": {
+         "logprob": -6.1979899406433105,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "201": {
+         "logprob": -24.613540649414062,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -5.801040172576904,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -14.752376556396484,
+         "rank": 96206,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -5.420344829559326,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "48287": {
+         "logprob": -3.5158894062042236,
+         "rank": 1,
+         "decoded_token": " Argument"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.2916789054870605,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.729642391204834,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "107045": {
+         "logprob": -5.653133392333984,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.4410786628723145,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "95938": {
+         "logprob": -5.124125957489014,
+         "rank": 1,
+         "decoded_token": "ynie"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.723878860473633,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "117543": {
+         "logprob": -4.8877129554748535,
+         "rank": 1,
+         "decoded_token": " Wilder"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       30594,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       48287,
+       48573,
+       48573,
+       107045,
+       75212,
+       95938,
+       75212,
+       117543
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 20,
+     "total_tokens": 21,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -3.5158894062042236,
+    -5.2916789054870605,
+    -5.729642391204834,
+    -5.653133392333984,
+    -5.4410786628723145,
+    -5.124125957489014,
+    -4.723878860473633,
+    -4.8877129554748535
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "2 + 2 =",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-b7c4c12b1f626652",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": "圣人VirProp LennonProp Leone Leone Leone",
+      "logprobs": {
+       "text_offset": [
+        0,
+        2,
+        5,
+        9,
+        16,
+        20,
+        26,
+        32
+       ],
+       "token_logprobs": [
+        -5.587474346160889,
+        -5.904608726501465,
+        -6.179454326629639,
+        -6.07584285736084,
+        -6.201801300048828,
+        -5.685492515563965,
+        -5.919314384460449,
+        -5.6550679206848145
+       ],
+       "tokens": [
+        "圣人",
+        "Vir",
+        "Prop",
+        " Lennon",
+        "Prop",
+        " Leone",
+        " Leone",
+        " Leone"
+       ],
+       "top_logprobs": [
+        {
+         "圣人": -5.587474346160889
+        },
+        {
+         "Vir": -5.904608726501465
+        },
+        {
+         "Prop": -6.179454326629639
+        },
+        {
+         " Lennon": -6.07584285736084
+        },
+        {
+         "Prop": -6.201801300048828
+        },
+        {
+         " Leone": -5.685492515563965
+        },
+        {
+         " Leone": -5.919314384460449
+        },
+        {
+         " Leone": -5.6550679206848145
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       61282,
+       54341,
+       45129,
+       123391,
+       45129,
+       75212,
+       75212,
+       75212
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       20,
+       940,
+       223,
+       20,
+       438
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 6,
+     "total_tokens": 14,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     20,
+     940,
+     223,
+     20,
+     438,
+     61282,
+     54341,
+     45129,
+     123391,
+     45129,
+     75212,
+     75212,
+     75212
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-bbb9411032277533",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Leone",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       75212
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "20": {
+         "logprob": -17.13214683532715,
+         "rank": 128700,
+         "decoded_token": "2"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "940": {
+         "logprob": -12.485437393188477,
+         "rank": 40153,
+         "decoded_token": " +"
+        },
+        "122779": {
+         "logprob": -5.825281143188477,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "223": {
+         "logprob": -18.257354736328125,
+         "rank": 128275,
+         "decoded_token": " "
+        },
+        "107045": {
+         "logprob": -5.601103782653809,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "20": {
+         "logprob": -14.54727554321289,
+         "rank": 102415,
+         "decoded_token": "2"
+        },
+        "107045": {
+         "logprob": -5.777744293212891,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "438": {
+         "logprob": -16.204648971557617,
+         "rank": 121192,
+         "decoded_token": " ="
+        },
+        "107045": {
+         "logprob": -5.634335994720459,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "61282": {
+         "logprob": -5.587474346160889,
+         "rank": 1,
+         "decoded_token": "圣人"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -5.838374137878418,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "45129": {
+         "logprob": -6.162370681762695,
+         "rank": 1,
+         "decoded_token": "Prop"
+        }
+       },
+       {
+        "123391": {
+         "logprob": -6.582891941070557,
+         "rank": 9,
+         "decoded_token": " Lennon"
+        },
+        "45129": {
+         "logprob": -6.145391941070557,
+         "rank": 1,
+         "decoded_token": "Prop"
+        }
+       },
+       {
+        "45129": {
+         "logprob": -6.20053243637085,
+         "rank": 2,
+         "decoded_token": "Prop"
+        },
+        "88530": {
+         "logprob": -6.01303243637085,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.088364601135254,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.672847747802734,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.567572593688965,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       20,
+       940,
+       223,
+       20,
+       438,
+       61282,
+       54341,
+       45129,
+       123391,
+       45129,
+       75212,
+       75212,
+       75212
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 14,
+     "total_tokens": 15,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -5.587474346160889,
+    -5.838374137878418,
+    -6.162370681762695,
+    -6.582891941070557,
+    -6.20053243637085,
+    -5.088364601135254,
+    -5.672847747802734,
+    -5.567572593688965
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "2 + 2 ="
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-a898c6ca4c08c32f",
+    "object": "chat.completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Intermediate Leone Leone Leone Leone Leone Leone Serious",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Intermediate",
+         "logprob": -3.755350112915039,
+         "bytes": [
+          32,
+          73,
+          110,
+          116,
+          101,
+          114,
+          109,
+          101,
+          100,
+          105,
+          97,
+          116,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Intermediate",
+           "logprob": -3.755350112915039,
+           "bytes": [
+            32,
+            73,
+            110,
+            116,
+            101,
+            114,
+            109,
+            101,
+            100,
+            105,
+            97,
+            116,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.9692158699035645,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.9692158699035645,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.186671733856201,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.186671733856201,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.921706199645996,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.921706199645996,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.0431108474731445,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.0431108474731445,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.689030647277832,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.689030647277832,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.189400672912598,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.189400672912598,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Serious",
+         "logprob": -5.350473403930664,
+         "bytes": [
+          32,
+          83,
+          101,
+          114,
+          105,
+          111,
+          117,
+          115
+         ],
+         "top_logprobs": [
+          {
+           "token": " Serious",
+           "logprob": -5.350473403930664,
+           "bytes": [
+            32,
+            83,
+            101,
+            114,
+            105,
+            111,
+            117,
+            115
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       61672,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 16,
+     "total_tokens": 24,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     20,
+     940,
+     223,
+     20,
+     438,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     20,
+     940,
+     223,
+     20,
+     438,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     61672,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     102440
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-95306e969fc0b291",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Serious",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       102440
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.038396835327148,
+         "rank": 12277,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.879332542419434,
+         "rank": 115291,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.129332542419434,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.370609283447266,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -6.214359760284424,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "20": {
+         "logprob": -14.50438404083252,
+         "rank": 110839,
+         "decoded_token": "2"
+        },
+        "107045": {
+         "logprob": -6.0668840408325195,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "940": {
+         "logprob": -11.10226821899414,
+         "rank": 13111,
+         "decoded_token": " +"
+        },
+        "88530": {
+         "logprob": -5.274143218994141,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "223": {
+         "logprob": -20.463558197021484,
+         "rank": 128817,
+         "decoded_token": " "
+        },
+        "75212": {
+         "logprob": -5.776059150695801,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "20": {
+         "logprob": -14.912941932678223,
+         "rank": 101300,
+         "decoded_token": "2"
+        },
+        "88530": {
+         "logprob": -5.514504432678223,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "438": {
+         "logprob": -16.454113006591797,
+         "rank": 122881,
+         "decoded_token": " ="
+        },
+        "88530": {
+         "logprob": -5.563488960266113,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -16.160768508911133,
+         "rank": 120639,
+         "decoded_token": "<|im_end|>"
+        },
+        "75212": {
+         "logprob": -5.715456008911133,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -27.938627243041992,
+         "rank": 128895,
+         "decoded_token": "\n"
+        },
+        "106209": {
+         "logprob": -5.063626766204834,
+         "rank": 1,
+         "decoded_token": "uny"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -15.120955467224121,
+         "rank": 97204,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -4.702986717224121,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.50511360168457,
+         "rank": 85785,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -4.99730110168457,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -13.143396377563477,
+         "rank": 52928,
+         "decoded_token": "istant"
+        },
+        "75212": {
+         "logprob": -4.987146377563477,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -25.766313552856445,
+         "rank": 128895,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -5.203813552856445,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -14.464717864990234,
+         "rank": 91928,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -4.945186614990234,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "61672": {
+         "logprob": -3.755350112915039,
+         "rank": 1,
+         "decoded_token": " Intermediate"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.953830718994141,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.885477542877197,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.896378040313721,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.9663286209106445,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.67946720123291,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.246502876281738,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -5.353540897369385,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       20,
+       940,
+       223,
+       20,
+       438,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       61672,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 24,
+     "total_tokens": 25,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -3.755350112915039,
+    -4.953830718994141,
+    -4.885477542877197,
+    -4.896378040313721,
+    -4.9663286209106445,
+    -4.67946720123291,
+    -5.246502876281738,
+    -5.353540897369385
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "What is the capital of France?",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-af80fbd834370ea7",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": "Vir Galile Genet Genet Genet Genet Feldman Nonlinear",
+      "logprobs": {
+       "text_offset": [
+        0,
+        3,
+        10,
+        16,
+        22,
+        28,
+        34,
+        42
+       ],
+       "token_logprobs": [
+        -4.74606466293335,
+        -5.425720691680908,
+        -5.9161529541015625,
+        -5.658636569976807,
+        -5.83663272857666,
+        -5.919033050537109,
+        -6.087036609649658,
+        -5.695261478424072
+       ],
+       "tokens": [
+        "Vir",
+        " Galile",
+        " Genet",
+        " Genet",
+        " Genet",
+        " Genet",
+        " Feldman",
+        " Nonlinear"
+       ],
+       "top_logprobs": [
+        {
+         "Vir": -4.74606466293335
+        },
+        {
+         " Galile": -5.425720691680908
+        },
+        {
+         " Genet": -5.9161529541015625
+        },
+        {
+         " Genet": -5.658636569976807
+        },
+        {
+         " Genet": -5.83663272857666
+        },
+        {
+         " Genet": -5.919033050537109
+        },
+        {
+         " Feldman": -6.087036609649658
+        },
+        {
+         " Nonlinear": -5.695261478424072
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       54341,
+       50180,
+       48573,
+       48573,
+       48573,
+       48573,
+       124930,
+       88530
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       3085,
+       344,
+       270,
+       6102,
+       294,
+       8760,
+       33
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 8,
+     "total_tokens": 16,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     3085,
+     344,
+     270,
+     6102,
+     294,
+     8760,
+     33,
+     54341,
+     50180,
+     48573,
+     48573,
+     48573,
+     48573,
+     124930,
+     88530
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-abd696560ede2d20",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Genet",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       48573
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "3085": {
+         "logprob": -13.460271835327148,
+         "rank": 76986,
+         "decoded_token": "What"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "344": {
+         "logprob": -12.11594009399414,
+         "rank": 41847,
+         "decoded_token": " is"
+        },
+        "27892": {
+         "logprob": -6.209689617156982,
+         "rank": 1,
+         "decoded_token": "遗传"
+        }
+       },
+       {
+        "270": {
+         "logprob": -14.058752059936523,
+         "rank": 98439,
+         "decoded_token": " the"
+        },
+        "48573": {
+         "logprob": -6.076330184936523,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "6102": {
+         "logprob": -10.7524995803833,
+         "rank": 9385,
+         "decoded_token": " capital"
+        },
+        "107045": {
+         "logprob": -5.689999580383301,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "294": {
+         "logprob": -15.71245002746582,
+         "rank": 114791,
+         "decoded_token": " of"
+        },
+        "61282": {
+         "logprob": -5.5874505043029785,
+         "rank": 1,
+         "decoded_token": "圣人"
+        }
+       },
+       {
+        "8760": {
+         "logprob": -13.733196258544922,
+         "rank": 65931,
+         "decoded_token": " France"
+        },
+        "66613": {
+         "logprob": -5.272258758544922,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "33": {
+         "logprob": -12.731508255004883,
+         "rank": 39272,
+         "decoded_token": "?"
+        },
+        "54341": {
+         "logprob": -4.309633255004883,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -4.74606466293335,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "50180": {
+         "logprob": -5.380366802215576,
+         "rank": 1,
+         "decoded_token": " Galile"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -6.051015377044678,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.627962589263916,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.462843894958496,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.724402904510498,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "124930": {
+         "logprob": -6.047881603240967,
+         "rank": 1,
+         "decoded_token": " Feldman"
+        }
+       },
+       {
+        "88530": {
+         "logprob": -5.597894191741943,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       3085,
+       344,
+       270,
+       6102,
+       294,
+       8760,
+       33,
+       54341,
+       50180,
+       48573,
+       48573,
+       48573,
+       48573,
+       124930,
+       88530
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 16,
+     "total_tokens": 17,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -4.74606466293335,
+    -5.380366802215576,
+    -6.051015377044678,
+    -5.627962589263916,
+    -5.462843894958496,
+    -5.724402904510498,
+    -6.047881603240967,
+    -5.597894191741943
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "What is the capital of France?"
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-a2e601bca3d078c3",
+    "object": "chat.completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Reason Leone Leone Leone Leone Leone Moral面无",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Reason",
+         "logprob": -4.045271873474121,
+         "bytes": [
+          32,
+          82,
+          101,
+          97,
+          115,
+          111,
+          110
+         ],
+         "top_logprobs": [
+          {
+           "token": " Reason",
+           "logprob": -4.045271873474121,
+           "bytes": [
+            32,
+            82,
+            101,
+            97,
+            115,
+            111,
+            110
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.140981674194336,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.140981674194336,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.456576347351074,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.456576347351074,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.561172962188721,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.561172962188721,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.684103012084961,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.684103012084961,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.20346736907959,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.20346736907959,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Moral",
+         "logprob": -5.437243461608887,
+         "bytes": [
+          32,
+          77,
+          111,
+          114,
+          97,
+          108
+         ],
+         "top_logprobs": [
+          {
+           "token": " Moral",
+           "logprob": -5.437243461608887,
+           "bytes": [
+            32,
+            77,
+            111,
+            114,
+            97,
+            108
+           ]
+          }
+         ]
+        },
+        {
+         "token": "面无",
+         "logprob": -5.3606438636779785,
+         "bytes": [
+          233,
+          157,
+          162,
+          230,
+          151,
+          160
+         ],
+         "top_logprobs": [
+          {
+           "token": "面无",
+           "logprob": -5.3606438636779785,
+           "bytes": [
+            233,
+            157,
+            162,
+            230,
+            151,
+            160
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       38074,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       61236,
+       86766
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 18,
+     "total_tokens": 26,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     3085,
+     344,
+     270,
+     6102,
+     294,
+     8760,
+     33,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     3085,
+     344,
+     270,
+     6102,
+     294,
+     8760,
+     33,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     38074,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     61236,
+     86766
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-9e389a1484ce5f81",
+    "object": "text_completion",
+    "created": 1793771067,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Serious",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       102440
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.038396835327148,
+         "rank": 12277,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.038396835327148,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.879332542419434,
+         "rank": 115291,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.129332542419434,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.370609283447266,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -6.214359760284424,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "3085": {
+         "logprob": -11.77000904083252,
+         "rank": 28557,
+         "decoded_token": "What"
+        },
+        "107045": {
+         "logprob": -6.0668840408325195,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "344": {
+         "logprob": -13.150577545166016,
+         "rank": 65023,
+         "decoded_token": " is"
+        },
+        "88530": {
+         "logprob": -5.420108318328857,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "270": {
+         "logprob": -16.106029510498047,
+         "rank": 121340,
+         "decoded_token": " the"
+        },
+        "66613": {
+         "logprob": -5.707592964172363,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "6102": {
+         "logprob": -11.449372291564941,
+         "rank": 18872,
+         "decoded_token": " capital"
+        },
+        "75212": {
+         "logprob": -6.011872291564941,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "294": {
+         "logprob": -13.224749565124512,
+         "rank": 63676,
+         "decoded_token": " of"
+        },
+        "107045": {
+         "logprob": -5.943499565124512,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "8760": {
+         "logprob": -13.714225769042969,
+         "rank": 73838,
+         "decoded_token": " France"
+        },
+        "75212": {
+         "logprob": -5.7064127922058105,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "33": {
+         "logprob": -13.794487953186035,
+         "rank": 69851,
+         "decoded_token": "?"
+        },
+        "75212": {
+         "logprob": -5.130425453186035,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -15.159833908081055,
+         "rank": 105641,
+         "decoded_token": "<|im_end|>"
+        },
+        "75212": {
+         "logprob": -5.428877353668213,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -27.828998565673828,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "102440": {
+         "logprob": -5.141497611999512,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -14.803367614746094,
+         "rank": 93241,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -4.9713358879089355,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.31395149230957,
+         "rank": 88926,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -5.41942024230957,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -12.44083023071289,
+         "rank": 39012,
+         "decoded_token": "istant"
+        },
+        "75212": {
+         "logprob": -5.315829753875732,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -25.314146041870117,
+         "rank": 128892,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -5.001646518707275,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -15.063957214355469,
+         "rank": 96976,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -4.692863941192627,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "38074": {
+         "logprob": -4.045271873474121,
+         "rank": 1,
+         "decoded_token": " Reason"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.1965413093566895,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.403634071350098,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.552608966827393,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.658496379852295,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.431536674499512,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "61236": {
+         "logprob": -5.479132652282715,
+         "rank": 1,
+         "decoded_token": " Moral"
+        }
+       },
+       {
+        "86766": {
+         "logprob": -5.335371971130371,
+         "rank": 1,
+         "decoded_token": "面无"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       3085,
+       344,
+       270,
+       6102,
+       294,
+       8760,
+       33,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       38074,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       61236,
+       86766
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-7f5cb46f",
+    "usage": {
+     "prompt_tokens": 26,
+     "total_tokens": 27,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -4.045271873474121,
+    -5.1965413093566895,
+    -5.403634071350098,
+    -5.552608966827393,
+    -4.658496379852295,
+    -5.431536674499512,
+    -5.479132652282715,
+    -5.335371971130371
+   ]
+  }
+ ],
+ "status": "completed",
+ "ended": "2026-11-04T05:44:27.389456+00:00"
+}

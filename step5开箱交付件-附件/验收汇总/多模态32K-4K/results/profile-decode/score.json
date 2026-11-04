@@ -1,0 +1,837 @@
+{
+  "label": "decode-32768in-4096out",
+  "profile_dir": "prof-decode",
+  "rule": {
+    "scope": "all compute kernels, including vision; communication, data movement/metadata, integer routing/indexing, and sampling excluded",
+    "per_call": "duration < 10 us: score=1; otherwise score=max(valid pipe ratio in that same call)/0.8",
+    "aggregation": "compute-duration weighted mean over every kernel call in the profiled iteration",
+    "threshold": 0.8,
+    "note": "empirical compute-side metric, not MFU or hardware peak utilization"
+  },
+  "rank_count": 8,
+  "rank_score_min": 0.9414387036002075,
+  "rank_score_max": 0.9555219868711351,
+  "rank_score_mean": 0.950102683186136,
+  "rank_score_stdev": 0.004998389311080588,
+  "all_ranks_present": true,
+  "pass_threshold": 0.8,
+  "pass": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "file": "prof-decode/dp0_pp0_tp0_dcp0_ep0_rank0_48430_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "5b20802cde0a1502a707c1195f52ba6fda6de24ce815ab0752e6733a053f6a83",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 114835.09699999994,
+        "compute": 22167.540000000015,
+        "movement_metadata": 8623.196999999993,
+        "sampling": 104.785
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 22167.540000000015,
+      "weighted_score_us": 21037.04257499998,
+      "missing_ratio_us": 0.0,
+      "score": 0.9490021254049825,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8415.935000000001,
+          "weighted_score_us": 8181.376920000003,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 2944.424,
+          "weighted_score_us": 2530.7786337500006,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2858.7099999999996,
+          "weighted_score_us": 3426.2232075,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1844.6769999999988,
+          "weighted_score_us": 1545.9528225000001,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1672.1980000000008,
+          "weighted_score_us": 1588.9544350000003,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1175.2849999999999,
+          "weighted_score_us": 778.2740862499999,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 816.3960000000002,
+          "weighted_score_us": 816.3960000000002,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 805.328,
+          "weighted_score_us": 805.328,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 563.0459999999999,
+          "weighted_score_us": 292.2174699999999,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 321.10300000000007,
+          "weighted_score_us": 321.10300000000007,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 320.108,
+          "weighted_score_us": 320.108,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 287.8859999999999,
+          "weighted_score_us": 287.8859999999999,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 142.444,
+          "weighted_score_us": 142.444,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 1,
+      "file": "prof-decode/dp0_pp0_tp1_dcp0_ep1_rank1_48431_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "b24a05cf0f65f4c55002478cc4fa3722263883f2cc80a7607989bbbaebfdff2c",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 115517.17899999973,
+        "compute": 21131.05699999992,
+        "movement_metadata": 8617.199999999997,
+        "sampling": 104.10600000000001
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 21131.05699999992,
+      "weighted_score_us": 20163.375687499945,
+      "missing_ratio_us": 0.0,
+      "score": 0.9542057308112898,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8440.875999999993,
+          "weighted_score_us": 8125.831368750004,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2858.7639999999997,
+          "weighted_score_us": 3416.4486575000005,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 1936.7890000000007,
+          "weighted_score_us": 1789.0499350000005,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1787.8479999999995,
+          "weighted_score_us": 1493.03268875,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1688.4650000000008,
+          "weighted_score_us": 1610.6372625,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1196.034,
+          "weighted_score_us": 770.2246749999999,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 804.7289999999994,
+          "weighted_score_us": 804.7289999999994,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 802.0459999999996,
+          "weighted_score_us": 802.0459999999996,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 552.3639999999999,
+          "weighted_score_us": 288.2340999999999,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 310.41199999999986,
+          "weighted_score_us": 310.41199999999986,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 309.17700000000013,
+          "weighted_score_us": 309.17700000000013,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 304.59900000000005,
+          "weighted_score_us": 304.59900000000005,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 138.95399999999998,
+          "weighted_score_us": 138.95399999999998,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "file": "prof-decode/dp0_pp0_tp2_dcp0_ep2_rank2_48432_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "6372819647c067c11f0ee454394440eee2314b929ee58bedd6f2327d89ee4763",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 75915.13700000016,
+        "compute": 22520.836000000014,
+        "movement_metadata": 8369.076,
+        "sampling": 103.27399999999999
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 22520.836000000014,
+      "weighted_score_us": 21443.511213750004,
+      "missing_ratio_us": 0.0,
+      "score": 0.9521631973941815,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8397.274999999989,
+          "weighted_score_us": 8139.141693749986,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 3386.7560000000017,
+          "weighted_score_us": 3061.2647250000014,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2863.7119999999995,
+          "weighted_score_us": 3427.2115074999992,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1790.3459999999998,
+          "weighted_score_us": 1500.76969125,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1681.4469999999994,
+          "weighted_score_us": 1594.8229062499995,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1192.3589999999997,
+          "weighted_score_us": 773.20024625,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 815.821,
+          "weighted_score_us": 815.821,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 787.1119999999997,
+          "weighted_score_us": 787.1119999999997,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 557.091,
+          "weighted_score_us": 295.25044375,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 312.3190000000001,
+          "weighted_score_us": 312.3190000000001,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 302.9120000000001,
+          "weighted_score_us": 302.9120000000001,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 293.2099999999999,
+          "weighted_score_us": 293.2099999999999,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 140.476,
+          "weighted_score_us": 140.476,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "file": "prof-decode/dp0_pp0_tp3_dcp0_ep3_rank3_48433_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "745f99041bc34cd9d483821fd08c5a279f566ab9ba7a63a04ad9c7ab14447a26",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 88925.66999999988,
+        "compute": 21345.050000000003,
+        "movement_metadata": 8438.523999999992,
+        "sampling": 105.08000000000001
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 21345.050000000003,
+      "weighted_score_us": 20349.464506250006,
+      "missing_ratio_us": 0.0,
+      "score": 0.9533575468902628,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8440.899999999998,
+          "weighted_score_us": 8206.15525125,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2887.1930000000007,
+          "weighted_score_us": 3455.8497525000002,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 2131.3049999999994,
+          "weighted_score_us": 1886.6895437500007,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1799.6450000000007,
+          "weighted_score_us": 1500.7594837499992,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1685.7680000000005,
+          "weighted_score_us": 1589.1989675000002,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1175.9200000000003,
+          "weighted_score_us": 763.5125125000001,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 803.5640000000002,
+          "weighted_score_us": 803.5640000000002,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 797.8170000000002,
+          "weighted_score_us": 797.8170000000002,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 566.413,
+          "weighted_score_us": 289.392995,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 312.597,
+          "weighted_score_us": 312.597,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 308.10000000000025,
+          "weighted_score_us": 308.10000000000025,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 293.284,
+          "weighted_score_us": 293.284,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 142.54400000000004,
+          "weighted_score_us": 142.54400000000004,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "file": "prof-decode/dp0_pp0_tp4_dcp0_ep4_rank4_48434_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "6e0cfce745ab8a5a013cad0376a2b9b53bea4e01958f124cced1fe57c375bb8d",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 84752.21199999993,
+        "compute": 22524.441000000064,
+        "movement_metadata": 8519.96699999998,
+        "sampling": 104.9
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 22524.441000000064,
+      "weighted_score_us": 21264.24111500002,
+      "missing_ratio_us": 0.0,
+      "score": 0.9440518907883201,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8439.235999999995,
+          "weighted_score_us": 8150.554762499996,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 3298.305999999999,
+          "weighted_score_us": 2846.3956637500014,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2858.2909999999997,
+          "weighted_score_us": 3418.329529999999,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1811.3549999999993,
+          "weighted_score_us": 1508.9824862500009,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1696.1209999999996,
+          "weighted_score_us": 1613.8222199999998,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1194.8630000000003,
+          "weighted_score_us": 776.68368625,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 804.8870000000005,
+          "weighted_score_us": 804.8870000000005,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 793.7750000000001,
+          "weighted_score_us": 793.7750000000001,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 568.425,
+          "weighted_score_us": 291.62876625,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 309.2520000000001,
+          "weighted_score_us": 309.2520000000001,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 303.7649999999999,
+          "weighted_score_us": 303.7649999999999,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 303.3620000000001,
+          "weighted_score_us": 303.3620000000001,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 142.80300000000003,
+          "weighted_score_us": 142.80300000000003,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "file": "prof-decode/dp0_pp0_tp5_dcp0_ep5_rank5_48435_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "8dac67efddc0a57adf80f83358a03c5453ed000ad3f33923758b9e4d6e5157ba",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 72217.66200000005,
+        "compute": 21522.196000000004,
+        "movement_metadata": 8469.892,
+        "sampling": 104.70000000000002
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 21522.196000000004,
+      "weighted_score_us": 20564.93148375,
+      "missing_ratio_us": 0.0,
+      "score": 0.9555219868711351,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8436.074000000006,
+          "weighted_score_us": 8216.185473750013,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2861.9200000000005,
+          "weighted_score_us": 3428.0814587499995,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 2361.9039999999995,
+          "weighted_score_us": 2115.02654625,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1798.244,
+          "weighted_score_us": 1500.7570125,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1677.4509999999998,
+          "weighted_score_us": 1597.12650125,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1188.022,
+          "weighted_score_us": 783.2139424999999,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 794.6610000000003,
+          "weighted_score_us": 794.6610000000003,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 793.3589999999998,
+          "weighted_score_us": 793.3589999999998,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 567.256,
+          "weighted_score_us": 293.2155487499999,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 303.254,
+          "weighted_score_us": 303.254,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 301.25600000000003,
+          "weighted_score_us": 301.25600000000003,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 295.4829999999999,
+          "weighted_score_us": 295.4829999999999,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 143.31199999999998,
+          "weighted_score_us": 143.31199999999998,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "file": "prof-decode/dp0_pp0_tp6_dcp0_ep6_rank6_48436_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "f6a36617a128dcf9ff668fd08f2d01ccfb135f15d9d14eab9ad01a8946e14c1d",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 115135.76100000023,
+        "compute": 22874.185999999903,
+        "movement_metadata": 8416.263000000015,
+        "sampling": 104.797
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 22874.185999999903,
+      "weighted_score_us": 21534.644013749927,
+      "missing_ratio_us": 0.0,
+      "score": 0.9414387036002075,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8453.433999999994,
+          "weighted_score_us": 8173.564978750003,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 3522.7990000000004,
+          "weighted_score_us": 2987.3486225,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2882.6679999999997,
+          "weighted_score_us": 3447.6702575,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1835.8130000000003,
+          "weighted_score_us": 1543.7257125,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1741.763000000001,
+          "weighted_score_us": 1657.2156887499993,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1191.4719999999995,
+          "weighted_score_us": 740.7208062500001,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 814.2949999999997,
+          "weighted_score_us": 814.2949999999997,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 806.2170000000002,
+          "weighted_score_us": 806.2170000000002,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 555.0369999999999,
+          "weighted_score_us": 293.19794750000005,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 312.26900000000006,
+          "weighted_score_us": 312.26900000000006,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 310.1140000000001,
+          "weighted_score_us": 310.1140000000001,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 308.063,
+          "weighted_score_us": 308.063,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 140.242,
+          "weighted_score_us": 140.242,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "file": "prof-decode/dp0_pp0_tp7_dcp0_ep7_rank7_48437_20261022221935867_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "139f900adf85b09cb0bf0a0099bae8231908f3c455b31f7d33e6c0cfdb144533",
+      "rows": 6242,
+      "categories_us": {
+        "communication": 85396.92100000006,
+        "compute": 21616.599999999955,
+        "movement_metadata": 8254.611000000017,
+        "sampling": 103.98800000000003
+      },
+      "category_calls": {
+        "communication": 1120,
+        "compute": 2420,
+        "movement_metadata": 2682,
+        "sampling": 20
+      },
+      "compute_us": 21616.599999999955,
+      "weighted_score_us": 20559.122061249967,
+      "missing_ratio_us": 0.0,
+      "score": 0.951080283728709,
+      "types": {
+        "MatMulV3": {
+          "calls": 920,
+          "duration_us": 8446.924999999996,
+          "weighted_score_us": 8170.27127875,
+          "missing_us": 0.0
+        },
+        "_csa_decode_stage_flush_kernel": {
+          "calls": 40,
+          "duration_us": 2850.5710000000004,
+          "weighted_score_us": 3408.4917024999995,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 200,
+          "duration_us": 2438.1319999999982,
+          "weighted_score_us": 2189.62911875,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 160,
+          "duration_us": 1794.3300000000004,
+          "weighted_score_us": 1502.3464862499995,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 120,
+          "duration_us": 1690.424,
+          "weighted_score_us": 1605.6668312500003,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 40,
+          "duration_us": 1181.8410000000001,
+          "weighted_score_us": 733.0060299999999,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 260,
+          "duration_us": 803.0980000000001,
+          "weighted_score_us": 803.0980000000001,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 300,
+          "duration_us": 793.9590000000003,
+          "weighted_score_us": 793.9590000000003,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 40,
+          "duration_us": 556.021,
+          "weighted_score_us": 291.35461374999994,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 100,
+          "duration_us": 314.368,
+          "weighted_score_us": 314.368,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 40,
+          "duration_us": 306.432,
+          "weighted_score_us": 306.432,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 160,
+          "duration_us": 295.1790000000001,
+          "weighted_score_us": 295.1790000000001,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 40,
+          "duration_us": 145.32000000000002,
+          "weighted_score_us": 145.32000000000002,
+          "missing_us": 0.0
+        }
+      }
+    }
+  ]
+}

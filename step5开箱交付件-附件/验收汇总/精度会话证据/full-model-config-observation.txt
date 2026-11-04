@@ -1,0 +1,211 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 5217
+Timestamp: 2026-10-27T07:56:21.122Z
+Record SHA256: 5cb3532ba85d2fc854fc2dc4479c532be4c620232657e1cff17342db77f8be01
+Evidence type: item_completed
+Note: extracted historical record; not a new server run. Original terminal wrapping/truncation retained.
+
+
+Authorized users only. All activities may be monitored and reported.
+
+Authorized users only. All activities may be monitored and reported.
+/data/yyy/start_gpqa_vllm_225.sh
+/data/yyy/vllm-ascend-main/examples/run_dp_server.sh
+/data/yyy/vllm-ascend-main/format.sh
+/data/yyy/vllm-ascend-main/csrc/build_batch_invariant_ops.sh
+/data/yyy/vllm-ascend-main/csrc/build.sh
+/data/yyy/vllm-ascend-main/csrc/build_aclnn.sh
+/data/yyy/vllm-ascend-main/tools/rtd_build.sh
+/data/yyy/vllm-ascend-main/tools/actionlint.sh
+/data/yyy/vllm-ascend-main/tools/mypy.sh
+/data/yyy/vllm-ascend-main/tools/check_logger.sh
+/data/yyy/vllm-ascend-main/tools/check_repo.sh
+/data/yyy/vllm-ascend-main/tools/collect_user_first_contribution.sh
+/data/yyy/vllm-ascend-main/tools/png-lint.sh
+/data/yyy/vllm-ascend-main/tools/mooncake_installer.sh
+/data/yyy/vllm-ascend-main/tools/shellcheck.sh
+/data/yyy/ops-transformer_inedex_topk/build.sh
+/data/yyy/ops-transformer_inedex_topk/scripts/format_cpp.sh
+/data/yyy/ops-transformer_inedex_topk/scripts/oat_check.sh
+/data/yyy/ops-transformer_inedex_topk/scripts/check_duplicate_headers.sh
+/data/yyy/ops-transformer_inedex_topk/install_deps.sh
+/data/yyy/gpqa_eval_env.sh
+/data/yyy/vllm-ascend-step4/benchmarks/run_structured_output_benchmark.sh
+/data/yyy/vllm-ascend-step4/benchmarks/kv_cache_watermark.sh
+/data/yyy/vllm-ascend-step4/build_vllm_ppc64le.sh
+/data/yyy/vllm-ascend-step4/docs/pre_run_check.sh
+/data/yyy/vllm-ascend-step4/tools/install_protoc.sh
+/data/yyy/vllm-ascend-step4/tools/check_repo.sh
+/data/yyy/vllm-ascend-step4/tools/install_torchcodec_rocm.sh
+/data/yyy/vllm-ascend-step4/tools/setup_deepgemm_pythons.sh
+/data/yyy/vllm-ascend-step4/tools/flashinfer-build.sh
+/data/yyy/vllm-ascend-step4/tools/install_deepgemm.sh
+/data/yyy/vllm-ascend-step4/tools/install_gdrcopy.sh
+/data/yyy/vllm-ascend-step4/build_rust.sh
+/data/yyy/mp_diagnostic_20261020_175712/capture_failure.sh
+/data/yyy/mp_diagnostic_20261020_175712/launch.sh
+/data/yyy/mp_diagnostic_20261020_175712/server/_serve.sh
+/data/yyy/mp_diagnostic_20261020_175712/start_short_eval.sh
+/data/yyy/mp_diagnostic_20261020_175712/env_wrapper.sh
+/data/yyy/mp_diagnostic_20261020_175712/dump_hccl.sh
+/data/yyy/mp_diagnostic_20261020_175712/capture_stall.sh
+/data/yyy/mp_retest_20261020_1410/server/_serve.sh
+/data/yyy/mp_retest_20261020_1410/start_short_eval.sh
+/data/yyy/mp_retest_20261020_1410/env_wrapper.sh
+/data/yyy/step5_bf16_env_20261027/package-inspection/uninstall.sh
+/data/yyy/step5_bf16_env_20261027/package-inspection/upgrade.sh
+/data/yyy/step5_bf16_env_20261027/package-inspection/install.sh
+/data/yyy/step5_bf16_env_20261027/build.sh
+/data/yyy/step5_bf16_env_20261027/ops-transformer/build.sh
+/data/yyy/step5_bf16_env_20261027/ops-transformer/install_deps.sh
+/data/yyy/step5_bf16_env_20261027/install_environment.sh
+/data/yyy/step5_8layer_health_20261024/start.sh
+/data/yyy/step5_8layer_health_20261024/serve.sh
+/data/yyy/step5_8layer_health_20261024/model/config.json
+/data/yyy/start_gpqa_resume_225.sh
+/data/yyy/short_retest_20261020_1205/start_ray_head.sh
+/data/yyy/short_retest_20261020_1205/start_server.sh
+/data/yyy/short_retest_20261020_1205/start_short_eval.sh
+/data/yyy/short_retest_20261020_1205/before/start_gpqa_vllm_225.sh
+/data/yyy/short_retest_20261020_1205/before/gpqa_eval_env.sh
+/data/yyy/short_retest_20261020_1205/before/start_gpqa_resume_225.sh
+/data/yyy/short_retest_20261020_1205/watch_short_eval.sh
+/data/yyy/short_retest_20261020_1205/finish_watcher.sh
+/data/yyy/short_retest_20261020_1205/config_comparison.json
+/data/yyy/short_retest_20261020_1205/diagnostics_env.sh
+/data/yyy/run_maxlen153300_tp8dp2_20261023/run_worker.sh
+/data/yyy/run_maxlen153300_tp8dp2_20261023/run_head.sh
+/data/yyy/evalscope-bf16/start_preflight.sh
+/data/yyy/evalscope-bf16/runs/20261025_mmmu_orchestrator.sh
+/data/yyy/evalscope-bf16/runs/20261025_remaining_orchestrator.sh
+/data/yyy/evalscope-bf16/runs/20261024_192501/mmmu_pro/audit.json:30:    "head_153300_seq32_mmmu_20261024_retry3.log": {
+/data/yyy/evalscope-bf16/runs/20261024_192501/mmmu_pro/audit.json:36:    "head_153300_seq32_mmmu_20261024_retry3.log": {
+/data/yyy/evalscope-bf16/runs/20261024_192501/mmmu_pro/server_log_start.json:2:  "head_153300_seq32_mmmu_20261024_retry3.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/gpqa_diamond/audit.json:2977:    "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/gpqa_diamond/audit.json:2983:    "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/gpqa_diamond/server_log_start.json:2:  "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/smoke_mmmu_pro/audit.json:20:    "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/smoke_mmmu_pro/audit.json:26:    "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/smoke_mmmu_pro/server_log_start.json:2:  "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/smoke_gpqa_diamond/audit.json:20:    "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/smoke_gpqa_diamond/audit.json:26:    "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104729/smoke_gpqa_diamond/server_log_start.json:2:  "head_153300_kv4g_full_decode_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_182628/mmmu_pro/audit.json:30:    "head_153300_seq32_mmmu_20261024_retry2.log": {
+/data/yyy/evalscope-bf16/runs/20261024_182628/mmmu_pro/audit.json:36:    "head_153300_seq32_mmmu_20261024_retry2.log": {
+/data/yyy/evalscope-bf16/runs/20261024_182628/mmmu_pro/server_log_start.json:2:  "head_153300_seq32_mmmu_20261024_retry2.log": {
+/data/yyy/evalscope-bf16/runs/20261024_234403/mmmu_pro/audit.json:20:    "head_153300_seq32_mmmu_20261024_retry4.log": {
+/data/yyy/evalscope-bf16/runs/20261024_234403/mmmu_pro/audit.json:26:    "head_153300_seq32_mmmu_20261024_retry4.log": {
+/data/yyy/evalscope-bf16/runs/20261024_234403/mmmu_pro/server_log_start.json:2:  "head_153300_seq32_mmmu_20261024_retry4.log": {
+/data/yyy/evalscope-bf16/runs/20261024_163057/mmmu_pro/audit.json:27175:    "head_153300_seq128_nokv_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_163057/mmmu_pro/audit.json:27181:    "head_153300_seq128_nokv_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_163057/mmmu_pro/server_log_start.json:2:  "head_153300_seq128_nokv_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/gpqa_diamond/audit.json:2091:    "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/gpqa_diamond/audit.json:2097:    "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/gpqa_diamond/server_log_start.json:2:  "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/smoke_mmmu_pro/audit.json:20:    "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/smoke_mmmu_pro/audit.json:26:    "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/smoke_mmmu_pro/server_log_start.json:2:  "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/smoke_gpqa_diamond/audit.json:20:    "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/smoke_gpqa_diamond/audit.json:26:    "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_111534/smoke_gpqa_diamond/server_log_start.json:2:  "head_153300_kv4g_full_decode_hccl_20261024.log": {
+/data/yyy/evalscope-bf16/runs/20261024_104535/smoke_gpqa_diamond/server_log_start.json:2:  "head_153300_kv4g_full_decode_20261024.log": {
+-rwxr-xr-x. 1 root root 330 Oct 19 12:57 /home/yyy/evalscope-bf16/.venv/bin/evalscope
+README.md
+train.jsonl
+{
+  "architectures": [
+    "Step5ForConditionalGeneration"
+  ],
+  "model_type": "step5_vl",
+  "im_end_token": "<im_end>",
+  "im_patch_token": "<im_patch>",
+  "im_start_token": "<im_start>",
+  "image_token_len": 169,
+  "patch_token_len": 81,
+  "image_token_id": 128001,
+  "understand_projector_stride": 2,
+  "use_im_start_end": "true",
+  "vision_select_layer": -1,
+  "projector_bias": false,
+  "vision_config": {
+    "model_type": "perception_encoder",
+    "image_size": 728,
+    "patch_size": 14,
+    "width": 1536,
+    "layers": 47,
+    "heads": 16,
+    "pool_type": "none",
+    "output_dim": null,
+    "use_cls_token": false,
+    "ls_init_value": 0.1,
+    "use_ln_post": false,
+    "hidden_act": "quick_gelu"
+  },
+  "text_config": {
+    "architectures": [
+      "Step5ForCausalLM"
+    ],
+    "model_type": "step5",
+    "att_impl_type": "GQA",
+    "torch_dtype": "bfloat16",
+    "norm_dtype": "float32",
+    "bos_token_id": 0,
+    "eos_token_id": [
+      1,
+      2
+    ],
+    "hidden_size": 4096,
+    "intermediate_size": 13824,
+    "num_hidden_layers": 92,
+    "vocab_size": 128896,
+    "rms_norm_eps": 1e-05,
+    "fp32_residual_connection": true,
+    "num_attention_heads": 64,
+    "num_attention_groups": 4,
+    "num_sliding_attention_heads": 64,
+    "head_dim": 192,
+    "head_dim_full_attention": 192,
+    "head_dim_sliding_attention": 192,
+    "num_attention_groups_full_attention": 4,
+    "num_attention_groups_sliding_attention": 4,
+    "rope_theta": [
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,
+      10000.0,
+      10000.0,
+      10000.0,
+      10000000.0,

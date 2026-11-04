@@ -1,0 +1,74 @@
+{
+    "dataset":  "GPQA Diamond",
+    "correct":  184,
+    "total":  198,
+    "accuracy_exact":  0.9292929292929293,
+    "formal_exit_code":  0,
+    "duration_seconds":  7787.0,
+    "started":  "2026-10-27T16:21:44+08:00",
+    "finished":  "2026-10-27T18:31:31+08:00",
+    "successful_responses":  198,
+    "api_failures":  0,
+    "natural_stop":  197,
+    "length_limited":  1,
+    "length_limited_index":  127,
+    "length_limited_output_tokens":  149204,
+    "length_limited_scored_correct":  false,
+    "all_samples_retained":  true,
+    "head_kv_peak_percent":  61.7,
+    "smoke":  {
+                  "samples":  4,
+                  "correct":  4,
+                  "failures":  0
+              },
+    "long_context_probe":  {
+                               "prompt_tokens":  7707,
+                               "output_tokens":  38,
+                               "checksum_correct":  true
+                           },
+    "config":  {
+                   "tp":  8,
+                   "dp":  2,
+                   "ep":  true,
+                   "max_num_seqs":  32,
+                   "eval_batch_size":  32,
+                   "repeats":  1,
+                   "max_model_len":  153300,
+                   "max_num_batched_tokens":  8192,
+                   "max_tokens":  149204,
+                   "kv_cache_memory_bytes":  null,
+                   "cudagraph_mode":  "FULL_DECODE_ONLY"
+               },
+    "source_fix":  {
+                       "file":  "/data/yyy/vllm-ascend-main/vllm_ascend/models/step5/summary_cache.py",
+                       "sha256":  "cb899793a06cb117c0ba023cd9113e809f9f6e8192a51a750c38f9875b825428",
+                       "changes":  [
+                                       "BF16 cache payload and allocation use two-byte elements",
+                                       "Ascend cache constructor directly accepts BF16 mean cache"
+                                   ],
+                       "regression_cases_passed":  6
+                   },
+    "validation_scope":  "CSA BF16 -\u003e Indexer BF16 -\u003e GenericBlockSparseAttention integration; SparseFlashMLA installed but not exercised by this model path; no independent operator numerical comparison or speculative verify test",
+    "long_output_note":  "Index 127 repeats a DNA sequence and hits the output cap. This run alone does not establish whether the cause is sampling/model behavior or a BF16 regression.",
+    "paths":  {
+                  "task_root":  "/data/yyy/step5_bf16_gpqa_20261027_1600",
+                  "eval_log":  "/data/yyy/step5_bf16_gpqa_20261027_1600/formal/evalscope.log",
+                  "report":  "/data/yyy/step5_bf16_gpqa_20261027_1600/formal/outputs/20261027_162150/reports/step/gpqa_diamond.json",
+                  "predictions":  "/data/yyy/step5_bf16_gpqa_20261027_1600/formal/outputs/20261027_162150/predictions/step/gpqa_diamond_default.jsonl",
+                  "head_log":  "/data/yyy/step5_bf16_gpqa_20261027_1600/head.log",
+                  "worker_log_226":  "/data/yyy/step5_bf16_gpqa_20261027_1600/worker.log",
+                  "audit":  "/data/yyy/step5_bf16_gpqa_20261027_1600/formal/audit.json"
+              },
+    "final_state":  {
+                        "evaluation":  "completed",
+                        "evaluation_exit_code":  0,
+                        "head_service":  "stopped by Codex after evaluation, exit 0",
+                        "worker_service":  "stopped by Codex after evaluation, exit 0",
+                        "dedicated_containers":  "running, environment preserved",
+                        "test_npu_processes":  "released",
+                        "other_user_pid_3812973":  "untouched",
+                        "all_npu_health":  "OK at cleanup",
+                        "strict_audit_exit_code":  1,
+                        "strict_audit_reason":  "one length-limited response; formal evaluation succeeded"
+                    }
+}

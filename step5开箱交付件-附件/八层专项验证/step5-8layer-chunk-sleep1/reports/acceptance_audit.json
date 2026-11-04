@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "sleep_exact_pairs": 36,
+  "chunk_dual_api_requests": 24,
+  "workers_with_real_chunk_evidence": 8,
+  "unique_multistep_prefill_requests": 8,
+  "sleep_max_memory_growth_ratio": 0.004536406129841268,
+  "chunk_max_abs_logprob_diff_vs_nonchunk": 0.07197952270507812,
+  "exit_codes": {
+    "sleep_level1": 0,
+    "chunked_prefill": 0
+  },
+  "remaining_npu_processes": 0
+}

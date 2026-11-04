@@ -1,0 +1,72 @@
+{
+  "recorded_at": "2026-11-02T23:42:13.557716+08:00",
+  "host": "225 / 177.2.25.1",
+  "scope": "Resumed HCCL, independent checkpoint reload, sleep1/sleep2 five cycles each, IPC two consecutive updates",
+  "checkpoint_reused": true,
+  "new_tensor_reduction_performed": false,
+  "reuse_validation": {
+    "status": "passed",
+    "started_at": "2026-11-02T15:23:26.858377+00:00",
+    "operation": "verify and reuse existing copied tensors; no reduction",
+    "staging": "/data/yyy/hccl-without-pr19248-20261030/home/model_openbox/reduced-recheck-225-10.20/checkpoints/.head-tail8.building-p4ny7bfo",
+    "destination": "/data/yyy/hccl-without-pr19248-20261030/home/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+    "reference_sha256": "f8b47b5c25482621075f8568dcf00224c1a29aa34a6b230c936a32e21cee3652",
+    "verified_tensors": 802,
+    "completed_at": "2026-11-02T15:24:12.927322+00:00",
+    "tensor_bytes": 62537360896,
+    "shards": 13,
+    "same_tensor_values_as_reference": true,
+    "identical_shard_packing": false
+  },
+  "results": {
+    "hccl": {
+      "status": "passed",
+      "cycles": 1,
+      "exact_pairs": 8
+    },
+    "checkpoint_reload": {
+      "status": "passed",
+      "cycles": 1,
+      "exact_pairs": 8
+    },
+    "sleep_level2": {
+      "status": "passed",
+      "cycles": 5,
+      "exact_pairs": 40
+    },
+    "sleep_level1": {
+      "status": "passed",
+      "cycles": 5,
+      "exact_pairs": 40
+    },
+    "ipc": {
+      "status": "passed",
+      "cycles": 2,
+      "exact_pairs": 16,
+      "cross_round_exact_pairs": 8,
+      "cleanup_warning_count": 16
+    }
+  },
+  "runtime": {
+    "vllm": "c21cc405e9cbf0fcd6b958ec3c458360dfdcf9fe",
+    "vllm_ascend_base": "80d265f13e53b2c596da31388a1eedde2bb7f94d",
+    "vllm_ascend_full_diff_sha256": "96ec5ccd8b3bacd4cfca80e94af28d172186112dac8ba5338180ec11b386d7f4",
+    "mindspeed_agent": "d32b647e556a5670ffc2522b815f1a66e22df3d9"
+  },
+  "execution_interrupted_by_kill": false,
+  "cleanup": {
+    "method": "Explicit normal shutdown via stop_service.py; only recorded task-owned process trees targeted",
+    "stop_script_exit": 0,
+    "remaining_owned_live_processes": 0,
+    "final_npu_processes": 0,
+    "port_8940_listening": false,
+    "hccl_server_exit": "0",
+    "ipc_server_exit": "1",
+    "ipc_shutdown_warning": "DP coordinator termination traceback and 2 shared_memory objects warning appeared during explicit task shutdown; not a failed inference/update cycle"
+  },
+  "remaining": [
+    "IPC producer lifetime warnings and shutdown shared-memory warnings",
+    "Complete 8-worker allocator/sample coverage for IPC (only DP0 4 workers observed)",
+    "Routing, SP, PP, chunk, async and performance tasks not run during this resumption"
+  ]
+}

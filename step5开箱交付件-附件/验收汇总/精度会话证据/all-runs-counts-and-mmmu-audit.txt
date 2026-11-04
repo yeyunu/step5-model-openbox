@@ -1,0 +1,291 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 535
+Timestamp: 2026-10-25T06:16:03.758Z
+Record SHA256: 428499247757a7fdc47e7caa9f6df688bfa7439fda6db5156a3bc59feee175e6
+Evidence type: function_call_output
+Note: extracted historical record; not a new server run. Original terminal wrapping/truncation retained.
+
+Chunk ID: 15f68b
+Wall time: 10.0096 seconds
+Process running with session ID 54670
+Original token count: 4562
+Output:
+python3 - <<'PY'
+> from pathlib import Path
+> import json, yaml
+> root=Path('/home/yyy/evalscope-bf16/runs')
+> for cfg in sorted(root.glob('**/configs/task_config.yaml')):
+>     od=cfg.parent.parent
+>     try: c=yaml.safe_load(open(cfg)) or {}
+>     except: continue
+>     ds=','.join(c.get('datasets',[]) or [])
+>     if not any(x in ds for x in ('gpqa','mmmu')): continue
+>     rel=od.relative_to(root)
+>     preds=sorted(od.glob('predictions/*/*.jsonl'))
+>     revs=sorted(od.glob('reviews/*/*.jsonl*'))
+>     reports=sorted(od.glob('reports/**/*.json'))
+>     def lines(p):
+>         try:
+>             with open(p,'rb') as f:return sum(1 for _ in f)
+>         except:return -1
+>     scores=[]
+>     for rp in reports:
+>         try:
+>             d=json.load(open(rp))
+<dict): scores.append((rp.relative_to(od).as_posix(),d.get(<,d.get('score'),d.get('num'),d.get('metric_name')))       
+>         except Exception as e:scores.append((rp.name,'ERR',str(e),None))      
+<(c.get('repeats')),'batch='+str(c.get('eval_batch_size')))
+>     print(' PRED',[(p.parent.name,p.name,lines(p)) for p in preds])
+>     print(' REV ',[(p.parent.name,p.name,lines(p)) for p in revs])
+>     print(' REPORT',scores)
+> # audits tied to gpqa/mmmu benchmark dirs
+> for au in sorted(root.glob('**/audit.json')):
+>     if 'gpqa' not in str(au) and 'mmmu' not in str(au): continue
+>     try:
+>         d=json.load(open(au));
+>         if d.get('expected_responses',0) or d.get('saved_responses',0):       
+<on_ids')),'http='+str(d.get('http_status_counts')))
+>     except Exception as e: print('AUDIT_ERR',au,e)
+> PY
+OUTPUT 20261019_125836/gpqa_diamond/outputs/20261019_125927 dataset=gpqa_diamond
+[23;80Hd repeats=4 batch=128
+ PRED [('Step-5-Preview-BF16', 'gpqa_diamond_default.jsonl', 404)]
+ REV  [('Step-5-Preview-BF16', 'gpqa_diamond_default.jsonl.rerun-8cdb419c57ac4e9
+[23;80H9299860a7d6ec3b3d3', 404)]
+ REPORT []
+OUTPUT 20261019_125836/smoke_gpqa_diamond/outputs/20261019_125842 dataset=gpqa_d
+[23;80Hdiamond repeats=1 batch=1
+ PRED [('Step-5-Preview-BF16', 'gpqa_diamond_default.jsonl', 1)]
+ REV  [('Step-5-Preview-BF16', 'gpqa_diamond_default.jsonl', 1)]
+ REPORT [('reports/Step-5-Preview-BF16/gpqa_diamond.json', None, 1, None)]      
+OUTPUT 20261019_125836/smoke_mmmu_pro/outputs/20261019_125904 dataset=mmmu_pro r
+[23;80Hrepeats=1 batch=1
+ PRED [('Step-5-Preview-BF16', 'mmmu_pro_History.jsonl', 1)]
+ REV  [('Step-5-Preview-BF16', 'mmmu_pro_History.jsonl', 1)]
+ REPORT [('reports/Step-5-Preview-BF16/mmmu_pro.json', None, 1, None)]
+OUTPUT 20261024_104729/gpqa_diamond/outputs/20261024_104759 dataset=gpqa_diamond
+[23;80Hd repeats=4 batch=128
+ PRED [('step', 'gpqa_diamond_default.jsonl', 70)]
+ REV  []
+ REPORT []
+OUTPUT 20261024_104729/smoke_gpqa_diamond/outputs/20261024_104734 dataset=gpqa_d
+[23;80Hdiamond repeats=1 batch=1
+ PRED [('step', 'gpqa_diamond_default.jsonl', 1)]
+ REV  [('step', 'gpqa_diamond_default.jsonl', 1)]
+ REPORT [('reports/step/gpqa_diamond.json', None, 1, None)]
+OUTPUT 20261024_104729/smoke_mmmu_pro/outputs/20261024_104745 dataset=mmmu_pro r
+[23;80Hrepeats=1 batch=1
+ PRED [('step', 'mmmu_pro_History.jsonl', 1)]
+ REV  [('step', 'mmmu_pro_History.jsonl', 1)]
+ REPORT [('reports/step/mmmu_pro.json', None, 1, None)]
+OUTPUT 20261024_111534/gpqa_diamond/outputs/20261024_111559 dataset=gpqa_diamond
+[23;80Hd repeats=4 batch=128
+ PRED [('step', 'gpqa_diamond_default.jsonl', 277)]
+ REV  []
+ REPORT []
+OUTPUT 20261024_111534/smoke_gpqa_diamond/outputs/20261024_111539 dataset=gpqa_d
+[23;80Hdiamond repeats=1 batch=1
+ PRED [('step', 'gpqa_diamond_default.jsonl', 1)]
+ REV  [('step', 'gpqa_diamond_default.jsonl', 1)]
+ REPORT [('reports/step/gpqa_diamond.json', None, 1, None)]
+OUTPUT 20261024_111534/smoke_mmmu_pro/outputs/20261024_111548 dataset=mmmu_pro r
+[23;80Hrepeats=1 batch=1
+ PRED [('step', 'mmmu_pro_History.jsonl', 1)]
+ REV  [('step', 'mmmu_pro_History.jsonl', 1)]
+ REPORT [('reports/step/mmmu_pro.json', None, 1, None)]
+OUTPUT 20261024_163057/mmmu_pro/outputs/20261024_163101 dataset=mmmu_pro repeats
+[23;80Hs=1 batch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 55), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 58), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 45), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 52), ('step', 'mmmu_pro_Art_Theory.jsonl', 53), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 49), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 39), ('step', 'mmmu_pro_Chemistry.jsonl', 47), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 2)]
+ REV  []
+ REPORT []
+OUTPUT 20261024_182628/mmmu_pro/outputs/20261024_182633 dataset=mmmu_pro repeats
+[23;80Hs=1 batch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 55), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 31), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 44), ('step', 'mmmu_pro_Art_Theory.jsonl', 44), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 2)]
+ REV  []
+ REPORT []
+OUTPUT 20261024_192501/mmmu_pro/outputs/20261024_192506 dataset=mmmu_pro repeats
+[23;80Hs=1 batch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 56), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 36), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 47), ('step', 'mmmu_pro_Art_Theory.jsonl', 47), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 18)]
+ REV  []
+ REPORT []
+OUTPUT 20261024_234403/mmmu_pro/outputs/20261024_234407 dataset=mmmu_pro repeats
+[23;80Hs=1 batch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 58), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 60), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 53), ('step', 'mmmu_pro_Art_Theory.jsonl', 55), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 52), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 59), ('step', 'mmmu_pro_Chemistry.jsonl', 60), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 59), ('step', 'mmmu_pro_Computer_Science.jsonl', 60), ('step', 'm
+[23;80Hmmmu_pro_Design.jsonl', 60), ('step', 'mmmu_pro_Diagnostics_and_Laboratory_Medici
+[23;80Hine.jsonl', 60), ('step', 'mmmu_pro_Economics.jsonl', 59), ('step', 'mmmu_pro_Ele
+[23;80Hectronics.jsonl', 60), ('step', 'mmmu_pro_Energy_and_Power.jsonl', 58), ('step', 
+[23;80H 'mmmu_pro_Finance.jsonl', 60), ('step', 'mmmu_pro_Geography.jsonl', 52), ('step'
+[23;80H', 'mmmu_pro_History.jsonl', 56), ('step', 'mmmu_pro_Literature.jsonl', 52), ('st
+[23;80Htep', 'mmmu_pro_Manage.jsonl', 50), ('step', 'mmmu_pro_Marketing.jsonl', 59), ('s
+[23;80Hstep', 'mmmu_pro_Materials.jsonl', 60), ('step', 'mmmu_pro_Math.jsonl', 60), ('st
+[23;80Htep', 'mmmu_pro_Mechanical_Engineering.jsonl', 59), ('step', 'mmmu_pro_Music.json
+[23;80Hnl', 60), ('step', 'mmmu_pro_Pharmacy.jsonl', 57), ('step', 'mmmu_pro_Physics.jso
+[23;80Honl', 60), ('step', 'mmmu_pro_Psychology.jsonl', 60), ('step', 'mmmu_pro_Public_H
+[23;80HHealth.jsonl', 58), ('step', 'mmmu_pro_Sociology.jsonl', 54)]
+ REV  [('step', 'mmmu_pro_Accounting.jsonl', 58), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 60), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 53), ('step', 'mmmu_pro_Art_Theory.jsonl', 55), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 52), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 59), ('step', 'mmmu_pro_Chemistry.jsonl', 60), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 59), ('step', 'mmmu_pro_Computer_Science.jsonl', 60), ('step', 'm
+[23;80Hmmmu_pro_Design.jsonl', 60), ('step', 'mmmu_pro_Diagnostics_and_Laboratory_Medici
+[23;80Hine.jsonl', 60), ('step', 'mmmu_pro_Economics.jsonl', 59), ('step', 'mmmu_pro_Ele
+[23;80Hectronics.jsonl', 60), ('step', 'mmmu_pro_Energy_and_Power.jsonl', 58), ('step', 
+[23;80H 'mmmu_pro_Finance.jsonl', 60), ('step', 'mmmu_pro_Geography.jsonl', 52), ('step'
+[23;80H', 'mmmu_pro_History.jsonl', 56), ('step', 'mmmu_pro_Literature.jsonl', 52), ('st
+[23;80Htep', 'mmmu_pro_Manage.jsonl', 50), ('step', 'mmmu_pro_Marketing.jsonl', 59), ('s
+[23;80Hstep', 'mmmu_pro_Materials.jsonl', 60), ('step', 'mmmu_pro_Math.jsonl', 60), ('st
+[23;80Htep', 'mmmu_pro_Mechanical_Engineering.jsonl', 59), ('step', 'mmmu_pro_Music.json
+[23;80Hnl', 60), ('step', 'mmmu_pro_Pharmacy.jsonl', 57), ('step', 'mmmu_pro_Physics.jso
+[23;80Honl', 60), ('step', 'mmmu_pro_Psychology.jsonl', 60), ('step', 'mmmu_pro_Public_H
+[23;80HHealth.jsonl', 58), ('step', 'mmmu_pro_Sociology.jsonl', 54)]
+ REPORT [('reports/step/mmmu_pro.json', None, 1730, None)]
+OUTPUT 20261025_024647/gpqa_diamond/outputs/20261025_024652 dataset=gpqa_diamond
+[23;80Hd repeats=1 batch=32
+ PRED [('step', 'gpqa_diamond_default.jsonl', 198)]
+ REV  [('step', 'gpqa_diamond_default.jsonl', 198)]
+ REPORT [('reports/step/gpqa_diamond.json', None, 198, None)]
+OUTPUT 20261025_gpqa_round2/outputs/20261025_033621 dataset=gpqa_diamond repeats
+[23;80Hs=1 batch=32
+ PRED [('step', 'gpqa_diamond_default.jsonl', 198)]
+ REV  [('step', 'gpqa_diamond_default.jsonl', 198)]
+ REPORT [('reports/step/gpqa_diamond.json', None, 198, None)]
+OUTPUT 20261025_gpqa_round3/outputs/20261025_043008 dataset=gpqa_diamond repeats
+[23;80Hs=1 batch=32
+ PRED [('step', 'gpqa_diamond_default.jsonl', 198)]
+ REV  [('step', 'gpqa_diamond_default.jsonl', 198)]
+ REPORT [('reports/step/gpqa_diamond.json', None, 198, None)]
+OUTPUT 20261025_mmmu_fixed_round1/outputs/20261025_091132 dataset=mmmu_pro repea
+[23;80Hats=1 batch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 58), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 56), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 53), ('step', 'mmmu_pro_Art_Theory.jsonl', 55), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 52), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 57), ('step', 'mmmu_pro_Chemistry.jsonl', 56), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 52), ('step', 'mmmu_pro_Computer_Science.jsonl', 42), ('step', 'm
+[23;80Hmmmu_pro_Design.jsonl', 29), ('step', 'mmmu_pro_Diagnostics_and_Laboratory_Medici
+[23;80Hine.jsonl', 5)]
+ REV  [('step', 'mmmu_pro_Accounting.jsonl.rerun-6056f1e2653d48a1bba1c10180f59e1
+[23;80H14', 58), ('step', 'mmmu_pro_Agriculture.jsonl.rerun-28ed8bffd3ce47ec93353edd2672
+[23;80H20183', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl.rerun-f8eea822
+[23;80H2635a41eda7f2c629c07ba9b5', 56), ('step', 'mmmu_pro_Art.jsonl.rerun-b538e99dcb114
+[23;80H45aba7829f307d808f91', 53), ('step', 'mmmu_pro_Art_Theory.jsonl.rerun-a3160a85a4e
+[23;80He840ba8821ee6f346ccbf3', 55), ('step', 'mmmu_pro_Basic_Medical_Science.jsonl.reru
+[23;80Hun-90135742f00e499f8acf2f5ecb80b305', 52), ('step', 'mmmu_pro_Biology.jsonl.rerun
+[23;80Hn-752a316643d04cef9c5d2f05aa79d63c', 57), ('step', 'mmmu_pro_Chemistry.jsonl.reru
+[23;80Hun-53ac31fb1aa9454b9e1fcbfdf5ddb7c8', 56), ('step', 'mmmu_pro_Clinical_Medicine.j
+[23;80Hjsonl.rerun-9d7843a1e6ac41fe80349b724f213223', 52), ('step', 'mmmu_pro_Computer_S
+[23;80HScience.jsonl.rerun-12e2348d4d964a5994544573d76cfc46', 42), ('step', 'mmmu_pro_De
+[23;80Hesign.jsonl.rerun-47e77fb9a2b0421b98ca504d77dbad19', 29), ('step', 'mmmu_pro_Diag
+[23;80Hgnostics_and_Laboratory_Medicine.jsonl.rerun-5f061094143647d69ff0ff9023449421', 5
+[23;80H5)]
+ REPORT []
+OUTPUT 20261025_mmmu_resume2_round1/outputs/20261025_101110 dataset=mmmu_pro rep
+[23;80Hpeats=1 batch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 56), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 59), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 32), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 46), ('step', 'mmmu_pro_Art_Theory.jsonl', 47), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 17)]
+ REV  [('step', 'mmmu_pro_Accounting.jsonl.rerun-16cbcbad23354ae3b8229540e9fe7b6
+[23;80H67', 56), ('step', 'mmmu_pro_Agriculture.jsonl.rerun-a3a85ecaa28a465292d846ca8ae0
+[23;80H0bc3e', 59), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl.rerun-3c5d272f
+[23;80Hf97844c148c0a4b7fa506fa3b', 32), ('step', 'mmmu_pro_Art.jsonl.rerun-1e66fdc71ae54
+[23;80H4e318ac7bd5f89e4d0f5', 46), ('step', 'mmmu_pro_Art_Theory.jsonl.rerun-0f2ebf0e7c7
+[23;80H72409cacdc5833a8c5c4ea', 47), ('step', 'mmmu_pro_Basic_Medical_Science.jsonl.reru
+[23;80Hun-ddee04f89d134119ad8084a921c08a91', 17)]
+ REPORT []
+OUTPUT 20261025_mmmu_round1/outputs/20261025_052014 dataset=mmmu_pro repeats=1 b
+[23;80Hbatch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 58), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 60), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 53), ('step', 'mmmu_pro_Art_Theory.jsonl', 55), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 52), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 59), ('step', 'mmmu_pro_Chemistry.jsonl', 60), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 59), ('step', 'mmmu_pro_Computer_Science.jsonl', 60), ('step', 'm
+[23;80Hmmmu_pro_Design.jsonl', 60), ('step', 'mmmu_pro_Diagnostics_and_Laboratory_Medici
+[23;80Hine.jsonl', 60), ('step', 'mmmu_pro_Economics.jsonl', 59), ('step', 'mmmu_pro_Ele
+[23;80Hectronics.jsonl', 60), ('step', 'mmmu_pro_Energy_and_Power.jsonl', 58), ('step', 
+[23;80H 'mmmu_pro_Finance.jsonl', 60), ('step', 'mmmu_pro_Geography.jsonl', 52), ('step'
+[23;80H', 'mmmu_pro_History.jsonl', 56), ('step', 'mmmu_pro_Literature.jsonl', 52), ('st
+[23;80Htep', 'mmmu_pro_Manage.jsonl', 50), ('step', 'mmmu_pro_Marketing.jsonl', 59), ('s
+[23;80Hstep', 'mmmu_pro_Materials.jsonl', 60), ('step', 'mmmu_pro_Math.jsonl', 60), ('st
+[23;80Htep', 'mmmu_pro_Mechanical_Engineering.jsonl', 59), ('step', 'mmmu_pro_Music.json
+[23;80Hnl', 60), ('step', 'mmmu_pro_Pharmacy.jsonl', 57), ('step', 'mmmu_pro_Physics.jso
+[23;80Honl', 60), ('step', 'mmmu_pro_Psychology.jsonl', 60), ('step', 'mmmu_pro_Public_H
+[23;80HHealth.jsonl', 58), ('step', 'mmmu_pro_Sociology.jsonl', 54)]
+ REV  [('step', 'mmmu_pro_Accounting.jsonl', 58), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 60), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 53), ('step', 'mmmu_pro_Art_Theory.jsonl', 55), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 52), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 59), ('step', 'mmmu_pro_Chemistry.jsonl', 60), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 59), ('step', 'mmmu_pro_Computer_Science.jsonl', 60), ('step', 'm
+[23;80Hmmmu_pro_Design.jsonl', 60), ('step', 'mmmu_pro_Diagnostics_and_Laboratory_Medici
+[23;80Hine.jsonl', 60), ('step', 'mmmu_pro_Economics.jsonl', 59), ('step', 'mmmu_pro_Ele
+[23;80Hectronics.jsonl', 60), ('step', 'mmmu_pro_Energy_and_Power.jsonl', 58), ('step', 
+[23;80H 'mmmu_pro_Finance.jsonl', 60), ('step', 'mmmu_pro_Geography.jsonl', 52), ('step'
+[23;80H', 'mmmu_pro_History.jsonl', 56), ('step', 'mmmu_pro_Literature.jsonl', 52), ('st
+[23;80Htep', 'mmmu_pro_Manage.jsonl', 50), ('step', 'mmmu_pro_Marketing.jsonl', 59), ('s
+[23;80Hstep', 'mmmu_pro_Materials.jsonl', 60), ('step', 'mmmu_pro_Math.jsonl', 60), ('st
+[23;80Htep', 'mmmu_pro_Mechanical_Engineering.jsonl', 59), ('step', 'mmmu_pro_Music.json
+[23;80Hnl', 60), ('step', 'mmmu_pro_Pharmacy.jsonl', 57), ('step', 'mmmu_pro_Physics.jso
+[23;80Honl', 60), ('step', 'mmmu_pro_Psychology.jsonl', 60), ('step', 'mmmu_pro_Public_H
+[23;80HHealth.jsonl', 58), ('step', 'mmmu_pro_Sociology.jsonl', 54)]
+ REPORT [('reports/step/mmmu_pro.json', None, 1730, None)]
+OUTPUT 20261025_mmmu_round2/outputs/20261025_080953 dataset=mmmu_pro repeats=1 b
+[23;80Hbatch=128
+ PRED [('step', 'mmmu_pro_Accounting.jsonl', 58), ('step', 'mmmu_pro_Agriculture
+[23;80He.jsonl', 60), ('step', 'mmmu_pro_Architecture_and_Engineering.jsonl', 53), ('ste
+[23;80Hep', 'mmmu_pro_Art.jsonl', 53), ('step', 'mmmu_pro_Art_Theory.jsonl', 55), ('step
+[23;80Hp', 'mmmu_pro_Basic_Medical_Science.jsonl', 52), ('step', 'mmmu_pro_Biology.jsonl
+[23;80Hl', 57), ('step', 'mmmu_pro_Chemistry.jsonl', 49), ('step', 'mmmu_pro_Clinical_Me
+[23;80Hedicine.jsonl', 37), ('step', 'mmmu_pro_Computer_Science.jsonl', 8)]
+ REV  []
+ REPORT []
+OUTPUT 20261025_mmmu_round3/outputs/20261025_084523 dataset=mmmu_pro repeats=1 b
+[23;80Hbatch=128
+ PRED []
+ REV  []
+ REPORT []
+AUDIT 20261019_125836/gpqa_diamond/audit.json valid=False exit=1 expected=792 sa
+[23;80Haved=401 unique=401 http={'200': 401, '500': 1}
+AUDIT 20261019_125836/smoke_gpqa_diamond/audit.json valid=True exit=0 expected=1
+[23;80H1 saved=1 unique=1 http={'200': 1}
+AUDIT 20261019_125836/smoke_mmmu_pro/audit.json valid=True exit=0 expected=1 sav
+[23;80Hved=1 unique=1 http={'200': 1}
+AUDIT 20261024_104729/gpqa_diamond/audit.json valid=False exit=1 expected=792 sa
+[23;80Haved=70 unique=70 http={'200': 70, '500': 128}
+AUDIT 20261024_104729/smoke_gpqa_diamond/audit.json valid=True exit=0 expected=1
+[23;80H1 saved=1 unique=1 http={'200': 1}
+AUDIT 20261024_104729/smoke_mmmu_pro/audit.json valid=True exit=0 expected=1 sav
+[23;80Hved=1 unique=1 http={'200': 1}
+AUDIT 20261024_111534/gpqa_diamond/audit.json valid=False exit=1 expected=792 sa
+[23;80Haved=277 unique=277 http={'200': 277, '500': 128}
+AUDIT 20261024_111534/smoke_gpqa_diamond/audit.json valid=True exit=0 expected=1
+[23;80H1 saved=1 unique=1 http={'200': 1}
+AUDIT 20261024_111534/smoke_mmmu_pro/audit.json valid=True exit=0 expected=1 sav
+[23;80Hved=1 unique=1 http={'200': 1}
+AUDIT 20261024_163057/mmmu_pro/audit.json valid=False exit=1 expected=6920 saved
+[23;80Hd=400 unique=400 http={'200': 400}
+AUDIT 20261024_182628/mmmu_pro/audit.json valid=False exit=1 expected=1730 saved
+[23;80Hd=236 unique=236 http={'200': 236, '500': 127}
+AUDIT 20261024_192501/mmmu_pro/audit.json valid=False exit=1 expected=1730 saved
+[23;80Hd=264 unique=264 http={'200': 264, '500': 128}
+AUDIT 20261024_234403/mmmu_pro/audit.json valid=True exit=0 expected=1730 saved=
+[23;80H=1730 unique=1730 http={'200': 1730}
+[root@localhost ~]#[1C

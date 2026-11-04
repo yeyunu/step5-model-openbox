@@ -1,0 +1,29 @@
+{
+  "scope": "Local CPU tensors with stubbed hardware/configuration dependencies; actual engine and importer source",
+  "tests": {
+    "before": {
+      "exit_code": 1,
+      "log": "cpu-before.log"
+    },
+    "candidate": {
+      "exit_code": 0,
+      "log": "cpu-candidate.log"
+    }
+  },
+  "files": {
+    "vllm_ascend/distributed/weight_transfer/packed_tensor.py": {
+      "before_sha256": "7f15ea999aeafd68f6513e6d93246652cbc172b897e45e0b925f12c4831a0009",
+      "after_sha256": "ee8309ce26572d059afe7bac8c76e8e9fd75838c90b5aaf8dd40d4c49588bbdd"
+    },
+    "vllm_ascend/distributed/weight_transfer/npu_ipc_engine.py": {
+      "before_sha256": "1f1d9600c91d6fb07f50eeb2ca58c3707876f85f27d3a9a1d4a99ef2ef5d6330",
+      "after_sha256": "e13f2a4859b6bfde4849ae12901e3be26ee8cec4b1bf670fa0d147fc8aa40a63"
+    },
+    "tests/ut/distributed/weight_transfer/test_npu_ipc_engine.py": {
+      "before_sha256": "d5b8b0cd5afc94c1b55f9ed43c0904c4cb430188dbdd66679d91b002dcbee64e",
+      "after_sha256": "82847c794809850d430b5313f3591a9cdfcc51e206b657984d6b79e925c76ef5"
+    }
+  },
+  "npu_test_run": false,
+  "model_started": false
+}

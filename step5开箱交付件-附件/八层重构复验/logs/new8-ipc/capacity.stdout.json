@@ -1,0 +1,34 @@
+{
+  "actual_time": "2026-11-02T13:06:59.165342+00:00",
+  "status": "passed",
+  "model": "/home/yyy/model_openbox/reduced-recheck-10.20/checkpoints/head-tail8",
+  "mode": "ipc",
+  "tensor_bytes": 62537360896,
+  "expert_bytes": 53150220288,
+  "fully_replicated_other_bytes": 9387140608,
+  "assumptions": "conservative EP4 expert partition, all other tensors replicated; additional transient copy; maxlen2048/maxseq4 (PP stages estimated as full model); not a measured peak or guarantee",
+  "free_hbm_gib": [
+    91.3369140625,
+    91.341796875,
+    91.3486328125,
+    91.3486328125,
+    91.3486328125,
+    91.3486328125,
+    91.3486328125,
+    91.34765625
+  ],
+  "all_devices_idle": true,
+  "budgets": {
+    "resident_weight_upper_bound_gib": 21.11745595932007,
+    "transient_second_weight_copy_gib": 21.11745595932007,
+    "kv_cache_reserve_gib": 2,
+    "activations_gib": 8,
+    "graph_capture_gib": 4,
+    "runtime_workspace_gib": 10,
+    "transfer_buffers_gib": 8.5
+  },
+  "estimated_required_per_card_gib": 74.73491191864014,
+  "safety_margin_gib": 4,
+  "producer_if_hccl_gib": 25,
+  "producer_independent_card": null
+}

@@ -1,0 +1,156 @@
+94edc50f4a35911732fdd91781f889f436a1c4c7 Sync upstream transfer test layout and cover per-module release
+7c0261dc8c17f66882797f57e75e0488a5686787 Backport runtime tensor accounting fix from upstream PR #19248
+6fea64bf9b1d5e12a891ef3c34b5cd1cff141412 Backport upstream vllm-ascend #18944 HCCL engine reuse
+c8ac0609114d87bcd9fd6e7acc7a827202c74572 Backport upstream vllm-ascend #18848 IPC engine reuse
+285d40d925760f9577909767dd98287d06adfe7b Backport upstream vllm-ascend #17154 explicit HCCL close
+7c71fa4377e5362e78a0803863b68f0c3f712dda Backport upstream vllm-ascend #16959 IPC reload lifecycle
+80d265f13e53b2c596da31388a1eedde2bb7f94d [BugFix] Docker fix (#66)
+c21cc405e9cbf0fcd6b958ec3c458360dfdcf9fe
+{
+  "actual_time": "2026-11-02T12:46:41+00:00",
+  "source_base": "94edc50f4a35911732fdd91781f889f436a1c4c7",
+  "isolated_worktree": "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend",
+  "branch": "codex/step5-pr20403-recheck-10.20",
+  "upstream_pr": "https://github.com/vllm-project/vllm-ascend/pull/20403",
+  "upstream_production_commit": "c4ed2abb7cdb8243731fdc4311c7bb3ad4370f33",
+  "upstream_merged": false,
+  "integration": "equivalent backport; production and regression added lines exactly match official commit; old fork import context retained",
+  "source_checkout_unchanged": true,
+  "diff_sha256": "53f57c484771a5cddd6375d852c610636ea5d6879d6d6cee38bbff2193997ce1",
+  "reused_binary_paths": [
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/vllm_ascend_C.cpython-312-aarch64-linux-gnu.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_proto/lib/linux/aarch64/libcust_opsproto_rt2.0.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_impl/cpu/aicpu_kernel/impl/libtransformer_aicpu_kernels.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_impl/ai_core/tbe/op_tiling/liboptiling.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64/libcust_opmaster_rt2.0.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_api/lib/libcust_opapi.so"
+  ]
+}# Step5 上游替换复测：最新真机结果（2026-10-30）
+
+本轮使用已接入上游修复后的三仓代码，真实启动八卡 TP4/DP2/EP8 服务，完成 checkpoint 加载、图捕获以及双接口生成。两个 prompt 的输出全部为空格，被 Skill 原版 `text.strip()` 检查拒绝；sleep/HCCL/IPC/reload 尚未进入机制动作。10 月 16 日旧日志中也有纯空格输出。八卡已清理释放。
+
+详见 [本轮问题定位和结果](npu-1219/report.md)、[逐项报告](npu-1219/README.md)、[完整服务日志](npu-1219/logs/baseline-server.log)。本轮未改模型/Skill 源码，也未恢复旧放宽输出规则。
+
+---
+
+以下保留本轮真机启动前的集成记录；其中“未执行/资源阻塞”属于当时历史状态，以以上最新报告为准。
+
+# Step5 上游替换复测：代码就绪，真机验收待执行
+
+本轮完成新分支接入和 **82 项 CPU 测试**。baseline、sleep、HCCL、IPC、checkpoint reload 和 routing 的新一轮 NPU 验收均未完成，不能写成这些功能已经通过。
+
+A5 曾短暂空闲；第一次启动在资源检查处发现镜像中的 npu-smi 是空占位文件，尚未执行 vLLM。已将宿主机 npu-smi 恢复到本容器。随后另一项 DeepSeek-V4 八卡服务开始运行，资源检查拦住继续启动。该任务主进程曾为 1442182，端口 20007；PID 可能变化，停止前必须重新核实。没有停止其他人的任务。
+
+## 接入范围
+
+| 来源 | 接入内容 |
+|---|---|
+| [Ascend #16959](https://github.com/vllm-project/vllm-ascend/pull/16959) | IPC 解包后加载与 reload 生命周期；测试布局随后与 #18944 固定版本对齐 |
+| [Ascend #17154](https://github.com/vllm-project/vllm-ascend/pull/17154) | 显式、幂等关闭 HCCL 通信器 |
+| [Ascend #18848](https://github.com/vllm-project/vllm-ascend/pull/18848) | 复用 vLLM IPC 引擎、分块期间暂停 MTP 完整性检查 |
+| [Ascend #18944](https://github.com/vllm-project/vllm-ascend/pull/18944) | 复用 vLLM NCCL 编排的 HCCL 实现和新版 trainer 接口 |
+| [vLLM #50940](https://github.com/vllm-project/vllm/pull/50940) | 专家配置统一读取；额外验证 Step5 的 352 专家、top-k=8 |
+| [Ascend #19248](https://github.com/vllm-project/vllm-ascend/pull/19248)，仅部分 | 只取运行时张量 skip 集合及注册，排除 expert_ids_per_ep_rank 等；没有叠加 #18630，没有取 DeepSeek 模型修改或旧 IPC 累积实现 |
+
+**依赖并非仅五个补丁：** water18 缺少新 HCCL 父类接口。按 #18944 引用的 vLLM 固定提交 `c0b6f74bee518aeaf5d72b200a0216e72fbb5e7c` 补入四个 weight-transfer 模块，以及必要的抽象接口删除、NCCL 常量和环境辅助函数。没有整体升级模型仓，也没有重新编译算子。具体 diff 已归档。
+
+## 分支与可恢复备份
+
+| 仓库 | 新分支 | 当前提交 |
+|---|---|---|
+| `/home/yyy/vllm-ascend-step4` | `codex/step5-upstream-retest-vllm-20261030` | `c21cc405e9cbf0fcd6b958ec3c458360dfdcf9fe` |
+| `/home/yyy/vllm-ascend-main` | `codex/step5-upstream-retest-ascend-20261030` | `94edc50f4a35911732fdd91781f889f436a1c4c7` |
+| `/home/yyy/MindSpeed-Agent` | `codex/step5-upstream-retest-20261030` | `d32b647e556a5670ffc2522b815f1a66e22df3d9` |
+
+三个工作区均已提交并保持干净。旧的未提交修改和未跟踪文件先保存到 stash，并用持久 Git ref 固定；清单、原始 diff 和未跟踪文件压缩包在 `backups/`。原来的 main/water18/master 分支指针没有前移。vLLM 与 vllm-ascend 实际共用一个 Git 仓库，因此使用不同的新分支名。
+
+移除了旧 Step5WeightUpdateGuard、worker 接入、CPU 暂存以及旧 Skill 放宽输出/强制 eager 的改动。保留 Step5 fork 基线本身，基线 SHA 见 JSON。
+
+## 测试结果
+
+| 检查 | 结果 |
+|---|---|
+| Ascend IPC/HCCL/关闭通信器/上游对照配置/运行时张量回归 | 61 passed |
+| vLLM 专家配置与 Step5 字段 | 7 passed，25 个无关测试未选 |
+| vLLM routed-experts capture 文件全部测试 | 12 passed |
+| Skill 新 HCCL API：单次生命周期、失败清理 | 2 passed |
+| 合计 | **82 passed** |
+
+运行时张量回归使用真实 vLLM layerwise loader 和小型 CPU 张量：第一模块收齐后立即恢复目标权重、释放接收缓存，第二模块尚未加载；运行时专家表无需由发送端提供。这个测试没有模拟或测量 70 GiB 模型的真实 NPU 峰值。
+
+Skill 只适配 HCCL trainer_init/send_weights 和关闭接口。AST 核对 main、parse_args 未改变；双接口判断、sleep、routing、IPC、reload 和 checkpoint source 等公共文件与原始提交一致。没有改通过条件。
+
+Ruff 与 git diff --check 已执行。原版 Skill 已有 EXE001（shebang 文件未设 executable）和 BLE001（主入口记录异常）两项，本轮保留并在定向 lint 时单独排除；不改变异常处理。完整 pre-commit 初始化因 A5 访问 GitHub 卡住，未宣称整套 hooks 通过。
+
+## 尚未证明的内容
+
+- 尚无本轮 NPU baseline 成功、双接口输出、sleep 前后输出或 HCCL/IPC/reload 结果。
+- 尚无本轮显存峰值、连续五轮 Level 2 或完整模型精度结果。
+- 没有接入 #176/#58382：移除旧 guard 后，其额外 expected/loaded 名称并集检查不再存在。分块时暂停检查，不等于自动获得整次事务的完整性检查。
+- #18944 作者的真机验证使用了额外的 #19127；本次用户指定组合没有接入它，需要实际验证这套组合。
+- 保持原版 Skill 判定，减层/随机权重如产生不合格输出，会如实记录失败，不会为了跑通修改规则。
+
+## 资源与检查点
+
+检查点 `/data/Step-5-Preview-BF16-8layer`：16 个 safetensors 分片、807 个张量、75525811072 字节（约 70.34 GiB）；最大张量 4.125 GiB。
+manifest SHA256：`18a0d632eb4563a3f8c4d4b48ecb89aa8880efcb9fa6b7e1b5cbf675d9a6b008`。
+
+新的 run-service.sh 保留原拓扑：baseline 为 TP4/DP2/EP，HCCL 为 TP4/DP1/EP（另用卡 4 作为 producer），IPC 为 TP4/DP2/EP。监听本机 8930。启动前强制检查卡是否被占用，不会停止其他任务。
+
+## 证据
+
+- `reports/upstream_retest.json`：机器可读状态、分支/提交、检查点、设备快照和未执行项目。
+- `reports/npu-smi-before-test.txt`、`reports/competing-processes.txt`：资源阻塞证据。
+- `logs/*-final.log`：最终单测和 lint 日志。
+- `cpu-checks.sh`：可复现的 CPU 测试命令。
+- `vllm-ascend-step4.diff`、`vllm-ascend-main.diff`、`MindSpeed-Agent.diff`：相对原始 fork 基线的最终改动。
+- `backups/`：旧改动恢复清单与快照。
+
+下面保留原版 Skill 报告生成器的输出。其“0/1 report passed”表示真机阶段仍 blocked，不是 CPU 单测失败。
+
+---
+# Step5 upstream replacement retest - 2026-10-30
+
+> 自动汇总的模型 RL 用例看护证据。原始日志、JSON 报告和启动命令应与本文件一起归档。
+
+## Summary
+
+- **Generated:** 2026-10-30T03:46:10+00:00
+- **Model / checkpoint:** `/data/Step-5-Preview-BF16-8layer`
+- **Result:** **0/1** report(s) passed
+
+| Feature | Status | Evidence |
+|---|---|---|
+| `step5_upstream_replacement_preflight` | ⛔ **blocked** | [`reports/upstream_retest.json`](reports/upstream_retest.json) |
+
+## Commands
+
+The following commands were recorded in `logs/launch_commands.txt`:
+
+```bash
+2026-10-30T11:46:10+08:00 CPU_VERIFICATION docker exec yyy-cann92 bash /home/yyy/model_openbox/upstream-retest-20261030/cpu-checks.sh
+```
+
+## Feature evidence
+
+### 1. ⛔ step5_upstream_replacement_preflight — blocked
+
+Evidence file: [`reports/upstream_retest.json`](reports/upstream_retest.json)
+
+#### Checks
+
+| Check | Result |
+|---|---|
+| `parse_args` | ✅ pass |
+| `main` | ✅ pass |
+| `acceptance_helpers_unchanged` | ✅ pass |
+| `local_step5_guard_removed_and_worker_restored` | ✅ pass |
+- **Checkpoint:** `{"path":"/data/Step-5-Preview-BF16-8layer","format":"safetensors","file_count":16,"total_file_bytes":75525918107,"tensor_count":807,"total_tensor_bytes":75525811072,"max_tensor_name":"model.layers.3.moe.down_proj.weight","max_tensor_bytes":4429185024,"manifest_sha256":"18a0d632eb4563a3f8c4d4b48ecb89aa8880efcb9fa6b7e1b5cbf675d9a6b008"}`
+- **Reason:** Other tasks occupy A5 devices. No model service or NPU verifier was started.
+
+## Interpretation
+
+- `passed` means the recorded checks completed; it is not a substitute for customer precision acceptance.
+- `failed`, `blocked` and `not_run` must be reviewed together with the original logs and environment evidence.
+- Text output is runtime evidence only; it does not prove numerical equivalence.
+

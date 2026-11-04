@@ -1,0 +1,189 @@
+{
+  "reviewed_at": "2026-11-02T23:42:13.557217+08:00",
+  "review_type": "Local replay of archived original validator and saved outputs; no extra NPU run",
+  "validator_sha256": "17df09c58666e286f3f367a48b4699fcd9f0e77b187a4e63d3fc700987f4d037",
+  "checks": [
+    {
+      "report": "results/resume-hccl-10-20/report.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "247ee9a9c0448744a25c030364a084f7916a88988d13fbd72e2aa926bea6efd1"
+    },
+    {
+      "report": "results/resume-ipc-round1-10-20/report.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "7c7b545eb6d87294ffa716596dfeda94bd32a31acbb892ad82731a9408f2186c"
+    },
+    {
+      "report": "results/resume-ipc-round2-10-20/report.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "3c62ae3b4cd9cbc283f77d43a23e8d78547d6268c28b4f963acff4ae45b50f66"
+    },
+    {
+      "report": "results/resume-reload-10-20/report.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "d33be1c5a6a401528b01263dfa038d880f1627ea016e6df78c774a4a1bb2b11a"
+    },
+    {
+      "report": "results/resume-sleep1-10-20/report.json",
+      "status": "passed",
+      "exact_pairs": 40,
+      "source_sha256": "ac49cabf1c9dfb117d5f47e51a9065478fbd1fb4a4c210af16ef83a720c3d1cb"
+    },
+    {
+      "report": "results/resume-sleep2-10-20/report-cycle1.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "c9e6df32154f0a36dbf534fc7fdc72f0fddd965e511a41982700f025a075ed68"
+    },
+    {
+      "report": "results/resume-sleep2-10-20/report-cycle2.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "c9e6df32154f0a36dbf534fc7fdc72f0fddd965e511a41982700f025a075ed68"
+    },
+    {
+      "report": "results/resume-sleep2-10-20/report-cycle3.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "c9e6df32154f0a36dbf534fc7fdc72f0fddd965e511a41982700f025a075ed68"
+    },
+    {
+      "report": "results/resume-sleep2-10-20/report-cycle4.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "c9e6df32154f0a36dbf534fc7fdc72f0fddd965e511a41982700f025a075ed68"
+    },
+    {
+      "report": "results/resume-sleep2-10-20/report-cycle5.json",
+      "status": "passed",
+      "exact_pairs": 8,
+      "source_sha256": "c9e6df32154f0a36dbf534fc7fdc72f0fddd965e511a41982700f025a075ed68"
+    }
+  ],
+  "total_intra_cycle_exact_pairs": 112,
+  "ipc_cross_round_exact_pairs": 8,
+  "ipc_warnings_per_round": [
+    8,
+    8
+  ],
+  "ipc_memory_observations": [
+    {
+      "round": 1,
+      "observed_workers": 4,
+      "expected_workers": 8,
+      "before_mechanism": [
+        {
+          "world_rank": 0,
+          "dp_rank": 0,
+          "allocated": 26772435968,
+          "reserved": 29481762816
+        },
+        {
+          "world_rank": 1,
+          "dp_rank": 0,
+          "allocated": 26772435968,
+          "reserved": 29481762816
+        },
+        {
+          "world_rank": 2,
+          "dp_rank": 0,
+          "allocated": 26772435968,
+          "reserved": 29481762816
+        },
+        {
+          "world_rank": 3,
+          "dp_rank": 0,
+          "allocated": 26772435968,
+          "reserved": 29481762816
+        }
+      ],
+      "after_post_generation": [
+        {
+          "world_rank": 0,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 1,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 2,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 3,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "observed_workers": 4,
+      "expected_workers": 8,
+      "before_mechanism": [
+        {
+          "world_rank": 0,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 1,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 2,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 3,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        }
+      ],
+      "after_post_generation": [
+        {
+          "world_rank": 0,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 1,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 2,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        },
+        {
+          "world_rank": 3,
+          "dp_rank": 0,
+          "allocated": 26772440064,
+          "reserved": 48966402048
+        }
+      ]
+    }
+  ]
+}

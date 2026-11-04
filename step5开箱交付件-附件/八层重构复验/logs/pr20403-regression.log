@@ -1,0 +1,33 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.3.2, pluggy-1.6.0 -- /home/yyy/model_openbox/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend
+configfile: pyproject.toml
+plugins: platformdirs-4.13.3, xdist-3.6.1, anyio-4.15.1
+collecting ... collected 5 items
+
+tests/ut/patch/platform/test_patch_fused_moe.py::test_factory_adapts_only_the_returned_router PASSED [ 20%]
+tests/ut/patch/platform/test_patch_fused_moe.py::test_factory_keeps_v1_eplb_on_the_legacy_routing_path PASSED [ 40%]
+tests/ut/patch/platform/test_patch_fused_moe.py::test_adapted_router_uses_ascend_mapping_operation PASSED [ 60%]
+tests/ut/patch/platform/test_patch_fused_moe.py::test_factory_shares_upstream_hash_table_with_legacy_ascend_routing PASSED [ 80%]
+tests/ut/patch/platform/test_patch_fused_moe.py::test_reload_releases_completed_module_without_receiving_expert_map PASSED [100%]
+
+=============================== warnings summary ===============================
+../../../../../usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13
+  /usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:13: FutureWarning: triton.language.extra.cann.extension.atan2 is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.atan2 instead.
+    @_deprecated(replacement="triton.language.extra.cann.libdevice.atan2")
+
+../../../../../usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35
+  /usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:35: FutureWarning: triton.language.extra.cann.extension.isfinited is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.isfinited instead.
+    @_deprecated(replacement="triton.language.extra.cann.libdevice.isfinited")
+
+../../../../../usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49
+  /usr/local/python3.12.13/lib/python3.12/site-packages/triton/language/extra/cann/extension/math_ops.py:49: FutureWarning: triton.language.extra.cann.extension.finitef is deprecated and will be removed in the next release; use triton.language.extra.cann.libdevice.finitef instead.
+    @_deprecated(replacement="triton.language.extra.cann.libdevice.finitef")
+
+../../../../../usr/local/python3.12.13/lib/python3.12/site-packages/torch/jit/_script.py:362: 14 warnings
+  /usr/local/python3.12.13/lib/python3.12/site-packages/torch/jit/_script.py:362: DeprecationWarning: `torch.jit.script_method` is deprecated. Please switch to `torch.compile` or `torch.export`.
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 5 passed, 17 warnings in 0.05s ========================

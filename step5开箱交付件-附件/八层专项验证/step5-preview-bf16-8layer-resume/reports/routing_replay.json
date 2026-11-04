@@ -1,0 +1,587 @@
+{
+  "feature": "routing_replay",
+  "status": "passed",
+  "scope": "reduced 8-layer functional validation; no full-model accuracy claim",
+  "endpoint_checks": {
+    "/v1/completions": true,
+    "/v1/chat/completions": true
+  },
+  "baseline_outputs_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.97805118560791,
+          -6.499545097351074,
+          -7.034548282623291,
+          -6.87445592880249,
+          -6.962906360626221,
+          -6.76118803024292,
+          -6.685983657836914,
+          -6.696591854095459
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.108782768249512,
+          -6.6469926834106445,
+          -6.799182891845703,
+          -6.886170864105225,
+          -6.897500514984131,
+          -6.699454307556152,
+          -6.6755690574646,
+          -6.638632774353027
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.135400772094727,
+          -6.7148566246032715,
+          -7.003444671630859,
+          -6.926614284515381,
+          -6.84407377243042,
+          -6.830370903015137,
+          -6.6991400718688965,
+          -6.708800792694092
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.322119235992432,
+          -6.792964458465576,
+          -6.794940948486328,
+          -6.871264934539795,
+          -6.819687843322754,
+          -6.812644004821777,
+          -6.738521099090576,
+          -6.729896545410156
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.977429389953613,
+          -6.9459357261657715,
+          -6.888690948486328,
+          -6.962892532348633,
+          -7.0215744972229,
+          -6.961460590362549,
+          -6.944464683532715,
+          -6.8385701179504395
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.06466817855835,
+          -7.116052150726318,
+          -6.935471534729004,
+          -7.098372936248779,
+          -7.096277236938477,
+          -7.0099406242370605,
+          -6.957465171813965,
+          -6.920825481414795
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.079222679138184,
+          -7.076145172119141,
+          -6.987241744995117,
+          -7.165285587310791,
+          -7.098609924316406,
+          -7.009646415710449,
+          -7.0100202560424805,
+          -6.9228081703186035
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.095804691314697,
+          -7.063374042510986,
+          -6.993111610412598,
+          -6.977956295013428,
+          -7.0254926681518555,
+          -7.024902820587158,
+          -6.989711284637451,
+          -6.9220805168151855
+        ]
+      }
+    ]
+  },
+  "feature_outputs_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.97805118560791,
+          -6.499545097351074,
+          -7.034548282623291,
+          -6.87445592880249,
+          -6.962906360626221,
+          -6.76118803024292,
+          -6.685983657836914,
+          -6.696591854095459
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.108782768249512,
+          -6.6469926834106445,
+          -6.799182891845703,
+          -6.886170864105225,
+          -6.897500514984131,
+          -6.699454307556152,
+          -6.6755690574646,
+          -6.638632774353027
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.135400772094727,
+          -6.7148566246032715,
+          -7.003444671630859,
+          -6.926614284515381,
+          -6.84407377243042,
+          -6.830370903015137,
+          -6.6991400718688965,
+          -6.708800792694092
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.322119235992432,
+          -6.792964458465576,
+          -6.794940948486328,
+          -6.871264934539795,
+          -6.819687843322754,
+          -6.812644004821777,
+          -6.738521099090576,
+          -6.729896545410156
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.977429389953613,
+          -6.9459357261657715,
+          -6.888690948486328,
+          -6.962892532348633,
+          -7.0215744972229,
+          -6.961460590362549,
+          -6.944464683532715,
+          -6.8385701179504395
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.06466817855835,
+          -7.116052150726318,
+          -6.935471534729004,
+          -7.098372936248779,
+          -7.096277236938477,
+          -7.0099406242370605,
+          -6.957465171813965,
+          -6.920825481414795
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.079222679138184,
+          -7.076145172119141,
+          -6.987241744995117,
+          -7.165285587310791,
+          -7.098609924316406,
+          -7.009646415710449,
+          -7.0100202560424805,
+          -6.9228081703186035
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.095804691314697,
+          -7.063374042510986,
+          -6.993111610412598,
+          -6.977956295013428,
+          -7.0254926681518555,
+          -7.024902820587158,
+          -6.989711284637451,
+          -6.9220805168151855
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "actual_topology": true,
+    "dual_api_tokens_and_finite_aligned_logprobs": true
+  },
+  "actual_worker_topology": [
+    {
+      "rank": 0,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 1,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 2,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 3,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 0,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 1,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 2,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 3,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    }
+  ],
+  "routing_arrays": [
+    {
+      "endpoint": "/v1/completions",
+      "shape": [
+        13,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 344,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_completions-0.npy"
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "shape": [
+        23,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 347,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_chat_completions-1.npy"
+    },
+    {
+      "endpoint": "/v1/completions",
+      "shape": [
+        11,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 350,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_completions-2.npy"
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "shape": [
+        21,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 350,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_chat_completions-3.npy"
+    },
+    {
+      "endpoint": "/v1/completions",
+      "shape": [
+        12,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 351,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_completions-4.npy"
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "shape": [
+        22,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 351,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_chat_completions-5.npy"
+    },
+    {
+      "endpoint": "/v1/completions",
+      "shape": [
+        13,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 351,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_completions-6.npy"
+    },
+    {
+      "endpoint": "/v1/chat/completions",
+      "shape": [
+        23,
+        8,
+        8
+      ],
+      "min": 0,
+      "max": 351,
+      "path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-_v1_chat_completions-7.npy"
+    }
+  ],
+  "outputs_identical_by_endpoint": {
+    "/v1/completions": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "/v1/chat/completions": [
+      true,
+      true,
+      true,
+      true
+    ]
+  }
+}

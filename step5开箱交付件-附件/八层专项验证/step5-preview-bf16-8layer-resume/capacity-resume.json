@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "free_hbm_gib_per_card": 91.3,
+  "total_weight_gib": 70.33889281749725,
+  "expert_gib": 61.875,
+  "baseline_tp4_dp2_ep8_weight_gib_per_card": 9.850348204374313,
+  "hccl_tp4_dp1_weight_gib_per_card": 17.584723204374313,
+  "producer_max_tensor_gib": 4.125,
+  "producer_packed_buffer_gib": 4.25,
+  "producer_runtime_margin_gib": 4,
+  "baseline_utilization": 0.4,
+  "update_utilization": 0.3,
+  "update_service_budget_runtime_gib": 27.525,
+  "service_runtime_kv_graph_reserve_gib": 8,
+  "ipc_service_plus_producer_upper_gib": 39.9,
+  "hccl_cpu_staging_revision": {
+    "authorization": "User requested all remaining features pass after reviewing OOM report and prepared CPU staging patch",
+    "device_peak_conservative_gib": 55,
+    "free_device_gib": 91,
+    "host_buffer_upper_gib": 313.36,
+    "host_available_gib": 2228,
+    "packed_buffer_worst_case_gib": 8.375,
+    "reason": "Existing packed algorithm may overshoot requested size by at most one tensor; deferred loader inputs are staged to CPU"
+  },
+  "ipc_cpu_staging_revision": {
+    "status": "passed",
+    "device_peak_conservative_gib": 60,
+    "free_device_gib": 91,
+    "host_buffer_upper_gib": 694,
+    "host_available_gib": 2228,
+    "receivers": 8,
+    "reason": "Eight CPU staged checkpoint streams plus packed transient buffers; NPU staging bounded to chunks and sharded reload workspace",
+    "preflight_evidence": "logs/npu-before-ipc-v4.txt"
+  }
+}

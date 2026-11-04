@@ -1,0 +1,2858 @@
+{
+  "feature": "sleep_level1",
+  "status": "passed",
+  "scope": "8-layer real BF16 functional validation; not full-model accuracy",
+  "prompts": [
+    "The future of AI is",
+    "Machine learning enables",
+    "Deep learning models can",
+    "Step5 sparse attention is",
+    "Chunk validation alpha. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. The model processes a sequence of tokens and preserves the order. ",
+    "Chunk validation beta. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. Distributed inference splits a long input into smaller sections. "
+  ],
+  "checks": {
+    "actual_8layer_tp4_dp2_graph_config": true,
+    "three_level1_cycles_without_checkpoint_reload": true,
+    "dual_api_text_tokens_logprobs_exact_all_cycles": true,
+    "all_workers_release_more_than_1GiB_during_sleep": true,
+    "all_workers_memory_growth_at_most_5pct": true
+  },
+  "verification_command": "/home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/step5-8layer-chunk-sleep1-20261016-142049/verify_extra.py sleep_level1",
+  "runtime": [
+    {
+      "rank": 0,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625695744,
+      "memory_reserved": 39072038912,
+      "device_free": 56988618752,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 1,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625695744,
+      "memory_reserved": 39072038912,
+      "device_free": 56990273536,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 2,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625695744,
+      "memory_reserved": 39072038912,
+      "device_free": 56989933568,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 3,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625695744,
+      "memory_reserved": 39072038912,
+      "device_free": 56989503488,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 4,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625302528,
+      "memory_reserved": 39072038912,
+      "device_free": 56990531584,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 5,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625302528,
+      "memory_reserved": 39072038912,
+      "device_free": 56990371840,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 6,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625302528,
+      "memory_reserved": 39072038912,
+      "device_free": 56988733440,
+      "device_total": 98515812352
+    },
+    {
+      "rank": 7,
+      "layers": 8,
+      "tp": 4,
+      "dp": 2,
+      "chunked_prefill": false,
+      "max_num_batched_tokens": 2048,
+      "async_scheduling": true,
+      "graph_mode": "FULL_DECODE_ONLY",
+      "memory_allocated": 36625302528,
+      "memory_reserved": 39072038912,
+      "device_free": 56991715328,
+      "device_total": 98515812352
+    }
+  ],
+  "baseline_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.97805118560791,
+          -6.499545097351074,
+          -7.034548282623291,
+          -6.87445592880249,
+          -6.962906360626221,
+          -6.76118803024292,
+          -6.685983657836914,
+          -6.696591854095459
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.108782768249512,
+          -6.6469926834106445,
+          -6.799182891845703,
+          -6.886170864105225,
+          -6.897500514984131,
+          -6.699454307556152,
+          -6.6755690574646,
+          -6.638632774353027
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.135400772094727,
+          -6.7148566246032715,
+          -7.003444671630859,
+          -6.926614284515381,
+          -6.84407377243042,
+          -6.830370903015137,
+          -6.6991400718688965,
+          -6.708800792694092
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.322119235992432,
+          -6.792964458465576,
+          -6.794940948486328,
+          -6.871264934539795,
+          -6.819687843322754,
+          -6.812644004821777,
+          -6.738521099090576,
+          -6.729896545410156
+        ]
+      },
+      {
+        "text": " 1      ",
+        "tokens": [
+          " ",
+          "1",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.618234157562256,
+          -7.676413059234619,
+          -7.247402191162109,
+          -7.341476917266846,
+          -7.261571884155273,
+          -7.3459272384643555,
+          -7.260208606719971,
+          -7.210587978363037
+        ]
+      },
+      {
+        "text": " -       ",
+        "tokens": [
+          " -",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.514362335205078,
+          -7.313775062561035,
+          -7.159529685974121,
+          -7.312965393066406,
+          -7.404309272766113,
+          -7.394939422607422,
+          -7.293422222137451,
+          -7.136334419250488
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.977429389953613,
+          -6.9459357261657715,
+          -6.888690948486328,
+          -6.962892532348633,
+          -7.0215744972229,
+          -6.961460590362549,
+          -6.944464683532715,
+          -6.8385701179504395
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.06466817855835,
+          -7.116052150726318,
+          -6.935471534729004,
+          -7.098372936248779,
+          -7.096277236938477,
+          -7.0099406242370605,
+          -6.957465171813965,
+          -6.920825481414795
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.079222679138184,
+          -7.076145172119141,
+          -6.987241744995117,
+          -7.165285587310791,
+          -7.098609924316406,
+          -7.009646415710449,
+          -7.0100202560424805,
+          -6.9228081703186035
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.095804691314697,
+          -7.063374042510986,
+          -6.993111610412598,
+          -6.977956295013428,
+          -7.0254926681518555,
+          -7.024902820587158,
+          -6.989711284637451,
+          -6.9220805168151855
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.073423385620117,
+          -7.232013702392578,
+          -7.163536071777344,
+          -7.136204719543457,
+          -7.230614185333252,
+          -7.1810832023620605,
+          -7.130748271942139,
+          -7.0973029136657715
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.95267391204834,
+          -7.258184432983398,
+          -7.075373649597168,
+          -7.1786675453186035,
+          -7.160349369049072,
+          -7.162833213806152,
+          -7.128593444824219,
+          -7.079797267913818
+        ]
+      }
+    ]
+  },
+  "prompt_token_counts": {
+    "0:/v1/completions": 6,
+    "0:/v1/chat/completions": 16,
+    "1:/v1/completions": 4,
+    "1:/v1/chat/completions": 14,
+    "2:/v1/completions": 5,
+    "2:/v1/chat/completions": 15,
+    "3:/v1/completions": 6,
+    "3:/v1/chat/completions": 16,
+    "4:/v1/completions": 967,
+    "4:/v1/chat/completions": 977,
+    "5:/v1/completions": 907,
+    "5:/v1/chat/completions": 917
+  },
+  "observations": {
+    "before": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39738933248,
+          "device_free": 56315428864,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39738933248,
+          "device_free": 56316542976,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39738933248,
+          "device_free": 56316997632,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39738933248,
+          "device_free": 56316506112,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39665532928,
+          "device_free": 56390201344,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39665532928,
+          "device_free": 56390107136,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39665532928,
+          "device_free": 56388141056,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39665532928,
+          "device_free": 56391127040,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle1-sleep": {
+      "state": {
+        "is_sleeping": true
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 95861424128,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 95862284288,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 95862734848,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 95862501376,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95862796288,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95862444032,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95860994048,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95863721984,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle1-wake": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 56961609728,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 56962211840,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 56962662400,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625696768,
+          "memory_reserved": 39072038912,
+          "device_free": 56962170880,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56962465792,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56962371584,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56960729088,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56963907584,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle1-after-generation": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221057024,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221917184,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56222367744,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221876224,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199102464,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199008256,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56197365760,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56200544256,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle2-sleep": {
+      "state": {
+        "is_sleeping": true
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95823675392,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95824535552,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95824986112,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95824752640,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95843921920,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95843827712,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95841927168,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95844913152,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle2-wake": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56923860992,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56924463104,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56924913664,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56924422144,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56943591424,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56943497216,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56941854720,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56944840704,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle2-after-generation": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221057024,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221917184,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56222367744,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56222134272,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199102464,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199008256,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56197365760,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56200351744,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle3-sleep": {
+      "state": {
+        "is_sleeping": true
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95823675392,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95824535552,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95824986112,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 95824752640,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95843921920,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95843827712,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95841927168,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 95844913152,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle3-wake": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56923860992,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56924463104,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56924913664,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39072038912,
+          "device_free": 56924422144,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56943591424,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56943497216,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56941854720,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39072038912,
+          "device_free": 56944840704,
+          "device_total": 98515812352
+        }
+      ]
+    },
+    "cycle3-after-generation": {
+      "state": {
+        "is_sleeping": false
+      },
+      "workers": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56179372032,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56179974144,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56180424704,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56180191232,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56222171136,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56222076928,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56220434432,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56223420416,
+          "device_total": 98515812352
+        }
+      ]
+    }
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "outputs_by_endpoint": {
+        "/v1/completions": [
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.97805118560791,
+              -6.499545097351074,
+              -7.034548282623291,
+              -6.87445592880249,
+              -6.962906360626221,
+              -6.76118803024292,
+              -6.685983657836914,
+              -6.696591854095459
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.108782768249512,
+              -6.6469926834106445,
+              -6.799182891845703,
+              -6.886170864105225,
+              -6.897500514984131,
+              -6.699454307556152,
+              -6.6755690574646,
+              -6.638632774353027
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.135400772094727,
+              -6.7148566246032715,
+              -7.003444671630859,
+              -6.926614284515381,
+              -6.84407377243042,
+              -6.830370903015137,
+              -6.6991400718688965,
+              -6.708800792694092
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.322119235992432,
+              -6.792964458465576,
+              -6.794940948486328,
+              -6.871264934539795,
+              -6.819687843322754,
+              -6.812644004821777,
+              -6.738521099090576,
+              -6.729896545410156
+            ]
+          },
+          {
+            "text": " 1      ",
+            "tokens": [
+              " ",
+              "1",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.618234157562256,
+              -7.676413059234619,
+              -7.247402191162109,
+              -7.341476917266846,
+              -7.261571884155273,
+              -7.3459272384643555,
+              -7.260208606719971,
+              -7.210587978363037
+            ]
+          },
+          {
+            "text": " -       ",
+            "tokens": [
+              " -",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.514362335205078,
+              -7.313775062561035,
+              -7.159529685974121,
+              -7.312965393066406,
+              -7.404309272766113,
+              -7.394939422607422,
+              -7.293422222137451,
+              -7.136334419250488
+            ]
+          }
+        ],
+        "/v1/chat/completions": [
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.977429389953613,
+              -6.9459357261657715,
+              -6.888690948486328,
+              -6.962892532348633,
+              -7.0215744972229,
+              -6.961460590362549,
+              -6.944464683532715,
+              -6.8385701179504395
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.06466817855835,
+              -7.116052150726318,
+              -6.935471534729004,
+              -7.098372936248779,
+              -7.096277236938477,
+              -7.0099406242370605,
+              -6.957465171813965,
+              -6.920825481414795
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.079222679138184,
+              -7.076145172119141,
+              -6.987241744995117,
+              -7.165285587310791,
+              -7.098609924316406,
+              -7.009646415710449,
+              -7.0100202560424805,
+              -6.9228081703186035
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.095804691314697,
+              -7.063374042510986,
+              -6.993111610412598,
+              -6.977956295013428,
+              -7.0254926681518555,
+              -7.024902820587158,
+              -6.989711284637451,
+              -6.9220805168151855
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.073423385620117,
+              -7.232013702392578,
+              -7.163536071777344,
+              -7.136204719543457,
+              -7.230614185333252,
+              -7.1810832023620605,
+              -7.130748271942139,
+              -7.0973029136657715
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.95267391204834,
+              -7.258184432983398,
+              -7.075373649597168,
+              -7.1786675453186035,
+              -7.160349369049072,
+              -7.162833213806152,
+              -7.128593444824219,
+              -7.079797267913818
+            ]
+          }
+        ]
+      },
+      "workers_after": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221057024,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221917184,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56222367744,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221876224,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199102464,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199008256,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56197365760,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56200544256,
+          "device_total": 98515812352
+        }
+      ],
+      "memory_growth_ratios": [
+        0.002236279204117549,
+        0.0022423561687022133,
+        0.0022424773925024595,
+        0.002242451273056758,
+        0.004536406129841268,
+        0.004536395984830128,
+        0.004528503241006678,
+        0.004524254189400649
+      ]
+    },
+    {
+      "cycle": 2,
+      "outputs_by_endpoint": {
+        "/v1/completions": [
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.97805118560791,
+              -6.499545097351074,
+              -7.034548282623291,
+              -6.87445592880249,
+              -6.962906360626221,
+              -6.76118803024292,
+              -6.685983657836914,
+              -6.696591854095459
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.108782768249512,
+              -6.6469926834106445,
+              -6.799182891845703,
+              -6.886170864105225,
+              -6.897500514984131,
+              -6.699454307556152,
+              -6.6755690574646,
+              -6.638632774353027
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.135400772094727,
+              -6.7148566246032715,
+              -7.003444671630859,
+              -6.926614284515381,
+              -6.84407377243042,
+              -6.830370903015137,
+              -6.6991400718688965,
+              -6.708800792694092
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.322119235992432,
+              -6.792964458465576,
+              -6.794940948486328,
+              -6.871264934539795,
+              -6.819687843322754,
+              -6.812644004821777,
+              -6.738521099090576,
+              -6.729896545410156
+            ]
+          },
+          {
+            "text": " 1      ",
+            "tokens": [
+              " ",
+              "1",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.618234157562256,
+              -7.676413059234619,
+              -7.247402191162109,
+              -7.341476917266846,
+              -7.261571884155273,
+              -7.3459272384643555,
+              -7.260208606719971,
+              -7.210587978363037
+            ]
+          },
+          {
+            "text": " -       ",
+            "tokens": [
+              " -",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.514362335205078,
+              -7.313775062561035,
+              -7.159529685974121,
+              -7.312965393066406,
+              -7.404309272766113,
+              -7.394939422607422,
+              -7.293422222137451,
+              -7.136334419250488
+            ]
+          }
+        ],
+        "/v1/chat/completions": [
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.977429389953613,
+              -6.9459357261657715,
+              -6.888690948486328,
+              -6.962892532348633,
+              -7.0215744972229,
+              -6.961460590362549,
+              -6.944464683532715,
+              -6.8385701179504395
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.06466817855835,
+              -7.116052150726318,
+              -6.935471534729004,
+              -7.098372936248779,
+              -7.096277236938477,
+              -7.0099406242370605,
+              -6.957465171813965,
+              -6.920825481414795
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.079222679138184,
+              -7.076145172119141,
+              -6.987241744995117,
+              -7.165285587310791,
+              -7.098609924316406,
+              -7.009646415710449,
+              -7.0100202560424805,
+              -6.9228081703186035
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.095804691314697,
+              -7.063374042510986,
+              -6.993111610412598,
+              -6.977956295013428,
+              -7.0254926681518555,
+              -7.024902820587158,
+              -6.989711284637451,
+              -6.9220805168151855
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.073423385620117,
+              -7.232013702392578,
+              -7.163536071777344,
+              -7.136204719543457,
+              -7.230614185333252,
+              -7.1810832023620605,
+              -7.130748271942139,
+              -7.0973029136657715
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.95267391204834,
+              -7.258184432983398,
+              -7.075373649597168,
+              -7.1786675453186035,
+              -7.160349369049072,
+              -7.162833213806152,
+              -7.128593444824219,
+              -7.079797267913818
+            ]
+          }
+        ]
+      },
+      "workers_after": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221057024,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56221917184,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56222367744,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39833305088,
+          "device_free": 56222134272,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199102464,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56199008256,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56197365760,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39856373760,
+          "device_free": 56200351744,
+          "device_total": 98515812352
+        }
+      ],
+      "memory_growth_ratios": [
+        0.002236279204117549,
+        0.0022423561687022133,
+        0.0022424773925024595,
+        0.002236336291011025,
+        0.004536406129841268,
+        0.004536395984830128,
+        0.004528503241006678,
+        0.004528824241344638
+      ]
+    },
+    {
+      "cycle": 3,
+      "outputs_by_endpoint": {
+        "/v1/completions": [
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.97805118560791,
+              -6.499545097351074,
+              -7.034548282623291,
+              -6.87445592880249,
+              -6.962906360626221,
+              -6.76118803024292,
+              -6.685983657836914,
+              -6.696591854095459
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.108782768249512,
+              -6.6469926834106445,
+              -6.799182891845703,
+              -6.886170864105225,
+              -6.897500514984131,
+              -6.699454307556152,
+              -6.6755690574646,
+              -6.638632774353027
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.135400772094727,
+              -6.7148566246032715,
+              -7.003444671630859,
+              -6.926614284515381,
+              -6.84407377243042,
+              -6.830370903015137,
+              -6.6991400718688965,
+              -6.708800792694092
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.322119235992432,
+              -6.792964458465576,
+              -6.794940948486328,
+              -6.871264934539795,
+              -6.819687843322754,
+              -6.812644004821777,
+              -6.738521099090576,
+              -6.729896545410156
+            ]
+          },
+          {
+            "text": " 1      ",
+            "tokens": [
+              " ",
+              "1",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.618234157562256,
+              -7.676413059234619,
+              -7.247402191162109,
+              -7.341476917266846,
+              -7.261571884155273,
+              -7.3459272384643555,
+              -7.260208606719971,
+              -7.210587978363037
+            ]
+          },
+          {
+            "text": " -       ",
+            "tokens": [
+              " -",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.514362335205078,
+              -7.313775062561035,
+              -7.159529685974121,
+              -7.312965393066406,
+              -7.404309272766113,
+              -7.394939422607422,
+              -7.293422222137451,
+              -7.136334419250488
+            ]
+          }
+        ],
+        "/v1/chat/completions": [
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.977429389953613,
+              -6.9459357261657715,
+              -6.888690948486328,
+              -6.962892532348633,
+              -7.0215744972229,
+              -6.961460590362549,
+              -6.944464683532715,
+              -6.8385701179504395
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.06466817855835,
+              -7.116052150726318,
+              -6.935471534729004,
+              -7.098372936248779,
+              -7.096277236938477,
+              -7.0099406242370605,
+              -6.957465171813965,
+              -6.920825481414795
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.079222679138184,
+              -7.076145172119141,
+              -6.987241744995117,
+              -7.165285587310791,
+              -7.098609924316406,
+              -7.009646415710449,
+              -7.0100202560424805,
+              -6.9228081703186035
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.095804691314697,
+              -7.063374042510986,
+              -6.993111610412598,
+              -6.977956295013428,
+              -7.0254926681518555,
+              -7.024902820587158,
+              -6.989711284637451,
+              -6.9220805168151855
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -7.073423385620117,
+              -7.232013702392578,
+              -7.163536071777344,
+              -7.136204719543457,
+              -7.230614185333252,
+              -7.1810832023620605,
+              -7.130748271942139,
+              -7.0973029136657715
+            ]
+          },
+          {
+            "text": "        ",
+            "tokens": [
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " ",
+              " "
+            ],
+            "token_logprobs": [
+              -6.95267391204834,
+              -7.258184432983398,
+              -7.075373649597168,
+              -7.1786675453186035,
+              -7.160349369049072,
+              -7.162833213806152,
+              -7.128593444824219,
+              -7.079797267913818
+            ]
+          }
+        ]
+      },
+      "workers_after": [
+        {
+          "rank": 0,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56179372032,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 1,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56179974144,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 2,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56180424704,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 3,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625700864,
+          "memory_reserved": 39856373760,
+          "device_free": 56180191232,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 4,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56222171136,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 5,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56222076928,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 6,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56220434432,
+          "device_total": 98515812352
+        },
+        {
+          "rank": 7,
+          "layers": 8,
+          "tp": 4,
+          "dp": 2,
+          "chunked_prefill": false,
+          "max_num_batched_tokens": 2048,
+          "async_scheduling": true,
+          "graph_mode": "FULL_DECODE_ONLY",
+          "memory_allocated": 36625307648,
+          "memory_reserved": 39833305088,
+          "device_free": 56223420416,
+          "device_total": 98515812352
+        }
+      ],
+      "memory_growth_ratios": [
+        0.0032240662466654787,
+        0.003236284277416206,
+        0.0032364162099385147,
+        0.0032302635314603693,
+        0.003988789811691745,
+        0.003988780891344686,
+        0.003980913704478217,
+        0.003981195889248
+      ]
+    }
+  ],
+  "exact_comparison_pairs": 36,
+  "endpoint_checks": {
+    "/v1/completions": true,
+    "/v1/chat/completions": true
+  },
+  "exit_code": 0
+}

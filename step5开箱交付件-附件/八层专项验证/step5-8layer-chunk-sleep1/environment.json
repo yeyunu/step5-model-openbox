@@ -1,0 +1,29 @@
+{
+  "checkpoint": {
+    "path": "/data/Step-5-Preview-BF16-8layer",
+    "file_count": 16,
+    "tensor_count": 807,
+    "total_tensor_bytes": 75525811072,
+    "max_tensor": {
+      "name": "model.layers.3.moe.down_proj.weight",
+      "file": "model-00001.safetensors",
+      "dtype": "BF16",
+      "shape": [
+        352,
+        4096,
+        1536
+      ],
+      "bytes": 4429185024
+    },
+    "manifest_sha256": "40ae3bb0e0a1146a76fe4ec161ea23fdb8b993d2a480812b1f192737ef1a53ab"
+  },
+  "host": "A5",
+  "container": "yyy-cann92",
+  "layers": 8,
+  "source_path": "/home/yyy/weight/Step-5-Preview-BF16",
+  "python": "/home/yyy/model_openbox/.venv/bin/python",
+  "versions": {
+    "/home/yyy/vllm-ascend-step4": "5d7f9124db0304ad177f71969f26a70316ecc632",
+    "/home/yyy/vllm-ascend-main": "80d265f13e53b2c596da31388a1eedde2bb7f94d"
+  }
+}

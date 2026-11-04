@@ -1,0 +1,1269 @@
+{
+  "label": "prefill-32768in-4096out",
+  "profile_dir": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill",
+  "rule": {
+    "scope": "all compute kernels, including vision; communication, data movement/metadata, integer routing/indexing, and sampling excluded",
+    "per_call": "duration < 10 us: score=1; otherwise score=max(valid pipe ratio in that same call)/0.8",
+    "aggregation": "compute-duration weighted mean over every kernel call in the profiled iteration",
+    "threshold": 0.8,
+    "note": "empirical compute-side metric, not MFU or hardware peak utilization"
+  },
+  "rank_count": 8,
+  "rank_score_min": 1.1396808022888527,
+  "rank_score_max": 1.1464320267675572,
+  "rank_score_mean": 1.1427199338927714,
+  "rank_score_stdev": 0.0027303617996586958,
+  "all_ranks_present": true,
+  "pass_threshold": 0.8,
+  "pass": true,
+  "ranks": [
+    {
+      "rank": 0,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp0_dcp0_ep0_rank0_1080_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "7b0e9c43c227ce7711097120c7058a419ef9cc97fc9c204e9f2c2259d3cbcd41",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 181702.95500000005,
+        "compute": 181544.47400000002,
+        "movement_metadata": 33344.22499999994,
+        "sampling": 5.038
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 181544.47400000002,
+      "weighted_score_us": 208046.70333375005,
+      "missing_ratio_us": 0.0,
+      "score": 1.1459820216491416,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62759.32499999998,
+          "weighted_score_us": 76020.27467499998,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 56235.742,
+          "weighted_score_us": 65481.3532725,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 18603.415999999997,
+          "weighted_score_us": 22351.054353749998,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7571.114000000001,
+          "weighted_score_us": 9362.45352125,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7018.3470000000025,
+          "weighted_score_us": 7052.13827375,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6380.607,
+          "weighted_score_us": 4143.401315,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5305.303,
+          "weighted_score_us": 4520.249987500001,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3718.429,
+          "weighted_score_us": 4490.669562499999,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2667.6740000000004,
+          "weighted_score_us": 3178.84923875,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2538.15,
+          "weighted_score_us": 2476.422776250002,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1842.5640000000003,
+          "weighted_score_us": 2276.4846375,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1702.512,
+          "weighted_score_us": 1316.7189437499999,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1103.2830000000006,
+          "weighted_score_us": 1103.2830000000006,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1091.8379999999997,
+          "weighted_score_us": 1091.8379999999997,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 787.3569999999999,
+          "weighted_score_us": 743.4883074999999,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 688.1110000000003,
+          "weighted_score_us": 688.1110000000003,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 595.102,
+          "weighted_score_us": 616.3638325,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 508.6,
+          "weighted_score_us": 625.259315,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 350.901,
+          "weighted_score_us": 429.49730874999995,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 41.974,
+          "weighted_score_us": 41.974,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 25.346,
+          "weighted_score_us": 28.0390125,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 8.779,
+          "weighted_score_us": 8.779,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 1,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp1_dcp0_ep1_rank1_1081_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "30a2125330307deadcf91f1824b229bd0ad6af69317da61542c27e14a8ae8e86",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 184024.92500000002,
+        "compute": 178147.90700000006,
+        "movement_metadata": 33027.41799999997,
+        "sampling": 4.551
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 178147.90700000006,
+      "weighted_score_us": 203589.99110125008,
+      "missing_ratio_us": 0.0,
+      "score": 1.1428143868187572,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62762.916999999994,
+          "weighted_score_us": 76005.42125874998,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 56257.8,
+          "weighted_score_us": 65503.385345,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 15417.864,
+          "weighted_score_us": 18159.64638625,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7586.032000000001,
+          "weighted_score_us": 9380.349328749999,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7022.814000000002,
+          "weighted_score_us": 7053.20804375,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6376.764,
+          "weighted_score_us": 4144.8966,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5306.940999999999,
+          "weighted_score_us": 4525.782475,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3720.084,
+          "weighted_score_us": 4490.5466424999995,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2541.250000000001,
+          "weighted_score_us": 2483.4719025,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2414.16,
+          "weighted_score_us": 2857.0479775,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.8020000000001,
+          "weighted_score_us": 2275.5455162499998,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1687.0390000000002,
+          "weighted_score_us": 1309.56269,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1113.8230000000005,
+          "weighted_score_us": 1113.8230000000005,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1085.2340000000002,
+          "weighted_score_us": 1085.2340000000002,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 781.6720000000003,
+          "weighted_score_us": 744.3261025000003,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 695.6240000000005,
+          "weighted_score_us": 695.6240000000005,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 599.203,
+          "weighted_score_us": 626.2208899999999,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 508.361,
+          "weighted_score_us": 625.6022825,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 351.924,
+          "weighted_score_us": 430.6875074999999,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 42.506,
+          "weighted_score_us": 42.506,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 24.826,
+          "weighted_score_us": 27.836152499999997,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 9.267,
+          "weighted_score_us": 9.267,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 2,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp2_dcp0_ep2_rank2_1082_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "d9621b28e09c3ce622435816bd83299a73ce4862312fdcf9b6bf749518a767cf",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 177650.2309999998,
+        "compute": 183592.696,
+        "movement_metadata": 33369.846999999994,
+        "sampling": 5.406
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 183592.696,
+      "weighted_score_us": 210476.546575,
+      "missing_ratio_us": 0.0,
+      "score": 1.1464320267675572,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62754.962,
+          "weighted_score_us": 75996.06452500001,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 56475.195,
+          "weighted_score_us": 65655.8826,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 20291.300999999996,
+          "weighted_score_us": 24451.00722875,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7584.170999999999,
+          "weighted_score_us": 9378.5168325,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7031.476999999999,
+          "weighted_score_us": 7069.407348750001,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6383.338,
+          "weighted_score_us": 4149.1697,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5309.413,
+          "weighted_score_us": 4525.4039875,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3718.1789999999996,
+          "weighted_score_us": 4491.3610499999995,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2799.683,
+          "weighted_score_us": 3342.1547987500003,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2539.071999999999,
+          "weighted_score_us": 2482.594842500001,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.7250000000004,
+          "weighted_score_us": 2274.5257337499997,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1696.692,
+          "weighted_score_us": 1313.37952125,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1079.9479999999999,
+          "weighted_score_us": 1079.9479999999999,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1072.5109999999995,
+          "weighted_score_us": 1072.5109999999995,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 787.1810000000004,
+          "weighted_score_us": 743.0119487500002,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 695.5149999999998,
+          "weighted_score_us": 695.5149999999998,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 597.287,
+          "weighted_score_us": 621.9455674999999,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 508.461,
+          "weighted_score_us": 625.0889025,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 351.075,
+          "weighted_score_us": 430.52628,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 41.403000000000006,
+          "weighted_score_us": 41.403000000000006,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 24.667,
+          "weighted_score_us": 27.688707500000003,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 9.44,
+          "weighted_score_us": 9.44,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 3,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp3_dcp0_ep3_rank3_1083_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "c81fcfac88ff4083d47b785f764362b462b6a60d8f3ff8d4093f45c360e5c4ec",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 180907.73700000002,
+        "compute": 178210.74799999985,
+        "movement_metadata": 32958.24399999998,
+        "sampling": 4.762
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 178210.74799999985,
+      "weighted_score_us": 203387.68643250008,
+      "missing_ratio_us": 0.0,
+      "score": 1.1412762064861557,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62751.083,
+          "weighted_score_us": 75984.42106875,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 56780.403999999995,
+          "weighted_score_us": 65934.26525249999,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 14991.989,
+          "weighted_score_us": 17576.2152325,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7581.8009999999995,
+          "weighted_score_us": 9373.7703325,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7036.946999999999,
+          "weighted_score_us": 7068.301837500002,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6374.589,
+          "weighted_score_us": 4147.46641375,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5318.496999999999,
+          "weighted_score_us": 4528.9270937500005,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3738.745,
+          "weighted_score_us": 4517.386493749999,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2534.672,
+          "weighted_score_us": 2478.74071875,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2375.9480000000003,
+          "weighted_score_us": 2811.1840537500007,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.833,
+          "weighted_score_us": 2275.5791025,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1688.045,
+          "weighted_score_us": 1310.57893375,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1091.4260000000004,
+          "weighted_score_us": 1091.4260000000004,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1084.3620000000003,
+          "weighted_score_us": 1084.3620000000003,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 786.2269999999997,
+          "weighted_score_us": 747.3345562499999,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 698.6400000000001,
+          "weighted_score_us": 698.6400000000001,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 600.0889999999999,
+          "weighted_score_us": 624.2516137499999,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 507.806,
+          "weighted_score_us": 625.2337875,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 350.18,
+          "weighted_score_us": 429.03786999999994,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 42.131,
+          "weighted_score_us": 42.131,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 25.043,
+          "weighted_score_us": 28.14207125,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 10.291,
+          "weighted_score_us": 10.291,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 4,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp4_dcp0_ep4_rank4_1084_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "f9dcb650350d7d2f4e1832aeafcdc5fb11d51829bc732998255b7a6cdc6ea2d5",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 185481.91400000002,
+        "compute": 176183.99900000007,
+        "movement_metadata": 32774.75399999995,
+        "sampling": 4.735
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 176183.99900000007,
+      "weighted_score_us": 200954.37876375,
+      "missing_ratio_us": 0.0,
+      "score": 1.1405938104728224,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62761.608,
+          "weighted_score_us": 75997.44427875003,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 56952.307,
+          "weighted_score_us": 66134.34544,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 12974.274000000001,
+          "weighted_score_us": 15157.000963749999,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7581.952,
+          "weighted_score_us": 9374.535058750002,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7034.355999999999,
+          "weighted_score_us": 7068.815741250001,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6376.213,
+          "weighted_score_us": 4144.53845,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5302.2300000000005,
+          "weighted_score_us": 4525.07016,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3716.2369999999996,
+          "weighted_score_us": 4485.4527975,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2534.8839999999996,
+          "weighted_score_us": 2486.684321249999,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2219.1750000000006,
+          "weighted_score_us": 2616.3659100000004,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.876,
+          "weighted_score_us": 2274.7158624999997,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1690.652,
+          "weighted_score_us": 1309.0462425,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1094.6419999999991,
+          "weighted_score_us": 1094.6419999999991,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1094.6379999999997,
+          "weighted_score_us": 1094.6379999999997,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 782.0040000000001,
+          "weighted_score_us": 743.34331875,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 696.4409999999998,
+          "weighted_score_us": 696.4409999999998,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 597.345,
+          "weighted_score_us": 619.51316875,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 506.199,
+          "weighted_score_us": 622.939665,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 350.65999999999997,
+          "weighted_score_us": 429.6229749999999,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 42.603,
+          "weighted_score_us": 42.603,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 25.096,
+          "weighted_score_us": 28.01341,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 8.607,
+          "weighted_score_us": 8.607,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 5,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp5_dcp0_ep5_rank5_1085_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "88582f589107e67384133d897d94d0cfef31595dc3b3cf5719ba847ede5080e0",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 147708.28700000004,
+        "compute": 182573.93100000004,
+        "movement_metadata": 33639.35800000001,
+        "sampling": 4.636
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 182573.93100000004,
+      "weighted_score_us": 209032.5244237501,
+      "missing_ratio_us": 0.0,
+      "score": 1.1449198868580535,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62762.07300000001,
+          "weighted_score_us": 76002.41161874999,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 56962.850999999995,
+          "weighted_score_us": 66147.7766175,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 18870.943,
+          "weighted_score_us": 22630.0526875,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7568.871000000001,
+          "weighted_score_us": 9358.251069999998,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7018.158,
+          "weighted_score_us": 7053.87415375,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6372.304,
+          "weighted_score_us": 4145.9782225,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5305.682,
+          "weighted_score_us": 4528.03341625,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3727.572,
+          "weighted_score_us": 4500.2027875,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2695.8640000000005,
+          "weighted_score_us": 3204.6250200000004,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2541.533,
+          "weighted_score_us": 2480.8353874999993,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.629,
+          "weighted_score_us": 2275.7919262499995,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1692.8919999999998,
+          "weighted_score_us": 1312.1820775,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1109.2140000000002,
+          "weighted_score_us": 1109.2140000000002,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1080.1450000000002,
+          "weighted_score_us": 1080.1450000000002,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 782.3290000000001,
+          "weighted_score_us": 737.8095812499998,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 707.7890000000002,
+          "weighted_score_us": 707.7890000000002,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 601.4649999999999,
+          "weighted_score_us": 626.77805375,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 506.45799999999997,
+          "weighted_score_us": 623.2592725,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 349.78900000000004,
+          "weighted_score_us": 428.12240625,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 42.755,
+          "weighted_score_us": 42.755,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 24.177,
+          "weighted_score_us": 27.199125,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 9.438,
+          "weighted_score_us": 9.438,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 6,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp6_dcp0_ep6_rank6_1086_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "f9c154eac3f1505d6cbaecf5b68f112a785ad23e3cc878f4bc236c894be0b36a",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 184656.34700000007,
+        "compute": 177861.498,
+        "movement_metadata": 33070.670999999966,
+        "sampling": 4.743
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 177861.498,
+      "weighted_score_us": 202772.83806874987,
+      "missing_ratio_us": 0.0,
+      "score": 1.1400603298008312,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62766.19800000001,
+          "weighted_score_us": 76007.14700000001,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 55803.035,
+          "weighted_score_us": 64489.51229375,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 15592.75,
+          "weighted_score_us": 18381.72585125,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7573.218999999999,
+          "weighted_score_us": 9363.033756249999,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7034.774999999999,
+          "weighted_score_us": 7059.059152499999,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6379.981,
+          "weighted_score_us": 4146.98765,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5310.512000000001,
+          "weighted_score_us": 4527.18453125,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3730.975,
+          "weighted_score_us": 4504.333117499999,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2543.830999999999,
+          "weighted_score_us": 2488.4186062500003,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2428.769,
+          "weighted_score_us": 2878.8005749999998,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.74,
+          "weighted_score_us": 2275.0075249999995,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1698.925,
+          "weighted_score_us": 1315.4810137499999,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1072.3869999999997,
+          "weighted_score_us": 1072.3869999999997,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1068.043,
+          "weighted_score_us": 1068.043,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 790.092,
+          "weighted_score_us": 748.65061625,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 695.4169999999999,
+          "weighted_score_us": 695.4169999999999,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 600.5840000000001,
+          "weighted_score_us": 623.05375,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 505.943,
+          "weighted_score_us": 622.9419275,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 349.489,
+          "weighted_score_us": 427.76787999999993,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 41.047000000000004,
+          "weighted_score_us": 41.047000000000004,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 24.921,
+          "weighted_score_us": 27.9738225,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 8.865,
+          "weighted_score_us": 8.865,
+          "missing_us": 0.0
+        }
+      }
+    },
+    {
+      "rank": 7,
+      "file": "/home/yyy/model_openbox/mm-32k-4k/prof-prefill/dp0_pp0_tp7_dcp0_ep7_rank7_1087_20261022220652160_ascend_pt/ASCEND_PROFILER_OUTPUT/kernel_details.csv",
+      "sha256": "a0e8349a2a1f36fc354803a698e527ad99938a47eec19937ddad0a7ed288b971",
+      "rows": 5601,
+      "categories_us": {
+        "communication": 186434.37900000007,
+        "compute": 176474.2330000001,
+        "movement_metadata": 33095.15099999998,
+        "sampling": 4.578
+      },
+      "category_calls": {
+        "communication": 416,
+        "compute": 1454,
+        "movement_metadata": 3730,
+        "sampling": 1
+      },
+      "compute_us": 176474.2330000001,
+      "weighted_score_us": 201124.29544875005,
+      "missing_ratio_us": 0.0,
+      "score": 1.1396808022888527,
+      "types": {
+        "MatMulV3": {
+          "calls": 426,
+          "duration_us": 62771.187,
+          "weighted_score_us": 76000.58417874998,
+          "missing_us": 0.0
+        },
+        "GenericBlockSparseAttention": {
+          "calls": 2,
+          "duration_us": 55805.717000000004,
+          "weighted_score_us": 64527.6310375,
+          "missing_us": 0.0
+        },
+        "GroupedMatmul": {
+          "calls": 10,
+          "duration_us": 14278.588,
+          "weighted_score_us": 16786.444775,
+          "missing_us": 0.0
+        },
+        "_fused_add_rms_norm_cast_kernel": {
+          "calls": 15,
+          "duration_us": 7573.812000000002,
+          "weighted_score_us": 9362.800424999998,
+          "missing_us": 0.0
+        },
+        "FusedInferAttentionScore": {
+          "calls": 100,
+          "duration_us": 7034.960999999999,
+          "weighted_score_us": 7069.938632499999,
+          "missing_us": 0.0
+        },
+        "IndexerRegionScore": {
+          "calls": 2,
+          "duration_us": 6380.487999999999,
+          "weighted_score_us": 4151.305185,
+          "missing_us": 0.0
+        },
+        "_split_qkv_norm_rope_192_kernel": {
+          "calls": 8,
+          "duration_us": 5308.223,
+          "weighted_score_us": 4525.228606250001,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_update_ordered_kernel": {
+          "calls": 4,
+          "duration_us": 3724.5190000000002,
+          "weighted_score_us": 4497.323205,
+          "missing_us": 0.0
+        },
+        "LayerNormV4": {
+          "calls": 190,
+          "duration_us": 2542.4099999999994,
+          "weighted_score_us": 2488.7434512499976,
+          "missing_us": 0.0
+        },
+        "_swiglustep_kernel": {
+          "calls": 13,
+          "duration_us": 2327.941,
+          "weighted_score_us": 2758.7028824999998,
+          "missing_us": 0.0
+        },
+        "MoeGatingTopK": {
+          "calls": 5,
+          "duration_us": 1841.076,
+          "weighted_score_us": 2274.6485799999996,
+          "missing_us": 0.0
+        },
+        "Conv2DV2": {
+          "calls": 4,
+          "duration_us": 1694.7669999999998,
+          "weighted_score_us": 1309.732105,
+          "missing_us": 0.0
+        },
+        "Sin": {
+          "calls": 188,
+          "duration_us": 1107.475,
+          "weighted_score_us": 1107.475,
+          "missing_us": 0.0
+        },
+        "Cos": {
+          "calls": 188,
+          "duration_us": 1072.141,
+          "weighted_score_us": 1072.141,
+          "missing_us": 0.0
+        },
+        "FastGelu": {
+          "calls": 94,
+          "duration_us": 782.5079999999999,
+          "weighted_score_us": 741.6127137499998,
+          "missing_us": 0.0
+        },
+        "Neg": {
+          "calls": 188,
+          "duration_us": 698.2780000000001,
+          "weighted_score_us": 698.2780000000001,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_fill_direct_kernel": {
+          "calls": 2,
+          "duration_us": 598.363,
+          "weighted_score_us": 620.6339312499999,
+          "missing_us": 0.0
+        },
+        "_indexer_qkz_norm_rope_kernel": {
+          "calls": 2,
+          "duration_us": 506.39,
+          "weighted_score_us": 622.858045,
+          "missing_us": 0.0
+        },
+        "RmsNorm": {
+          "calls": 2,
+          "duration_us": 350.512,
+          "weighted_score_us": 430.31257,
+          "missing_us": 0.0
+        },
+        "Sigmoid": {
+          "calls": 8,
+          "duration_us": 41.613,
+          "weighted_score_us": 41.613,
+          "missing_us": 0.0
+        },
+        "ResizeBilinearV2": {
+          "calls": 1,
+          "duration_us": 24.193,
+          "weighted_score_us": 27.217125000000003,
+          "missing_us": 0.0
+        },
+        "_csa_prefill_clear_scratch_kernel": {
+          "calls": 2,
+          "duration_us": 9.071000000000002,
+          "weighted_score_us": 9.071000000000002,
+          "missing_us": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "feature": "routing_inproc",
+  "status": "passed",
+  "scope": "8-layer functional verification",
+  "topology": {
+    "tp": 8,
+    "dp": 1,
+    "ep": true
+  },
+  "note": "Offline LLM does not support single-process DP2; TP8 is supplementary to authoritative HTTP TP4/DP2.",
+  "outputs": [
+    {
+      "prompt": "The future of AI is",
+      "text": "        ",
+      "tokens": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223
+      ],
+      "logprobs": [
+        -6.962179660797119,
+        -6.499485969543457,
+        -7.034923553466797,
+        -6.875008583068848,
+        -6.962724685668945,
+        -6.745755195617676,
+        -6.686246871948242,
+        -6.696398735046387
+      ],
+      "routing_shape": [
+        13,
+        8,
+        8
+      ],
+      "routing_min": 0,
+      "routing_max": 344,
+      "routing_path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-inproc-0.npy"
+    },
+    {
+      "prompt": "Machine learning enables",
+      "text": "        ",
+      "tokens": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223
+      ],
+      "logprobs": [
+        -7.1088948249816895,
+        -6.662750244140625,
+        -6.799090385437012,
+        -6.886401176452637,
+        -6.8977131843566895,
+        -6.69926118850708,
+        -6.675463676452637,
+        -6.638529300689697
+      ],
+      "routing_shape": [
+        11,
+        8,
+        8
+      ],
+      "routing_min": 0,
+      "routing_max": 350,
+      "routing_path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-inproc-1.npy"
+    },
+    {
+      "prompt": "Deep learning models can",
+      "text": "        ",
+      "tokens": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223
+      ],
+      "logprobs": [
+        -7.135501384735107,
+        -6.7147297859191895,
+        -7.005691051483154,
+        -6.910974502563477,
+        -6.871582984924316,
+        -6.830171585083008,
+        -6.698953628540039,
+        -6.709001541137695
+      ],
+      "routing_shape": [
+        12,
+        8,
+        8
+      ],
+      "routing_min": 0,
+      "routing_max": 350,
+      "routing_path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-inproc-2.npy"
+    },
+    {
+      "prompt": "Step5 sparse attention is",
+      "text": "        ",
+      "tokens": [
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223,
+        223
+      ],
+      "logprobs": [
+        -7.321918964385986,
+        -6.792849540710449,
+        -6.842600345611572,
+        -6.8866286277771,
+        -6.819355487823486,
+        -6.796754837036133,
+        -6.73858118057251,
+        -6.745696544647217
+      ],
+      "routing_shape": [
+        13,
+        8,
+        8
+      ],
+      "routing_min": 0,
+      "routing_max": 351,
+      "routing_path": "/home/yyy/model_openbox/step5-preview-bf16-8layer-resume-20261016-112808/logs/routing-inproc-3.npy"
+    }
+  ],
+  "exit_code": 0
+}

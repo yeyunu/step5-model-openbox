@@ -1,0 +1,79 @@
+{
+  "scope": "Official upstream PRs with an evidence-backed path into the Step5 verification stack",
+  "included_merged": [
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 16959,
+      "title": "[BugFix][WeightTransfer] Align NPU IPC reload lifecycle and add the three-model IPC/HCCL state-transition cases",
+      "merged": true,
+      "merge_commit_sha": "4004d10e9b82b6bb36d7093a8e8ae19bdb97a1f6",
+      "integration": "backport 7c71fa4377e5362e78a0803863b68f0c3f712dda"
+    },
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 17154,
+      "title": "[BugFix][WeightTransfer] Destroy native HCCL communicators on shutdown",
+      "merged": true,
+      "merge_commit_sha": "cee16e8dbe44b417fee456c5fbc52490d4f5540e",
+      "integration": "backport 285d40d925760f9577909767dd98287d06adfe7b"
+    },
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 18848,
+      "title": "[Refactor][WeightTransfer] Reuse upstream IPC engines",
+      "merged": true,
+      "merge_commit_sha": "e992aa2e60bcd1dc99440958d5bd33bc4c6833e2",
+      "integration": "backport c8ac0609114d87bcd9fd6e7acc7a827202c74572"
+    },
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 18944,
+      "title": "[Refactor][WeightTransfer] Build HCCL engine reusing upstream NCCL engine",
+      "merged": true,
+      "merge_commit_sha": "ec26d2541fcbec6b4d719de1524c45d75b26c386",
+      "integration": "backport 6fea64bf9b1d5e12a891ef3c34b5cd1cff141412"
+    },
+    {
+      "repository": "vllm-project/vllm",
+      "number": 50940,
+      "title": "[R3] Unify routed expert shape configuration",
+      "merged": true,
+      "merge_commit_sha": "6153dbe036abe11628ab5f7e120707e4f7331652",
+      "integration": "included by fixed vLLM baseline c21cc405e9cbf0fcd6b958ec3c458360dfdcf9fe"
+    },
+    {
+      "repository": "vllm-project/vllm",
+      "number": 51259,
+      "title": "[Bugfix] Import each packed IPC export once on the consumer side",
+      "merged": true,
+      "merge_commit_sha": "f37dff22fc77e21ac857f2023faa7d5b8f9c9591",
+      "integration": "PackedBufferImporter adapted to the NPU packed IPC receive path"
+    }
+  ],
+  "not_counted_as_merged_official_pr": [
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 20403,
+      "state": "open",
+      "treatment": "equivalent backport of fixed production commit c4ed2abb7cdb8243731fdc4311c7bb3ad4370f33"
+    },
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 19248,
+      "state": "open",
+      "treatment": "partial selection of runtime tensor skip sets and registration"
+    },
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 19127,
+      "state": "open",
+      "treatment": "not included in the current verification stack"
+    },
+    {
+      "repository": "vllm-project/vllm-ascend",
+      "number": 19164,
+      "state": "merged",
+      "treatment": "not claimed in the current integration because the migration evidence does not show it was incorporated"
+    }
+  ]
+}

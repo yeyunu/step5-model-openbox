@@ -1,0 +1,56 @@
+[
+  {
+    "file": "225-ipc-before-round1.log",
+    "host": "225",
+    "source": "/data/yyy/hccl-without-pr19248-20261030/home/model_openbox/reduced-recheck-225-10.20/results/resume-ipc-round1-10-20/client.log",
+    "sha256": "530bdaea77a220f67f8ba4131588eac23b2ab8c7ba8da1de69044ffee98388ea"
+  },
+  {
+    "file": "225-ipc-before-round2.log",
+    "host": "225",
+    "source": "/data/yyy/hccl-without-pr19248-20261030/home/model_openbox/reduced-recheck-225-10.20/results/resume-ipc-round2-10-20/client.log",
+    "sha256": "0e4ea92962464ea70ba5048912b27b1cc3adad2f1fcf4fa0d02590b6ecf020e2"
+  },
+  {
+    "file": "226-ipc-before.log",
+    "host": "226",
+    "source": "/data/yyy/upstream-retest-20261030/home/model_openbox/upstream-retest-20261030/mechanism-226/ipc/logs/client.log",
+    "sha256": "424ffec425bee436d0f7bc5e4de953eef7bc93b77331199bdd2d2c4716ba866a"
+  },
+  {
+    "file": "226-ipc-before-repeat.log",
+    "host": "226",
+    "source": "/data/yyy/upstream-retest-20261030/home/model_openbox/upstream-retest-20261030/mechanism-226/ipc-repeat/logs/client.log",
+    "sha256": "1d58c14fd28c4557e1c6a26070219f800a067db86adef8e97209468d6d125eb0"
+  },
+  {
+    "file": "20403-regression-before.log",
+    "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\Step5上游替换复测-20261030\\hccl-minimal-buffer-20261030\\a5-run\\logs\\regression-before.log",
+    "provenance": "existing local archive",
+    "sha256": "3599482167dae0df4cc354ca71404b20da5b7c8f522fe782dfa30b7353f28a19"
+  },
+  {
+    "file": "20403-regression-after.log",
+    "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\Step5上游替换复测-20261030\\hccl-minimal-buffer-20261030\\a5-run\\logs\\regression-after.log",
+    "provenance": "existing local archive",
+    "sha256": "77a29bbef0c0e79f7b29f24cb348d91cf92f8856c0f3be7d3d20b3cfdd8655cb"
+  },
+  {
+    "file": "20403-count-diagnostic.log",
+    "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\Step5上游替换复测-20261030\\hccl-minimal-buffer-20261030\\a5-run\\logs\\count-diagnostic.log",
+    "provenance": "existing local archive",
+    "sha256": "760482f20855fe62de722d93f06273b0268834454d1aec530f96bf36553c4aff"
+  },
+  {
+    "file": "ascend-integration-cpu.log",
+    "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\Step5上游替换复测-20261030\\logs\\ascend-cpu-final.log",
+    "provenance": "existing local archive",
+    "sha256": "ff12c6884eaaf89f64cfbabf39fdd9831fdf4d9cb44389802c13116b97e01eac"
+  },
+  {
+    "file": "ipc-import-before-regression.log",
+    "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\Step5八层重构复验-10.20\\ipc-import-once-10.20\\cpu-before.log",
+    "provenance": "existing local archive",
+    "sha256": "a05c67b3357eb0c837ed02842fdddc4ab59fec6d69870e9c701b8f43708199d4"
+  }
+]

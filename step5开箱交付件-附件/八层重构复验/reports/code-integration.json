@@ -1,0 +1,20 @@
+{
+  "actual_time": "2026-11-02T12:46:41+00:00",
+  "source_base": "94edc50f4a35911732fdd91781f889f436a1c4c7",
+  "isolated_worktree": "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend",
+  "branch": "codex/step5-pr20403-recheck-10.20",
+  "upstream_pr": "https://github.com/vllm-project/vllm-ascend/pull/20403",
+  "upstream_production_commit": "c4ed2abb7cdb8243731fdc4311c7bb3ad4370f33",
+  "upstream_merged": false,
+  "integration": "equivalent backport; production and regression added lines exactly match official commit; old fork import context retained",
+  "source_checkout_unchanged": true,
+  "diff_sha256": "53f57c484771a5cddd6375d852c610636ea5d6879d6d6cee38bbff2193997ce1",
+  "reused_binary_paths": [
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/vllm_ascend_C.cpython-312-aarch64-linux-gnu.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_proto/lib/linux/aarch64/libcust_opsproto_rt2.0.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_impl/cpu/aicpu_kernel/impl/libtransformer_aicpu_kernels.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_impl/ai_core/tbe/op_tiling/liboptiling.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_impl/ai_core/tbe/op_tiling/lib/linux/aarch64/libcust_opmaster_rt2.0.so",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/_cann_ops_custom/vendors/custom_transformer/op_api/lib/libcust_opapi.so"
+  ]
+}

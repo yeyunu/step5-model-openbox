@@ -1,0 +1,51 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 601
+Timestamp: 2026-10-25T06:18:12.683Z
+Record SHA256: 1204297bd5be5da25bfff2506ac3498508b2ef354d3414efd5a3bb5f82f595a5
+Evidence type: function_call_output
+Note: extracted historical record; not a new server run. Original terminal wrapping/truncation retained.
+
+Chunk ID: 4cff52
+Wall time: 5.0035 seconds
+Process running with session ID 54670
+Original token count: 432
+Output:
+python3 - <<'PY'
+> import json,glob,hashlib
+<6/gpqa_diamond/outputs/*/predictions/*/*.jsonl')[0]
+<47/gpqa_diamond/outputs/*/predictions/*/*.jsonl')[0][15X
+> def load(p): return [json.loads(x) for x in open(p) if x.strip()]
+> def qcontent(r):
+>     for m in r.get('messages',[]):
+< and m.get('role')=='user': return m.get('content')
+>     return None
+> def h(x): return hashlib.sha256((x or '').encode()).hexdigest()
+> o=load(old); n=load(new)
+> Sall={h(qcontent(r)) for r in o}
+> Sfirst={h(qcontent(r)) for r in o[:198]}
+> Snew={h(qcontent(r)) for r in n}
+<ue',len(Sall),'first198 unique',len(Sfirst),'validrun',len(n),len(Snew))       
+> print('first198 == valid full set',Sfirst==Snew)
+<m valid',len(Snew-Sfirst),'extra',len(Sfirst-Snew))
+>[1Cprint('all old covers valid set',Snew.issubset(Sall))
+> # check second chunk and chunk overlap
+> Ssecond={h(qcontent(r)) for r in o[198:396]}
+<nd==Snew,'overlap firstsecond',len(Sfirst&Ssecond))
+< how many first chunk items occur first in valid ordering
+> first_idx={r.get('index') for r in n}
+<ique',min(first_idx),max(first_idx),len(first_idx))
+> # first 198 target/score completeness
+> rvals=[]
+> for r in o[:198]:
+>     try:rvals.append(r['sample_score']['score']['value']['accuracy'])
+>     except:rvals.append(r.get('sample_score'))
+<ls)-sum(x==1 for x in rvals)-sum(x==0 for x in rvals))
+> PY
+old total 404 hash unique 109 first198 unique 58 validrun 198 198
+first198 == valid full set False
+first198 missing from valid 140 extra 0
+all old covers valid set False
+second198 == valid full set False overlap firstsecond 21
+valid indices min/max/unique 0 197 198
+scores type {'NoneType'} correct 0 incorrect 0 other 198
+[root@localhost ~]# 

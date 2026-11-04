@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-11-02T13:11:29+00:00",
+  "scope": "Read-only source inspection over SSH. No service started, no NPU requests, no CP hardware retest.",
+  "source_commits": {
+    "vllm": "c21cc405e9cbf0fcd6b958ec3c458360dfdcf9fe",
+    "isolated_vllm_ascend": "94edc50f4a35911732fdd91781f889f436a1c4c7"
+  },
+  "file_sha256": {
+    "/home/yyy/vllm-ascend-step4/vllm/models/step5/model.py": "59fa998fc92a0641eac1c96fb2678670d8705ff19fd026701ff806faa214e723",
+    "/home/yyy/vllm-ascend-step4/vllm/models/step5/sparse_attention.py": "6c789403b0a30d801d0db47a54b3da4bb980c85c5a8769366f55f706c1087b55",
+    "/home/yyy/vllm-ascend-step4/vllm/config/scheduler.py": "3cf5d41a5d662ab0eada6f3128e2538abc0a250d6aef82acab7df7dd84e498bc",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/platform.py": "73aa3289189eb4802884a1924fa9f63513b13ea5e647662f87548f3dc13bcf65",
+    "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/worker/model_runner_v1.py": "68b37402fad35ecd28b2e4f7e617c6a4365b29904a888f06d2b9ff8ff986cd87"
+  },
+  "raw_excerpt_file": "../functional-api-audit-10.20.txt",
+  "raw_excerpt_sha256": "8f7b908ccf0f239b2f3f213d677129201001e2624c52db97068232505543aabf",
+  "cp": {
+    "status": "blocked",
+    "validation_kind": "static_code_review",
+    "hardware_retested": false,
+    "dcp": {
+      "path": "/home/yyy/vllm-ascend-step4/vllm/models/step5/sparse_attention.py",
+      "line": 1194,
+      "condition": "decode_context_parallel_size > 1",
+      "exception": "NotImplementedError: Step5 DSA does not support decode context parallelism."
+    },
+    "pcp": {
+      "path": "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/platform.py",
+      "line": 1500,
+      "condition": "not use_v2_model_runner and prefill_context_parallel_size > 1",
+      "exception": "ValueError: PCP (Prefill Context Parallelism) is not supported by vLLM Ascend."
+    },
+    "csa_runner": {
+      "path": "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/worker/model_runner_v1.py",
+      "line": 3347,
+      "condition": "use_dcp or prefill_context_parallel_size != 1 or ubatch_slices is not None",
+      "exception": "NotImplementedError: CSA runner slot plans do not support context parallel or microbatch slicing"
+    },
+    "boundary": "These guards apply to the checked Step5/MRV1/CSA path. This is not a claim that every model/backend lacks CP."
+  },
+  "sp": {
+    "cli_requirement": "compilation_config.pass_config.enable_sp=true",
+    "activation_path": "/home/yyy/vllm-ascend-step4/vllm/models/step5/model.py",
+    "activation_line": 2118,
+    "activation_expression": "pass_config.enable_sp and tp_size > 1",
+    "runtime_evidence_field": "Step5DecoderLayer.moe.experts.moe_config.is_sequence_parallel",
+    "legacy_flag_boundary": "enable_flashcomm1 alone does not set pass_config.enable_sp; retained in this version to avoid platform rewriting all2all_backend",
+    "platform_path": "/home/yyy/model_openbox/reduced-recheck-10.20/vllm-ascend/vllm_ascend/platform.py",
+    "platform_line": 1147,
+    "hardware_retested_by_this_audit": false
+  },
+  "async": {
+    "cli": "--async-scheduling",
+    "cli_path": "/home/yyy/vllm-ascend-step4/vllm/engine/arg_utils.py",
+    "cli_line": 1529,
+    "runtime_fields": [
+      "scheduler_config.async_scheduling",
+      "model_runner.use_async_scheduling"
+    ],
+    "hardware_retested_by_this_audit": false
+  },
+  "routing": {
+    "response_field": "choices[0].routed_experts",
+    "encoding": "base64 .npy ndarray",
+    "completion_path": "/home/yyy/vllm-ascend-step4/vllm/entrypoints/openai/completion/serving.py",
+    "completion_line": 570,
+    "chat_path": "/home/yyy/vllm-ascend-step4/vllm/entrypoints/openai/chat_completion/serving.py",
+    "chat_line": 1007,
+    "expected_shape": [
+      "positive token count",
+      8,
+      8
+    ],
+    "expected_expert_range": [
+      0,
+      351
+    ],
+    "active_moe_layers": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "dense_layer_slots": "Zero-initialized slots on non-MoE layers are not expert decisions.",
+    "hardware_retested_by_this_audit": false
+  },
+  "chunk_api": {
+    "scheduler_output_fields": [
+      "total_num_scheduled_tokens",
+      "num_scheduled_tokens",
+      "scheduled_new_reqs",
+      "scheduled_cached_reqs.req_ids",
+      "scheduled_cached_reqs.num_computed_tokens",
+      "scheduled_cached_reqs.is_prefill_chunk"
+    ],
+    "request_id_rule": "HTTP ID plus completion sub-request index and random engine suffix, separated by hyphens; helper correlates exact ID or ID + hyphen prefix.",
+    "optional_prefill_flag": "Empty compatibility flag arrays are treated as absent; actual computed/prompt-token positions still prove prefill progress."
+  }
+}

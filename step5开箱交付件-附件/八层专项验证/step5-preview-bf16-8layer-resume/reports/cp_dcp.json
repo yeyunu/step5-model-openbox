@@ -1,0 +1,15 @@
+{
+  "mode": "cp_dcp",
+  "status": "blocked",
+  "checks": {
+    "supported_by_model": false
+  },
+  "error": "Step5DSAAttention explicitly raises NotImplementedError for decode_context_parallel_size > 1.",
+  "evidence": [
+    "/home/yyy/vllm-ascend-step4/vllm/models/step5/sparse_attention.py:1191"
+  ],
+  "endpoint_checks": {},
+  "baseline_outputs_by_endpoint": {},
+  "feature_outputs_by_endpoint": {},
+  "verification_method": "static deployed-source preflight; no attempt to remove model safety checks"
+}

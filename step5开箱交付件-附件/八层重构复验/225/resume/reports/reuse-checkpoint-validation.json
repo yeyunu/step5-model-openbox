@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "started_at": "2026-11-02T15:23:26.858377+00:00",
+  "operation": "verify and reuse existing copied tensors; no reduction",
+  "staging": "/data/yyy/hccl-without-pr19248-20261030/home/model_openbox/reduced-recheck-225-10.20/checkpoints/.head-tail8.building-p4ny7bfo",
+  "destination": "/data/yyy/hccl-without-pr19248-20261030/home/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+  "reference_sha256": "f8b47b5c25482621075f8568dcf00224c1a29aa34a6b230c936a32e21cee3652",
+  "verified_tensors": 802,
+  "completed_at": "2026-11-02T15:24:12.927322+00:00",
+  "tensor_bytes": 62537360896,
+  "shards": 13,
+  "same_tensor_values_as_reference": true,
+  "identical_shard_packing": false
+}

@@ -1,0 +1,335 @@
+--- before//home/yyy/vllm-ascend-main/vllm_ascend/worker/worker.py
++++ after//home/yyy/vllm-ascend-main/vllm_ascend/worker/worker.py
+@@ -328,7 +328,22 @@
+         self._check_nz_disabled()
+ 
+         assert self.weight_transfer_engine is not None
+-        self.weight_transfer_engine.start_weight_update()
++        self._step5_update_guard = None
++        if self.model_config.hf_text_config.model_type == "step5":
++            from vllm_ascend.patch.worker.step5_weight_update import Step5WeightUpdateGuard
++
++            self._step5_update_guard = Step5WeightUpdateGuard(
++                self.weight_transfer_engine.model,
++                stage_to_cpu=self.vllm_config.weight_transfer_config.backend
++                in ("hccl", "npu_ipc"),
++            )
++            logger.info("Step5 streamed weight completeness guard enabled.")
++        try:
++            self.weight_transfer_engine.start_weight_update()
++        except BaseException:
++            if self._step5_update_guard is not None:
++                self._step5_update_guard.abort()
++            raise
+         self._weight_update_active = True
+ 
+     def update_weights(self, update_info: dict) -> None:
+@@ -343,6 +358,8 @@
+         try:
+             self.weight_transfer_engine.update_weights(update_info)
+         except BaseException:
++            if self._step5_update_guard is not None:
++                self._step5_update_guard.abort()
+             self._weight_update_active = False
+             raise
+ 
+@@ -354,8 +371,14 @@
+             raise RuntimeError("start_weight_update must be called before finish_weight_update.")
+ 
+         assert self.weight_transfer_engine is not None
+-        self.weight_transfer_engine.finish_weight_update()
+-        self._weight_update_active = False
++        try:
++            self.weight_transfer_engine.finish_weight_update()
++            if self._step5_update_guard is not None:
++                self._step5_update_guard.finish()
++        finally:
++            if self._step5_update_guard is not None:
++                self._step5_update_guard.abort()
++            self._weight_update_active = False
+ 
+     def shutdown(self) -> None:
+         if ensure_kv_transfer_shutdown is not None:
+--- before//home/yyy/vllm-ascend-main/vllm_ascend/patch/worker/step5_weight_update.py
++++ after//home/yyy/vllm-ascend-main/vllm_ascend/patch/worker/step5_weight_update.py
+@@ -0,0 +1,44 @@
++# SPDX-License-Identifier: Apache-2.0
++"""Validate a complete Step5 update across streamed checkpoint chunks."""
++
++
++class Step5WeightUpdateGuard:
++    def __init__(self, model, *, stage_to_cpu=False):
++        from vllm.models.step5.model import _reset_fused_qkv_indexer_load_state
++
++        self.model = model
++        self.stage_to_cpu = stage_to_cpu
++        self.original_load = model.load_weights
++        self.expected = set(dict(model.named_parameters()))
++        self.loaded = set()
++        _reset_fused_qkv_indexer_load_state(model)
++        model.load_weights = self.load_weights
++
++    def load_weights(self, weights):
++        from vllm.model_executor.model_loader.mtp_validation import (
++            disable_mtp_completeness_check,
++        )
++
++        # A chunk is partial; completeness is enforced at transaction finish.
++        with disable_mtp_completeness_check():
++            if self.stage_to_cpu:
++                weights = ((name, tensor.cpu()) for name, tensor in weights)
++            loaded = self.original_load(weights)
++        if loaded is None:
++            raise RuntimeError("Step5 loader did not return loaded parameter names")
++        self.loaded.update(loaded)
++        return loaded
++
++    def finish(self):
++        from vllm.models.step5.model import _validate_fused_qkv_indexer_weights
++
++        try:
++            missing = self.expected - self.loaded
++            if missing:
++                raise ValueError(f"Incomplete Step5 weight update: {sorted(missing)}")
++            _validate_fused_qkv_indexer_weights(self.model)
++        finally:
++            self.abort()
++
++    def abort(self):
++        self.model.load_weights = self.original_load
+--- before//home/yyy/vllm-ascend-step4/tests/model_executor/model_loader/test_step5_fused_weight_loading.py
++++ after//home/yyy/vllm-ascend-step4/tests/model_executor/model_loader/test_step5_fused_weight_loading.py
+@@ -1223,3 +1223,49 @@
+     assert ids.dtype == torch.int64
+     assert ids[0].tolist() == expected_ids.tolist()
+     assert ids[1].tolist() == [7, 7]
++
++
++@pytest.mark.parametrize("stage_to_cpu", [False, True])
++@pytest.mark.parametrize("omit", [None, "index_g", "dense"])
++def test_weight_update_transaction_checks_all_chunks_and_resets(omit, stage_to_cpu):
++    """Partial chunks are valid, but missing parameters or fused shards fail."""
++    from vllm_ascend.patch.worker.step5_weight_update import Step5WeightUpdateGuard
++
++    from vllm.model_executor.model_loader.mtp_validation import (
++        is_mtp_completeness_check_enabled,
++    )
++
++    class StreamModel(nn.Module):
++        def __init__(self):
++            super().__init__()
++            self.projection = _make_fused_projection()
++            self.projection.weight = nn.Parameter(torch.zeros(1))
++            self.dense = nn.Parameter(torch.zeros(1))
++
++        def load_weights(self, weights):
++            assert not is_mtp_completeness_check_enabled()
++            loaded = set()
++            for name, _ in weights:
++                if name == "dense":
++                    loaded.add("dense")
++                else:
++                    self.projection._loaded_shards.add(name)
++                    loaded.add("projection.weight")
++            return loaded
++
++    model = StreamModel()
++    original = model.load_weights
++    guard = Step5WeightUpdateGuard(model, stage_to_cpu=stage_to_cpu)
++    for shard in sorted(model.projection.required_shard_ids()) + ["dense"]:
++        if shard != omit:
++            model.load_weights([(shard, torch.zeros(1))])
++    if omit is None:
++        guard.finish()
++        second = Step5WeightUpdateGuard(model)
++        with pytest.raises(ValueError, match="Incomplete Step5"):
++            second.finish()
++    else:
++        with pytest.raises(ValueError, match="Incomplete"):
++            guard.finish()
++    assert model.load_weights == original
++    assert is_mtp_completeness_check_enabled()
+--- before//home/yyy/vllm-ascend-main/vllm_ascend/distributed/weight_transfer/npu_ipc_engine.py
++++ after//home/yyy/vllm-ascend-main/vllm_ascend/distributed/weight_transfer/npu_ipc_engine.py
+@@ -156,12 +156,22 @@
+         self.packed = init_info.packed
+ 
+     def start_weight_update(self) -> None:
+-        """No-op for NPU IPC engine (no layerwise reloading)."""
+-        pass
++        """Restore Step5 checkpoint layouts before loading streamed weights."""
++        if self.model_config.hf_text_config.model_type == "step5":
++            from vllm.model_executor.model_loader.reload import (
++                initialize_layerwise_reload,
++            )
++
++            initialize_layerwise_reload(self.model)
+ 
+     def finish_weight_update(self) -> None:
+-        """No-op for NPU IPC engine (no layerwise reloading)."""
+-        pass
++        """Restore Step5 runtime layouts after all checkpoint tensors arrive."""
++        if self.model_config.hf_text_config.model_type == "step5":
++            from vllm.model_executor.model_loader.reload import (
++                finalize_layerwise_reload,
++            )
++
++            finalize_layerwise_reload(self.model, self.model_config)
+ 
+     def receive_weights(self, update_info: NPUIPCWeightTransferUpdateInfo) -> None:
+         """Receive weights from the trainer via NPU IPC handles.
+@@ -219,7 +229,7 @@
+                 weight = rebuild_npu_tensor(*list_args)
+                 weights.append((name, weight))
+ 
+-            self.model.load_weights(weights)
++        self.model.load_weights(weights)
+ 
+     def shutdown(self) -> None:
+         pass
+--- before//home/yyy/vllm-ascend-main/tests/ut/distributed/weight_transfer/test_npu_ipc_engine.py
++++ after//home/yyy/vllm-ascend-main/tests/ut/distributed/weight_transfer/test_npu_ipc_engine.py
+@@ -35,6 +35,7 @@
+ import types
+ from unittest.mock import MagicMock, patch
+ 
++import pytest
+ import torch
+ 
+ from vllm_ascend.distributed.weight_transfer import npu_ipc_engine
+@@ -162,22 +163,61 @@
+     assert seen["args"][6] == device_index
+ 
+ 
+-def test_start_weight_update():
+-    engine = object.__new__(NPUIPCWeightTransferEngine)
+-    engine.model = MagicMock()
+-
+-    with patch("vllm.model_executor.model_loader.reload.initialize_layerwise_reload") as mock_init:
+-        engine.start_weight_update()
+-
+-    mock_init.assert_not_called()
+-
+-
+-def test_finish_weight_update():
++@pytest.mark.parametrize('model_type', ['step5', 'other'])
++def test_start_weight_update(model_type):
+     engine = object.__new__(NPUIPCWeightTransferEngine)
+     engine.model = MagicMock()
+     engine.model_config = MagicMock()
++    engine.model_config.hf_text_config.model_type = model_type
++
++    with patch("vllm.model_executor.model_loader.reload.initialize_layerwise_reload") as mock_init:
++        engine.start_weight_update()
++
++    if model_type == 'step5':
++        mock_init.assert_called_once_with(engine.model)
++    else:
++        mock_init.assert_not_called()
++
++
++@pytest.mark.parametrize('model_type', ['step5', 'other'])
++def test_finish_weight_update(model_type):
++    engine = object.__new__(NPUIPCWeightTransferEngine)
++    engine.model = MagicMock()
++    engine.model_config = MagicMock()
++    engine.model_config.hf_text_config.model_type = model_type
+ 
+     with patch("vllm.model_executor.model_loader.reload.finalize_layerwise_reload") as mock_finalize:
+         engine.finish_weight_update()
+ 
+-    mock_finalize.assert_not_called()
++    if model_type == 'step5':
++        mock_finalize.assert_called_once_with(engine.model, engine.model_config)
++    else:
++        mock_finalize.assert_not_called()
++
++
++def test_packed_receive_applies_checkpoint_values_to_model():
++    from types import SimpleNamespace
++
++    class Model:
++        def __init__(self):
++            self.weight = torch.zeros(2)
++
++        def load_weights(self, weights):
++            for name, value in weights:
++                assert name == "weight"
++                self.weight.copy_(value)
++
++    engine = NPUIPCWeightTransferEngine.__new__(NPUIPCWeightTransferEngine)
++    engine.model = Model()
++    engine.device = torch.device("npu:0")
++    engine.packed = True
++    info = SimpleNamespace(
++        ipc_handles={}, names=["weight"], shapes=[[2]],
++        dtype_names=["float32"], tensor_sizes=[8],
++    )
++    value = torch.tensor([2., 3.])
++    with patch(f"{_MODULE}.npu_generate_uuid", return_value="card-0"), patch(
++        f"{_MODULE}.packed_npu_ipc_consumer", return_value=[("weight", value)]
++    ):
++        engine.receive_weights(info)
++    torch.testing.assert_close(engine.model.weight, value)
+--- before//home/yyy/vllm-ascend-main/vllm_ascend/distributed/device_communicators/pyhccl.py
++++ after//home/yyy/vllm-ascend-main/vllm_ascend/distributed/device_communicators/pyhccl.py
+@@ -127,6 +127,16 @@
+             stream.synchronize()
+             del data
+ 
++    def close(self) -> None:
++        """Release the communicator before the NPU runtime shuts down."""
++        if not self.available or self.disabled:
++            return
++        with torch.npu.device(self.device):
++            torch.npu.synchronize()
++            self.hccl.hcclCommDestroy(self.comm)
++        self.disabled = True
++        self.available = False
++
+     def all_reduce(self, in_tensor: torch.Tensor, op: ReduceOp = ReduceOp.SUM, stream=None) -> torch.Tensor:
+         if self.disabled:
+             return None
+--- before//home/yyy/vllm-ascend-main/vllm_ascend/distributed/weight_transfer/hccl_engine.py
++++ after//home/yyy/vllm-ascend-main/vllm_ascend/distributed/weight_transfer/hccl_engine.py
+@@ -210,7 +210,7 @@
+ 
+     def shutdown(self) -> None:
+         if self.model_update_group is not None:
+-            # Clean up the communicator by removing the reference
++            self.model_update_group.close()
+             self.model_update_group = None
+ 
+     @staticmethod
+--- before//home/yyy/vllm-ascend-main/tests/ut/distributed/device_communicators/test_pyhccl.py
++++ after//home/yyy/vllm-ascend-main/tests/ut/distributed/device_communicators/test_pyhccl.py
+@@ -67,3 +67,19 @@
+         self.assertEqual(comm.world_size, 2)
+         self.assertFalse(comm.available)
+         self.assertTrue(comm.disabled)
++
++
++def test_close_destroys_communicator_once_before_runtime_shutdown():
++    comm = PyHcclCommunicator.__new__(PyHcclCommunicator)
++    comm.available = True
++    comm.disabled = False
++    comm.device = "npu:0"
++    comm.comm = object()
++    comm.hccl = MagicMock()
++    with patch("torch.npu.device"), patch("torch.npu.synchronize") as sync:
++        comm.close()
++        comm.close()
++    sync.assert_called_once()
++    comm.hccl.hcclCommDestroy.assert_called_once_with(comm.comm)
++    assert not comm.available
++    assert comm.disabled
+--- before//home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/weight-update/test_hccl_weight_update.py
++++ after//home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/weight-update/test_hccl_weight_update.py
+@@ -210,6 +210,7 @@
+         report["checks"]["checkpoint_stream_transfer"] = True
+         report["checks"]["init_start_update_finish"] = True
+ 
++        transfer_group.close()
+         transfer_group = None
+         gc.collect()
+         torch.npu.synchronize()

@@ -1,0 +1,54 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 625
+Timestamp: 2026-10-25T06:18:53.977Z
+Record SHA256: 2cab6d5dc6750b752cfa315e6603ac252b6a355e1bffb7b8de54a08447f499bd
+Evidence type: function_call_output
+Note: extracted historical record; not a new server run. Original terminal wrapping/truncation retained.
+
+Chunk ID: 187340
+Wall time: 5.0067 seconds
+Process running with session ID 54670
+Original token count: 433
+Output:
+python3 - <<'PY'
+> import json,glob,collections,hashlib
+<6/gpqa_diamond/outputs/*/predictions/*/*.jsonl')[0]
+>[1C<25836/gpqa_diamond/outputs/*/reviews/*/*.jsonl*')[0]    
+<)]; R=[json.loads(x) for x in open(rp) if x.strip()]
+> def sig(r):
+>  u=a=None
+>  for m in r.get('messages',[]):
+>   if m.get('role')=='user' and u is None:u=m.get('content','')
+>   if m.get('role')=='assistant':a=m.get('content','')
+>  return hashlib.sha256(((u or '')+'\0'+(a or '')).encode()).hexdigest()       
+> def qsig(r):
+>  for m in r.get('messages',[]):
+<a256((m.get('content') or '').encode()).hexdigest()
+>  return None
+> PS=[sig(x) for x in P]; RS=[sig(x) for x in R]
+<',len(set(RS)),'intersection',len(set(PS)&set(RS)))
+<'R rows match one P',sum(x in set(PS) for x in RS))
+> rmap={}
+> for r,s in zip(R,RS):rmap.setdefault(s,[]).append(r)
+> def score(r):
+>  try:return float(r['sample_score']['score']['value']['accuracy'])
+>  except:return None
+> matched=[]; missing=0
+> for p,s in zip(P[:198],PS[:198]):
+>  if s not in rmap: missing+=1
+>  else:
+>   # unique? print dup count later
+>   matched.append(rmap[s][0])
+<sum(len(rmap[s])>1 for s in PS[:198] if s in rmap))
+> vals=[score(x) for x in matched]
+<for x in vals),'incorrect',sum(x==0 for x in vals))
+> print('first198 P unique questions',len({qsig(x) for x in P[:198]}))
+> print('first198 R unique questions',len({qsig(x) for x in R[:198]}))
+> PY
+unique P sig 404 unique R sig 404 intersection 404
+P rows match one R 404 R rows match one P 404
+first198 P matched 198 missing 0 matched rows 198 dups 0
+first198 P accuracy 0.9393939393939394 correct 186 incorrect 12
+first198 P unique questions 58
+first198 R unique questions 65
+[root@localhost ~]# 

@@ -1,0 +1,4454 @@
+{
+ "mode": "on",
+ "started": "2026-11-04T05:49:21.562427+00:00",
+ "cases": [
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "The future of AI is",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-9812743ed25ea318",
+    "object": "text_completion",
+    "created": 1793771361,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " PropagationVirVir Nonlinear Nonlinear Nonlinear Genet Genet",
+      "logprobs": {
+       "text_offset": [
+        0,
+        12,
+        15,
+        18,
+        28,
+        38,
+        48,
+        54
+       ],
+       "token_logprobs": [
+        -5.0383219718933105,
+        -5.165907382965088,
+        -5.998479843139648,
+        -6.20667839050293,
+        -6.21666955947876,
+        -6.271129131317139,
+        -5.808823108673096,
+        -5.862743854522705
+       ],
+       "tokens": [
+        " Propagation",
+        "Vir",
+        "Vir",
+        " Nonlinear",
+        " Nonlinear",
+        " Nonlinear",
+        " Genet",
+        " Genet"
+       ],
+       "top_logprobs": [
+        {
+         " Propagation": -5.0383219718933105
+        },
+        {
+         "Vir": -5.165907382965088
+        },
+        {
+         "Vir": -5.998479843139648
+        },
+        {
+         " Nonlinear": -6.20667839050293
+        },
+        {
+         " Nonlinear": -6.21666955947876
+        },
+        {
+         " Nonlinear": -6.271129131317139
+        },
+        {
+         " Genet": -5.808823108673096
+        },
+        {
+         " Genet": -5.862743854522705
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       107045,
+       54341,
+       54341,
+       88530,
+       88530,
+       88530,
+       48573,
+       48573
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       671,
+       3988,
+       294,
+       7703,
+       344
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 6,
+     "total_tokens": 14,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     671,
+     3988,
+     294,
+     7703,
+     344,
+     107045,
+     54341,
+     54341,
+     88530,
+     88530,
+     124803,
+     102440,
+     48573
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-bc9720c827c7504d",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Genet",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       48573
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "671": {
+         "logprob": -14.125289916992188,
+         "rank": 95427,
+         "decoded_token": "The"
+        },
+        "108583": {
+         "logprob": -6.039351940155029,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "3988": {
+         "logprob": -14.815410614013672,
+         "rank": 102794,
+         "decoded_token": " future"
+        },
+        "42168": {
+         "logprob": -5.557598114013672,
+         "rank": 1,
+         "decoded_token": "恶性"
+        }
+       },
+       {
+        "294": {
+         "logprob": -15.647918701171875,
+         "rank": 114248,
+         "decoded_token": " of"
+        },
+        "45129": {
+         "logprob": -5.585418224334717,
+         "rank": 1,
+         "decoded_token": "Prop"
+        }
+       },
+       {
+        "7703": {
+         "logprob": -14.753738403320312,
+         "rank": 91535,
+         "decoded_token": " AI"
+        },
+        "107045": {
+         "logprob": -4.890457630157471,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "344": {
+         "logprob": -13.630062103271484,
+         "rank": 68694,
+         "decoded_token": " is"
+        },
+        "11705": {
+         "logprob": -5.852718830108643,
+         "rank": 1,
+         "decoded_token": "一条"
+        }
+       },
+       {
+        "107045": {
+         "logprob": -5.048429012298584,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -5.254749298095703,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -5.9028825759887695,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "88530": {
+         "logprob": -6.209564685821533,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "88530": {
+         "logprob": -6.207525253295898,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "124803": {
+         "logprob": -6.250537395477295,
+         "rank": 1,
+         "decoded_token": " Zad"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -5.316344738006592,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.669109344482422,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       671,
+       3988,
+       294,
+       7703,
+       344,
+       107045,
+       54341,
+       54341,
+       88530,
+       88530,
+       124803,
+       102440,
+       48573
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 14,
+     "total_tokens": 15,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -5.048429012298584,
+    -5.254749298095703,
+    -5.9028825759887695,
+    -6.209564685821533,
+    -6.207525253295898,
+    -6.250537395477295,
+    -5.316344738006592,
+    -5.669109344482422
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "The future of AI is"
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-b7fe5255264646b6",
+    "object": "chat.completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Moderate Serious Leone Leone Leone Leone面无 Leone",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Moderate",
+         "logprob": -3.7600467205047607,
+         "bytes": [
+          32,
+          77,
+          111,
+          100,
+          101,
+          114,
+          97,
+          116,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Moderate",
+           "logprob": -3.7600467205047607,
+           "bytes": [
+            32,
+            77,
+            111,
+            100,
+            101,
+            114,
+            97,
+            116,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Serious",
+         "logprob": -4.720694065093994,
+         "bytes": [
+          32,
+          83,
+          101,
+          114,
+          105,
+          111,
+          117,
+          115
+         ],
+         "top_logprobs": [
+          {
+           "token": " Serious",
+           "logprob": -4.720694065093994,
+           "bytes": [
+            32,
+            83,
+            101,
+            114,
+            105,
+            111,
+            117,
+            115
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.730743885040283,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.730743885040283,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.8656463623046875,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.8656463623046875,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.8686747550964355,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.8686747550964355,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.861622333526611,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.861622333526611,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": "面无",
+         "logprob": -5.301320552825928,
+         "bytes": [
+          233,
+          157,
+          162,
+          230,
+          151,
+          160
+         ],
+         "top_logprobs": [
+          {
+           "token": "面无",
+           "logprob": -5.301320552825928,
+           "bytes": [
+            233,
+            157,
+            162,
+            230,
+            151,
+            160
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.478847503662109,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.478847503662109,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       84042,
+       102440,
+       75212,
+       75212,
+       75212,
+       75212,
+       86766,
+       75212
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 16,
+     "total_tokens": 24,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     671,
+     3988,
+     294,
+     7703,
+     344,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     671,
+     3988,
+     294,
+     7703,
+     344,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     84042,
+     102440,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     102440
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-99774658edd723c5",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Serious",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       102440
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.04038143157959,
+         "rank": 12314,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.04038143157959,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.93910026550293,
+         "rank": 115778,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.14222526550293,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.85794448852539,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.826694965362549,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "671": {
+         "logprob": -14.119314193725586,
+         "rank": 100325,
+         "decoded_token": "The"
+        },
+        "88530": {
+         "logprob": -5.990407943725586,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "3988": {
+         "logprob": -15.343111038208008,
+         "rank": 118810,
+         "decoded_token": " future"
+        },
+        "88530": {
+         "logprob": -5.741548538208008,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "294": {
+         "logprob": -13.864786148071289,
+         "rank": 88588,
+         "decoded_token": " of"
+        },
+        "66613": {
+         "logprob": -6.015176296234131,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "7703": {
+         "logprob": -14.650473594665527,
+         "rank": 102403,
+         "decoded_token": " AI"
+        },
+        "88530": {
+         "logprob": -5.841879844665527,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "344": {
+         "logprob": -13.34256362915039,
+         "rank": 68994,
+         "decoded_token": " is"
+        },
+        "88530": {
+         "logprob": -6.061313629150391,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -14.394092559814453,
+         "rank": 91929,
+         "decoded_token": "<|im_end|>"
+        },
+        "88530": {
+         "logprob": -5.315967082977295,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "201": {
+         "logprob": -28.59415626525879,
+         "rank": 128896,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.594155788421631,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -15.267291069030762,
+         "rank": 98346,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -4.450884819030762,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.250604629516602,
+         "rank": 82622,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -5.31310510635376,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -13.015384674072266,
+         "rank": 49867,
+         "decoded_token": "istant"
+        },
+        "75212": {
+         "logprob": -5.327884674072266,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -26.062828063964844,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "124930": {
+         "logprob": -5.812827110290527,
+         "rank": 1,
+         "decoded_token": " Feldman"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -14.391648292541504,
+         "rank": 92041,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -5.290085792541504,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "84042": {
+         "logprob": -3.7437398433685303,
+         "rank": 1,
+         "decoded_token": " Moderate"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -4.673242092132568,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.690079689025879,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.8098978996276855,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.835700511932373,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.8587646484375,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.396376609802246,
+         "rank": 2,
+         "decoded_token": " Leone"
+        },
+        "86766": {
+         "logprob": -5.333876609802246,
+         "rank": 1,
+         "decoded_token": "面无"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -5.059415340423584,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       671,
+       3988,
+       294,
+       7703,
+       344,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       84042,
+       102440,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 24,
+     "total_tokens": 25,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -3.7437398433685303,
+    -4.673242092132568,
+    -4.690079689025879,
+    -4.8098978996276855,
+    -4.835700511932373,
+    -4.8587646484375,
+    -5.396376609802246,
+    -5.059415340423584
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "你好",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-80216eefac64717b",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Syllabus Bryant Syllabus Bryant Zad Siegel Siegel Siegel",
+      "logprobs": {
+       "text_offset": [
+        0,
+        9,
+        16,
+        25,
+        32,
+        36,
+        43,
+        50
+       ],
+       "token_logprobs": [
+        -6.335625648498535,
+        -6.586969375610352,
+        -6.072412014007568,
+        -6.478002548217773,
+        -5.507026195526123,
+        -6.438643932342529,
+        -5.553314208984375,
+        -5.919780731201172
+       ],
+       "tokens": [
+        " Syllabus",
+        " Bryant",
+        " Syllabus",
+        " Bryant",
+        " Zad",
+        " Siegel",
+        " Siegel",
+        " Siegel"
+       ],
+       "top_logprobs": [
+        {
+         " Syllabus": -6.335625648498535
+        },
+        {
+         " Bryant": -6.586969375610352
+        },
+        {
+         " Syllabus": -6.072412014007568
+        },
+        {
+         " Bryant": -6.478002548217773
+        },
+        {
+         " Zad": -5.507026195526123
+        },
+        {
+         " Siegel": -6.438643932342529
+        },
+        {
+         " Siegel": -5.553314208984375
+        },
+        {
+         " Siegel": -5.919780731201172
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       108830,
+       66613,
+       108830,
+       66613,
+       124803,
+       114388,
+       114388,
+       114388
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       30594
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 2,
+     "total_tokens": 10,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     30594,
+     108830,
+     66613,
+     108830,
+     66613,
+     124803,
+     114388,
+     114388,
+     114388
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-b24a2c135ef5f9ce",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Siegel",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       114388
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "30594": {
+         "logprob": -13.484664916992188,
+         "rank": 77642,
+         "decoded_token": "你好"
+        },
+        "108583": {
+         "logprob": -6.039351940155029,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "108830": {
+         "logprob": -6.258572101593018,
+         "rank": 1,
+         "decoded_token": " Syllabus"
+        }
+       },
+       {
+        "66613": {
+         "logprob": -6.662633895874023,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "108830": {
+         "logprob": -6.054171562194824,
+         "rank": 1,
+         "decoded_token": " Syllabus"
+        }
+       },
+       {
+        "66613": {
+         "logprob": -6.4418134689331055,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "124803": {
+         "logprob": -5.6708664894104,
+         "rank": 1,
+         "decoded_token": " Zad"
+        }
+       },
+       {
+        "114388": {
+         "logprob": -6.34031867980957,
+         "rank": 1,
+         "decoded_token": " Siegel"
+        }
+       },
+       {
+        "114388": {
+         "logprob": -5.300107479095459,
+         "rank": 1,
+         "decoded_token": " Siegel"
+        }
+       },
+       {
+        "114388": {
+         "logprob": -5.648970127105713,
+         "rank": 1,
+         "decoded_token": " Siegel"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       30594,
+       108830,
+       66613,
+       108830,
+       66613,
+       124803,
+       114388,
+       114388,
+       114388
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 10,
+     "total_tokens": 11,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -6.258572101593018,
+    -6.662633895874023,
+    -6.054171562194824,
+    -6.4418134689331055,
+    -5.6708664894104,
+    -6.34031867980957,
+    -5.300107479095459,
+    -5.648970127105713
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "你好"
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-9c827eb384ba4d1a",
+    "object": "chat.completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Qualitative Genet Genetynieunik Leoneynie Leone",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Qualitative",
+         "logprob": -3.8375027179718018,
+         "bytes": [
+          32,
+          81,
+          117,
+          97,
+          108,
+          105,
+          116,
+          97,
+          116,
+          105,
+          118,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Qualitative",
+           "logprob": -3.8375027179718018,
+           "bytes": [
+            32,
+            81,
+            117,
+            97,
+            108,
+            105,
+            116,
+            97,
+            116,
+            105,
+            118,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Genet",
+         "logprob": -5.38489294052124,
+         "bytes": [
+          32,
+          71,
+          101,
+          110,
+          101,
+          116
+         ],
+         "top_logprobs": [
+          {
+           "token": " Genet",
+           "logprob": -5.38489294052124,
+           "bytes": [
+            32,
+            71,
+            101,
+            110,
+            101,
+            116
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Genet",
+         "logprob": -5.805633068084717,
+         "bytes": [
+          32,
+          71,
+          101,
+          110,
+          101,
+          116
+         ],
+         "top_logprobs": [
+          {
+           "token": " Genet",
+           "logprob": -5.805633068084717,
+           "bytes": [
+            32,
+            71,
+            101,
+            110,
+            101,
+            116
+           ]
+          }
+         ]
+        },
+        {
+         "token": "ynie",
+         "logprob": -5.5936102867126465,
+         "bytes": [
+          121,
+          110,
+          105,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": "ynie",
+           "logprob": -5.5936102867126465,
+           "bytes": [
+            121,
+            110,
+            105,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": "unik",
+         "logprob": -5.358304977416992,
+         "bytes": [
+          117,
+          110,
+          105,
+          107
+         ],
+         "top_logprobs": [
+          {
+           "token": "unik",
+           "logprob": -5.358304977416992,
+           "bytes": [
+            117,
+            110,
+            105,
+            107
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.3241353034973145,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.3241353034973145,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": "ynie",
+         "logprob": -5.005882740020752,
+         "bytes": [
+          121,
+          110,
+          105,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": "ynie",
+           "logprob": -5.005882740020752,
+           "bytes": [
+            121,
+            110,
+            105,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.8935418128967285,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.8935418128967285,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       72205,
+       48573,
+       48573,
+       95938,
+       118584,
+       75212,
+       95938,
+       75212
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 12,
+     "total_tokens": 20,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     30594,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     30594,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     48287,
+     48573,
+     48573,
+     107045,
+     75212,
+     95938,
+     75212,
+     117543
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-92dc3f93568995e4",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Wilder",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       117543
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.039352416992188,
+         "rank": 12289,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.039351940155029,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.925224304199219,
+         "rank": 115687,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.143974304199219,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.798385620117188,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.892136573791504,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "30594": {
+         "logprob": -12.111499786376953,
+         "rank": 36626,
+         "decoded_token": "你好"
+        },
+        "107045": {
+         "logprob": -5.970875263214111,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -12.78640079498291,
+         "rank": 56200,
+         "decoded_token": "<|im_end|>"
+        },
+        "88530": {
+         "logprob": -5.96218204498291,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "201": {
+         "logprob": -18.300395965576172,
+         "rank": 128865,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.706645488739014,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -14.664285659790039,
+         "rank": 115351,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -6.922097682952881,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.104952812194824,
+         "rank": 102452,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -6.737765312194824,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -12.498603820800781,
+         "rank": 49163,
+         "decoded_token": "istant"
+        },
+        "88530": {
+         "logprob": -6.139228343963623,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "201": {
+         "logprob": -24.694042205810547,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -5.7565412521362305,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -14.749872207641602,
+         "rank": 96039,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -5.42370080947876,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "48287": {
+         "logprob": -4.021702289581299,
+         "rank": 3,
+         "decoded_token": " Argument"
+        },
+        "72205": {
+         "logprob": -3.896702289581299,
+         "rank": 1,
+         "decoded_token": " Qualitative"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.192996978759766,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.7139153480529785,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "107045": {
+         "logprob": -5.590705871582031,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.4452223777771,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "95938": {
+         "logprob": -5.118404388427734,
+         "rank": 1,
+         "decoded_token": "ynie"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.769962787628174,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "117543": {
+         "logprob": -4.7654128074646,
+         "rank": 1,
+         "decoded_token": " Wilder"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       30594,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       48287,
+       48573,
+       48573,
+       107045,
+       75212,
+       95938,
+       75212,
+       117543
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 20,
+     "total_tokens": 21,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -4.021702289581299,
+    -5.192996978759766,
+    -5.7139153480529785,
+    -5.590705871582031,
+    -5.4452223777771,
+    -5.118404388427734,
+    -4.769962787628174,
+    -4.7654128074646
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "2 + 2 =",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-8544e30021d3dd52",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": "圣人VirPropProp Leone Leone Leone Leone",
+      "logprobs": {
+       "text_offset": [
+        0,
+        2,
+        5,
+        9,
+        13,
+        19,
+        25,
+        31
+       ],
+       "token_logprobs": [
+        -5.580641746520996,
+        -5.891258716583252,
+        -6.161725044250488,
+        -6.194365501403809,
+        -5.539552211761475,
+        -5.413755416870117,
+        -5.327078342437744,
+        -5.3823370933532715
+       ],
+       "tokens": [
+        "圣人",
+        "Vir",
+        "Prop",
+        "Prop",
+        " Leone",
+        " Leone",
+        " Leone",
+        " Leone"
+       ],
+       "top_logprobs": [
+        {
+         "圣人": -5.580641746520996
+        },
+        {
+         "Vir": -5.891258716583252
+        },
+        {
+         "Prop": -6.161725044250488
+        },
+        {
+         "Prop": -6.194365501403809
+        },
+        {
+         " Leone": -5.539552211761475
+        },
+        {
+         " Leone": -5.413755416870117
+        },
+        {
+         " Leone": -5.327078342437744
+        },
+        {
+         " Leone": -5.3823370933532715
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       61282,
+       54341,
+       45129,
+       45129,
+       75212,
+       75212,
+       75212,
+       75212
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       20,
+       940,
+       223,
+       20,
+       438
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 6,
+     "total_tokens": 14,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     20,
+     940,
+     223,
+     20,
+     438,
+     61282,
+     54341,
+     45129,
+     123391,
+     45129,
+     75212,
+     75212,
+     75212
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-a167369e07741860",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Leone",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       75212
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "20": {
+         "logprob": -17.133102416992188,
+         "rank": 128700,
+         "decoded_token": "2"
+        },
+        "108583": {
+         "logprob": -6.039351940155029,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "940": {
+         "logprob": -12.503241539001465,
+         "rank": 40952,
+         "decoded_token": " +"
+        },
+        "122779": {
+         "logprob": -5.839179039001465,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "223": {
+         "logprob": -18.30698585510254,
+         "rank": 128330,
+         "decoded_token": " "
+        },
+        "107045": {
+         "logprob": -5.619485855102539,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "20": {
+         "logprob": -14.504669189453125,
+         "rank": 101540,
+         "decoded_token": "2"
+        },
+        "107045": {
+         "logprob": -5.774199962615967,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "438": {
+         "logprob": -16.275409698486328,
+         "rank": 121569,
+         "decoded_token": " ="
+        },
+        "107045": {
+         "logprob": -5.6425981521606445,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "61282": {
+         "logprob": -5.584005832672119,
+         "rank": 1,
+         "decoded_token": "圣人"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -5.85395622253418,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "45129": {
+         "logprob": -6.110489368438721,
+         "rank": 1,
+         "decoded_token": "Prop"
+        }
+       },
+       {
+        "123391": {
+         "logprob": -6.605091094970703,
+         "rank": 9,
+         "decoded_token": " Lennon"
+        },
+        "45129": {
+         "logprob": -6.167591094970703,
+         "rank": 1,
+         "decoded_token": "Prop"
+        }
+       },
+       {
+        "45129": {
+         "logprob": -6.37305212020874,
+         "rank": 3,
+         "decoded_token": "Prop"
+        },
+        "88530": {
+         "logprob": -6.18555212020874,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.079793930053711,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.650017261505127,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.513720512390137,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       20,
+       940,
+       223,
+       20,
+       438,
+       61282,
+       54341,
+       45129,
+       123391,
+       45129,
+       75212,
+       75212,
+       75212
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 14,
+     "total_tokens": 15,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -5.584005832672119,
+    -5.85395622253418,
+    -6.110489368438721,
+    -6.605091094970703,
+    -6.37305212020874,
+    -5.079793930053711,
+    -5.650017261505127,
+    -5.513720512390137
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "2 + 2 ="
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-ba2f8ef9c8071a49",
+    "object": "chat.completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Intermediate Leone Leone Leone Leone Leone Leone Serious",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Intermediate",
+         "logprob": -3.8166983127593994,
+         "bytes": [
+          32,
+          73,
+          110,
+          116,
+          101,
+          114,
+          109,
+          101,
+          100,
+          105,
+          97,
+          116,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Intermediate",
+           "logprob": -3.8166983127593994,
+           "bytes": [
+            32,
+            73,
+            110,
+            116,
+            101,
+            114,
+            109,
+            101,
+            100,
+            105,
+            97,
+            116,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.038614273071289,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.038614273071289,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.952852725982666,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.952852725982666,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.904870510101318,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.904870510101318,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.021256923675537,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.021256923675537,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.669717311859131,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.669717311859131,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.233997344970703,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.233997344970703,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Serious",
+         "logprob": -5.261602401733398,
+         "bytes": [
+          32,
+          83,
+          101,
+          114,
+          105,
+          111,
+          117,
+          115
+         ],
+         "top_logprobs": [
+          {
+           "token": " Serious",
+           "logprob": -5.261602401733398,
+           "bytes": [
+            32,
+            83,
+            101,
+            114,
+            105,
+            111,
+            117,
+            115
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       61672,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 16,
+     "total_tokens": 24,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     20,
+     940,
+     223,
+     20,
+     438,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     20,
+     940,
+     223,
+     20,
+     438,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     61672,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     102440
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-96bc554d710bf7b3",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Serious",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       102440
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.04038143157959,
+         "rank": 12314,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.04038143157959,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.93910026550293,
+         "rank": 115778,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.14222526550293,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.85794448852539,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.826694965362549,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "20": {
+         "logprob": -14.787282943725586,
+         "rank": 113904,
+         "decoded_token": "2"
+        },
+        "88530": {
+         "logprob": -5.990407943725586,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "940": {
+         "logprob": -11.066019058227539,
+         "rank": 12504,
+         "decoded_token": " +"
+        },
+        "88530": {
+         "logprob": -5.237894058227539,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "223": {
+         "logprob": -20.323841094970703,
+         "rank": 128834,
+         "decoded_token": " "
+        },
+        "88530": {
+         "logprob": -5.511341571807861,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "20": {
+         "logprob": -15.00221061706543,
+         "rank": 104422,
+         "decoded_token": "2"
+        },
+        "88530": {
+         "logprob": -5.35767936706543,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "438": {
+         "logprob": -16.574691772460938,
+         "rank": 123480,
+         "decoded_token": " ="
+        },
+        "88530": {
+         "logprob": -5.402817726135254,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -15.998741149902344,
+         "rank": 119263,
+         "decoded_token": "<|im_end|>"
+        },
+        "75212": {
+         "logprob": -5.654991626739502,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -28.032695770263672,
+         "rank": 128895,
+         "decoded_token": "\n"
+        },
+        "106209": {
+         "logprob": -5.1576948165893555,
+         "rank": 1,
+         "decoded_token": "uny"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -15.128973960876465,
+         "rank": 97354,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -4.628973960876465,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.544771194458008,
+         "rank": 86877,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -4.974459171295166,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -13.125387191772461,
+         "rank": 52851,
+         "decoded_token": "istant"
+        },
+        "75212": {
+         "logprob": -5.031636714935303,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -25.626829147338867,
+         "rank": 128895,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -5.251829624176025,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -14.441893577575684,
+         "rank": 91570,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -4.988768577575684,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "61672": {
+         "logprob": -3.7279250621795654,
+         "rank": 1,
+         "decoded_token": " Intermediate"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.990588665008545,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.197948455810547,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.87817907333374,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.007467746734619,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.696661949157715,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.146785259246826,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "102440": {
+         "logprob": -5.335943698883057,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       20,
+       940,
+       223,
+       20,
+       438,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       61672,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       102440
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 24,
+     "total_tokens": 25,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -3.7279250621795654,
+    -4.990588665008545,
+    -5.197948455810547,
+    -4.87817907333374,
+    -5.007467746734619,
+    -4.696661949157715,
+    -5.146785259246826,
+    -5.335943698883057
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "prompt": "What is the capital of France?",
+    "logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "cmpl-865c79f5ea677112",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": "Vir Galile Genet Genet Genet Genet Nonlinear Genet",
+      "logprobs": {
+       "text_offset": [
+        0,
+        3,
+        10,
+        16,
+        22,
+        28,
+        34,
+        44
+       ],
+       "token_logprobs": [
+        -5.156443119049072,
+        -5.426076412200928,
+        -6.093947887420654,
+        -5.6519036293029785,
+        -5.464554309844971,
+        -5.81075382232666,
+        -6.117569923400879,
+        -5.821035385131836
+       ],
+       "tokens": [
+        "Vir",
+        " Galile",
+        " Genet",
+        " Genet",
+        " Genet",
+        " Genet",
+        " Nonlinear",
+        " Genet"
+       ],
+       "top_logprobs": [
+        {
+         "Vir": -5.156443119049072
+        },
+        {
+         " Galile": -5.426076412200928
+        },
+        {
+         " Genet": -6.093947887420654
+        },
+        {
+         " Genet": -5.6519036293029785
+        },
+        {
+         " Genet": -5.464554309844971
+        },
+        {
+         " Genet": -5.81075382232666
+        },
+        {
+         " Nonlinear": -6.117569923400879
+        },
+        {
+         " Genet": -5.821035385131836
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       54341,
+       50180,
+       48573,
+       48573,
+       48573,
+       48573,
+       88530,
+       48573
+      ],
+      "prompt_logprobs": null,
+      "prompt_token_ids": [
+       0,
+       3085,
+       344,
+       270,
+       6102,
+       294,
+       8760,
+       33
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 8,
+     "total_tokens": 16,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     3085,
+     344,
+     270,
+     6102,
+     294,
+     8760,
+     33,
+     54341,
+     50180,
+     48573,
+     48573,
+     48573,
+     48573,
+     124930,
+     88530
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-b0c99937e003d7e8",
+    "object": "text_completion",
+    "created": 1793771362,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Genet",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       48573
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "3085": {
+         "logprob": -13.46225643157959,
+         "rank": 77033,
+         "decoded_token": "What"
+        },
+        "108583": {
+         "logprob": -6.04038143157959,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "344": {
+         "logprob": -12.148038864135742,
+         "rank": 42700,
+         "decoded_token": " is"
+        },
+        "27892": {
+         "logprob": -6.194913387298584,
+         "rank": 1,
+         "decoded_token": "遗传"
+        }
+       },
+       {
+        "270": {
+         "logprob": -14.056187629699707,
+         "rank": 98145,
+         "decoded_token": " the"
+        },
+        "48573": {
+         "logprob": -6.103062629699707,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "6102": {
+         "logprob": -10.77235221862793,
+         "rank": 9560,
+         "decoded_token": " capital"
+        },
+        "107045": {
+         "logprob": -5.647352695465088,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "294": {
+         "logprob": -15.687361717224121,
+         "rank": 114539,
+         "decoded_token": " of"
+        },
+        "61282": {
+         "logprob": -5.640486717224121,
+         "rank": 1,
+         "decoded_token": "圣人"
+        }
+       },
+       {
+        "8760": {
+         "logprob": -13.753789901733398,
+         "rank": 66428,
+         "decoded_token": " France"
+        },
+        "66613": {
+         "logprob": -5.19910192489624,
+         "rank": 1,
+         "decoded_token": " Bryant"
+        }
+       },
+       {
+        "33": {
+         "logprob": -12.520252227783203,
+         "rank": 34712,
+         "decoded_token": "?"
+        },
+        "54341": {
+         "logprob": -4.520252227783203,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "54341": {
+         "logprob": -4.726336479187012,
+         "rank": 1,
+         "decoded_token": "Vir"
+        }
+       },
+       {
+        "50180": {
+         "logprob": -5.468314170837402,
+         "rank": 1,
+         "decoded_token": " Galile"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -6.051052093505859,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.692929744720459,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.527103424072266,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "48573": {
+         "logprob": -5.844849586486816,
+         "rank": 1,
+         "decoded_token": " Genet"
+        }
+       },
+       {
+        "124930": {
+         "logprob": -6.264150619506836,
+         "rank": 3,
+         "decoded_token": " Feldman"
+        },
+        "88530": {
+         "logprob": -6.139150619506836,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "88530": {
+         "logprob": -5.683587551116943,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       3085,
+       344,
+       270,
+       6102,
+       294,
+       8760,
+       33,
+       54341,
+       50180,
+       48573,
+       48573,
+       48573,
+       48573,
+       124930,
+       88530
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 16,
+     "total_tokens": 17,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -4.726336479187012,
+    -5.468314170837402,
+    -6.051052093505859,
+    -5.692929744720459,
+    -5.527103424072266,
+    -5.844849586486816,
+    -6.264150619506836,
+    -5.683587551116943
+   ]
+  },
+  {
+   "generation_request": {
+    "model": "step5-head-tail8",
+    "temperature": 0,
+    "top_p": 1,
+    "seed": 0,
+    "max_tokens": 8,
+    "messages": [
+     {
+      "role": "user",
+      "content": "What is the capital of France?"
+     }
+    ],
+    "logprobs": true,
+    "top_logprobs": 1,
+    "return_token_ids": true
+   },
+   "generation": {
+    "id": "chatcmpl-9d7b719b92378fae",
+    "object": "chat.completion",
+    "created": 1793771363,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "message": {
+       "role": "assistant",
+       "content": " Reason Leone Leone Leone Leone Leone Moral面无",
+       "refusal": null,
+       "annotations": null,
+       "audio": null,
+       "function_call": null,
+       "reasoning": null
+      },
+      "logprobs": {
+       "content": [
+        {
+         "token": " Reason",
+         "logprob": -4.1148834228515625,
+         "bytes": [
+          32,
+          82,
+          101,
+          97,
+          115,
+          111,
+          110
+         ],
+         "top_logprobs": [
+          {
+           "token": " Reason",
+           "logprob": -4.1148834228515625,
+           "bytes": [
+            32,
+            82,
+            101,
+            97,
+            115,
+            111,
+            110
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.974191665649414,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.974191665649414,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.469541072845459,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.469541072845459,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.428396224975586,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.428396224975586,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -4.649435997009277,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -4.649435997009277,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Leone",
+         "logprob": -5.202918529510498,
+         "bytes": [
+          32,
+          76,
+          101,
+          111,
+          110,
+          101
+         ],
+         "top_logprobs": [
+          {
+           "token": " Leone",
+           "logprob": -5.202918529510498,
+           "bytes": [
+            32,
+            76,
+            101,
+            111,
+            110,
+            101
+           ]
+          }
+         ]
+        },
+        {
+         "token": " Moral",
+         "logprob": -5.447202205657959,
+         "bytes": [
+          32,
+          77,
+          111,
+          114,
+          97,
+          108
+         ],
+         "top_logprobs": [
+          {
+           "token": " Moral",
+           "logprob": -5.447202205657959,
+           "bytes": [
+            32,
+            77,
+            111,
+            114,
+            97,
+            108
+           ]
+          }
+         ]
+        },
+        {
+         "token": "面无",
+         "logprob": -5.236778259277344,
+         "bytes": [
+          233,
+          157,
+          162,
+          230,
+          151,
+          160
+         ],
+         "top_logprobs": [
+          {
+           "token": "面无",
+           "logprob": -5.236778259277344,
+           "bytes": [
+            233,
+            157,
+            162,
+            230,
+            151,
+            160
+           ]
+          }
+         ]
+        }
+       ]
+      },
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       38074,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       61236,
+       86766
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 18,
+     "total_tokens": 26,
+     "completion_tokens": 8,
+     "prompt_tokens_details": null
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": [
+     0,
+     128006,
+     5265,
+     201,
+     3085,
+     344,
+     270,
+     6102,
+     294,
+     8760,
+     33,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798
+    ],
+    "prompt_text": null,
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "score_request": {
+    "model": "step5-head-tail8",
+    "prompt": [
+     0,
+     128006,
+     5265,
+     201,
+     3085,
+     344,
+     270,
+     6102,
+     294,
+     8760,
+     33,
+     128007,
+     201,
+     128006,
+     624,
+     15059,
+     201,
+     128798,
+     38074,
+     75212,
+     75212,
+     75212,
+     75212,
+     75212,
+     61236,
+     86766
+    ],
+    "max_tokens": 1,
+    "temperature": 0,
+    "seed": 0,
+    "prompt_logprobs": 1,
+    "return_token_ids": true,
+    "add_special_tokens": false
+   },
+   "score_response": {
+    "id": "cmpl-96045d85eaab1495",
+    "object": "text_completion",
+    "created": 1793771363,
+    "model": "step5-head-tail8",
+    "choices": [
+     {
+      "index": 0,
+      "text": " Serious",
+      "logprobs": null,
+      "finish_reason": "length",
+      "stop_reason": null,
+      "token_ids": [
+       102440
+      ],
+      "prompt_logprobs": [
+       null,
+       {
+        "128006": {
+         "logprob": -11.039352416992188,
+         "rank": 12289,
+         "decoded_token": "<|im_start|>"
+        },
+        "108583": {
+         "logprob": -6.039351940155029,
+         "rank": 1,
+         "decoded_token": " Переводчик"
+        }
+       },
+       {
+        "5265": {
+         "logprob": -14.925224304199219,
+         "rank": 115687,
+         "decoded_token": "user"
+        },
+        "122779": {
+         "logprob": -6.143974304199219,
+         "rank": 1,
+         "decoded_token": " Hered"
+        }
+       },
+       {
+        "201": {
+         "logprob": -23.798385620117188,
+         "rank": 128894,
+         "decoded_token": "\n"
+        },
+        "88530": {
+         "logprob": -5.892136573791504,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "3085": {
+         "logprob": -11.877124786376953,
+         "rank": 30191,
+         "decoded_token": "What"
+        },
+        "107045": {
+         "logprob": -5.970875263214111,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "344": {
+         "logprob": -13.537643432617188,
+         "rank": 74689,
+         "decoded_token": " is"
+        },
+        "88530": {
+         "logprob": -5.227096080780029,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "270": {
+         "logprob": -15.55537223815918,
+         "rank": 116600,
+         "decoded_token": " the"
+        },
+        "107045": {
+         "logprob": -5.70380973815918,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "6102": {
+         "logprob": -11.524051666259766,
+         "rank": 20122,
+         "decoded_token": " capital"
+        },
+        "75212": {
+         "logprob": -6.086551189422607,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "294": {
+         "logprob": -13.222596168518066,
+         "rank": 63638,
+         "decoded_token": " of"
+        },
+        "107045": {
+         "logprob": -5.847596168518066,
+         "rank": 1,
+         "decoded_token": " Propagation"
+        }
+       },
+       {
+        "8760": {
+         "logprob": -13.64819622039795,
+         "rank": 71895,
+         "decoded_token": " France"
+        },
+        "88530": {
+         "logprob": -5.695071220397949,
+         "rank": 1,
+         "decoded_token": " Nonlinear"
+        }
+       },
+       {
+        "33": {
+         "logprob": -13.583674430847168,
+         "rank": 63320,
+         "decoded_token": "?"
+        },
+        "75212": {
+         "logprob": -5.091486930847168,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128007": {
+         "logprob": -15.208917617797852,
+         "rank": 106748,
+         "decoded_token": "<|im_end|>"
+        },
+        "75212": {
+         "logprob": -5.230401992797852,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -28.258817672729492,
+         "rank": 128896,
+         "decoded_token": "\n"
+        },
+        "102440": {
+         "logprob": -5.07131814956665,
+         "rank": 1,
+         "decoded_token": " Serious"
+        }
+       },
+       {
+        "128006": {
+         "logprob": -14.908432006835938,
+         "rank": 94893,
+         "decoded_token": "<|im_start|>"
+        },
+        "75212": {
+         "logprob": -4.7951507568359375,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "624": {
+         "logprob": -14.327409744262695,
+         "rank": 88681,
+         "decoded_token": "ass"
+        },
+        "75212": {
+         "logprob": -5.303971767425537,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "15059": {
+         "logprob": -12.450066566467285,
+         "rank": 38659,
+         "decoded_token": "istant"
+        },
+        "75212": {
+         "logprob": -5.246941566467285,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "201": {
+         "logprob": -25.30762481689453,
+         "rank": 128890,
+         "decoded_token": "\n"
+        },
+        "75212": {
+         "logprob": -4.932623863220215,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "128798": {
+         "logprob": -15.163464546203613,
+         "rank": 98546,
+         "decoded_token": "<think>"
+        },
+        "75212": {
+         "logprob": -4.620495796203613,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "38074": {
+         "logprob": -4.52490234375,
+         "rank": 6,
+         "decoded_token": " Reason"
+        },
+        "64450": {
+         "logprob": -3.89990234375,
+         "rank": 1,
+         "decoded_token": " Responsible"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.167386531829834,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.406824588775635,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.548952102661133,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -4.6778035163879395,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "75212": {
+         "logprob": -5.2046098709106445,
+         "rank": 1,
+         "decoded_token": " Leone"
+        }
+       },
+       {
+        "61236": {
+         "logprob": -5.337723731994629,
+         "rank": 1,
+         "decoded_token": " Moral"
+        }
+       },
+       {
+        "86766": {
+         "logprob": -5.340282917022705,
+         "rank": 1,
+         "decoded_token": "面无"
+        }
+       }
+      ],
+      "prompt_token_ids": [
+       0,
+       128006,
+       5265,
+       201,
+       3085,
+       344,
+       270,
+       6102,
+       294,
+       8760,
+       33,
+       128007,
+       201,
+       128006,
+       624,
+       15059,
+       201,
+       128798,
+       38074,
+       75212,
+       75212,
+       75212,
+       75212,
+       75212,
+       61236,
+       86766
+      ],
+      "routed_experts": null
+     }
+    ],
+    "service_tier": null,
+    "system_fingerprint": "vllm-0.1.dev19473+g5d7f9124d.d20261014-tp4-dp2-ep-4ca183b3",
+    "usage": {
+     "prompt_tokens": 26,
+     "total_tokens": 27,
+     "completion_tokens": 1,
+     "prompt_tokens_details": null
+    },
+    "kv_transfer_params": null,
+    "ec_transfer_params": null,
+    "metrics": null
+   },
+   "fixed_logprobs": [
+    -4.52490234375,
+    -5.167386531829834,
+    -5.406824588775635,
+    -5.548952102661133,
+    -4.6778035163879395,
+    -5.2046098709106445,
+    -5.337723731994629,
+    -5.340282917022705
+   ]
+  }
+ ],
+ "workers": [
+  {
+   "rank": 0,
+   "world_rank": 0,
+   "world_size": 8,
+   "dp_rank": 0,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 1,
+   "world_rank": 1,
+   "world_size": 8,
+   "dp_rank": 0,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 2,
+   "world_rank": 2,
+   "world_size": 8,
+   "dp_rank": 0,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 3,
+   "world_rank": 3,
+   "world_size": 8,
+   "dp_rank": 0,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 0,
+   "world_rank": 4,
+   "world_size": 8,
+   "dp_rank": 1,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 1,
+   "world_rank": 5,
+   "world_size": 8,
+   "dp_rank": 1,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 2,
+   "world_rank": 6,
+   "world_size": 8,
+   "dp_rank": 1,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  },
+  {
+   "rank": 3,
+   "world_rank": 7,
+   "world_size": 8,
+   "dp_rank": 1,
+   "tp": 4,
+   "dp": 2,
+   "pp": 1,
+   "ep_enabled": true,
+   "all2all_backend": "allgather_reducescatter",
+   "parallel_sequence_parallel_moe": true,
+   "model_layers": [
+    {
+     "name": "language_model.model.layers.0",
+     "layer_idx": 0,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.1",
+     "layer_idx": 1,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.2",
+     "layer_idx": 2,
+     "use_moe": false,
+     "sequence_parallel": null
+    },
+    {
+     "name": "language_model.model.layers.3",
+     "layer_idx": 3,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.4",
+     "layer_idx": 4,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.5",
+     "layer_idx": 5,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.6",
+     "layer_idx": 6,
+     "use_moe": true,
+     "sequence_parallel": true
+    },
+    {
+     "name": "language_model.model.layers.7",
+     "layer_idx": 7,
+     "use_moe": false,
+     "sequence_parallel": null
+    }
+   ],
+   "expected_moe_layers": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "num_hidden_layers": 8,
+   "moe_num_experts": 352,
+   "num_experts_per_tok": 8,
+   "graph_mode": "FULL_DECODE_ONLY",
+   "compilation_enable_sp": true,
+   "chunked_prefill": false,
+   "max_num_batched_tokens": 2048,
+   "async_scheduling": true,
+   "model_runner_async_scheduling": true,
+   "scheduler_class_setting": "None",
+   "prefix_caching": true,
+   "observer_module": "/home/yyy/model_openbox/reduced-recheck-225-10.20/functional_worker_extension.py",
+   "observer_sha256": "ebeadd4cd11e57ff84e38d60e2554447502be15d6e39d0b3af111bf583ba5028"
+  }
+ ],
+ "status": "completed",
+ "ended": "2026-11-04T05:49:24.936663+00:00"
+}

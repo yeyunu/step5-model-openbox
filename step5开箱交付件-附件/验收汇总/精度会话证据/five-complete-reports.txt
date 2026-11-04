@@ -1,0 +1,138 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 553
+Timestamp: 2026-10-25T06:16:26.917Z
+Record SHA256: c770964e2b28bd4518f3b246f6702660d51ffa28ad5d5b9c8ce3d75bdabf2c79
+Evidence type: function_call_output
+Note: extracted historical record; not a new server run. Original terminal wrapping/truncation retained.
+
+Chunk ID: b08e8c
+Wall time: 5.0063 seconds
+Process running with session ID 54670
+Original token count: 2100
+Output:
+python3 - <<'PY'
+> import json,glob,os
+<e-bf16/runs/**/reports/**/*.json',recursive=True)):
+>[1C    if not any(x in p for x in ('gpqa','mmmu')) or 'smoke_' in p: continue
+>     d=json.load(open(p))
+>     print('\n---',p)
+>     print('keys', list(d))
+>     for k in ('score','metrics','num','dataset_name','model_name'):
+>         if k in d: print(k,repr(d[k])[:1500])
+> PY
+
+--- /data/yyy/evalscope-bf16/runs/20261024_234403/mmmu_pro/outputs/20261024_2344
+[23;80H407/reports/step/mmmu_pro.json
+keys ['schema_version', 'name', 'dataset_name', 'dataset_pretty_name', 'dataset_
+[23;80H_description', 'model_name', 'metrics', 'analysis', 'perf_metrics', 'primary_metr
+[23;80Hric_identity', 'primary_metric_unavailable_reason', 'judge_summary', 'execution_s
+[23;80Hsummary', 'num']
+metrics [{'identity': {'name': 'accuracy', 'aggregation': 'mean', 'dimensions': 
+[23;80H {}}, 'legacy_name': None, 'num': 1730, 'score': 0.7665, 'macro_score': 0.7665, '
+[23;80H'categories': [{'name': ['default'], 'num': 1730, 'score': 0.7665, 'macro_score':
+[23;80H: 0.7668, 'subsets': [{'name': 'Accounting', 'score': 0.8793, 'num': 58, 'is_aggr
+[23;80Hregate': False}, {'name': 'Agriculture', 'score': 0.5667, 'num': 60, 'is_aggregat
+[23;80Hte': False}, {'name': 'Architecture_and_Engineering', 'score': 0.7833, 'num': 60,
+[23;80H, 'is_aggregate': False}, {'name': 'Art', 'score': 0.8302, 'num': 53, 'is_aggrega
+[23;80Hate': False}, {'name': 'Art_Theory', 'score': 0.8727, 'num': 55, 'is_aggregate': 
+[23;80H False}, {'name': 'Basic_Medical_Science', 'score': 0.6731, 'num': 52, 'is_aggreg
+[23;80Hgate': False}, {'name': 'Biology', 'score': 0.6949, 'num': 59, 'is_aggregate': Fa
+[23;80Halse}, {'name': 'Chemistry', 'score': 0.8667, 'num': 60, 'is_aggregate': False}, 
+[23;80H {'name': 'Clinical_Medicine', 'score': 0.7119, 'num': 59, 'is_aggregate': False}
+[23;80H}, {'name': 'Computer_Science', 'score': 0.75, 'num': 60, 'is_aggregate': False},
+[23;80H, {'name': 'Design', 'score': 0.7833, 'num': 60, 'is_aggregate': False}, {'name':
+[23;80H: 'Diagnostics_and_Laboratory_Medicine', 'score': 0.5833, 'num': 60, 'is_aggregat
+[23;80Hte': False}, {'name': 'Economics', 'score': 0.8644, 'num': 59, 'is_aggregate': Fa
+[23;80Halse}, {'name': 'Electronics', 'score': 0.9, 'num': 60, 'is_aggregate': False}, {
+[23;80H{'name': 'Energy_and_Power', 'score': 0.8448, 'num': 58, 'is_aggregate': False}, 
+[23;80H {'name': 'Finance', 'score': 0.95, 'num': 60, 'is_aggregate': False}
+num 1730
+dataset_name 'mmmu_pro'
+model_name 'step'
+
+--- /data/yyy/evalscope-bf16/runs/20261025_024647/gpqa_diamond/outputs/20261025_
+[23;80H_024652/reports/step/gpqa_diamond.json
+keys ['schema_version', 'name', 'dataset_name', 'dataset_pretty_name', 'dataset_
+[23;80H_description', 'model_name', 'metrics', 'analysis', 'perf_metrics', 'primary_metr
+[23;80Hric_identity', 'primary_metric_unavailable_reason', 'judge_summary', 'execution_s
+[23;80Hsummary', 'num']
+metrics [{'identity': {'name': 'accuracy', 'aggregation': 'mean', 'dimensions': 
+[23;80H {}}, 'legacy_name': None, 'num': 198, 'score': 0.9495, 'macro_score': 0.9495, 'c
+[23;80Hcategories': [{'name': ['default'], 'num': 198, 'score': 0.9495, 'macro_score': 0
+[23;80H0.9495, 'subsets': [{'name': 'default', 'score': 0.9495, 'num': 198, 'is_aggregat
+[23;80Hte': False}]}], 'semantics': {'semantic_id': 'quality.accuracy.ratio', 'metric_na
+[23;80Hame': 'Accuracy', 'display_name': None, 'kind': 'quality', 'direction': 'higher_i
+[23;80His_better', 'raw_unit': None, 'value_range': {'min': 0.0, 'max': 1.0}, 'display_k
+[23;80Hkind': 'percent', 'display_multiplier': 100.0, 'display_unit': '%', 'display_prec
+[23;80Hcision': 1}}]
+num 198
+dataset_name 'gpqa_diamond'
+model_name 'step'
+
+--- /data/yyy/evalscope-bf16/runs/20261025_gpqa_round2/outputs/20261025_033621/r
+[23;80Hreports/step/gpqa_diamond.json
+keys ['schema_version', 'name', 'dataset_name', 'dataset_pretty_name', 'dataset_
+[23;80H_description', 'model_name', 'metrics', 'analysis', 'perf_metrics', 'primary_metr
+[23;80Hric_identity', 'primary_metric_unavailable_reason', 'judge_summary', 'execution_s
+[23;80Hsummary', 'num']
+metrics [{'identity': {'name': 'accuracy', 'aggregation': 'mean', 'dimensions': 
+[23;80H {}}, 'legacy_name': None, 'num': 198, 'score': 0.9293, 'macro_score': 0.9293, 'c
+[23;80Hcategories': [{'name': ['default'], 'num': 198, 'score': 0.9293, 'macro_score': 0
+[23;80H0.9293, 'subsets': [{'name': 'default', 'score': 0.9293, 'num': 198, 'is_aggregat
+[23;80Hte': False}]}], 'semantics': {'semantic_id': 'quality.accuracy.ratio', 'metric_na
+[23;80Hame': 'Accuracy', 'display_name': None, 'kind': 'quality', 'direction': 'higher_i
+[23;80His_better', 'raw_unit': None, 'value_range': {'min': 0.0, 'max': 1.0}, 'display_k
+[23;80Hkind': 'percent', 'display_multiplier': 100.0, 'display_unit': '%', 'display_prec
+[23;80Hcision': 1}}]
+num 198
+dataset_name 'gpqa_diamond'
+model_name 'step'
+
+--- /data/yyy/evalscope-bf16/runs/20261025_gpqa_round3/outputs/20261025_043008/r
+[23;80Hreports/step/gpqa_diamond.json
+keys ['schema_version', 'name', 'dataset_name', 'dataset_pretty_name', 'dataset_
+[23;80H_description', 'model_name', 'metrics', 'analysis', 'perf_metrics', 'primary_metr
+[23;80Hric_identity', 'primary_metric_unavailable_reason', 'judge_summary', 'execution_s
+[23;80Hsummary', 'num']
+metrics [{'identity': {'name': 'accuracy', 'aggregation': 'mean', 'dimensions': 
+[23;80H {}}, 'legacy_name': None, 'num': 198, 'score': 0.9343, 'macro_score': 0.9343, 'c
+[23;80Hcategories': [{'name': ['default'], 'num': 198, 'score': 0.9343, 'macro_score': 0
+[23;80H0.9343, 'subsets': [{'name': 'default', 'score': 0.9343, 'num': 198, 'is_aggregat
+[23;80Hte': False}]}], 'semantics': {'semantic_id': 'quality.accuracy.ratio', 'metric_na
+[23;80Hame': 'Accuracy', 'display_name': None, 'kind': 'quality', 'direction': 'higher_i
+[23;80His_better', 'raw_unit': None, 'value_range': {'min': 0.0, 'max': 1.0}, 'display_k
+[23;80Hkind': 'percent', 'display_multiplier': 100.0, 'display_unit': '%', 'display_prec
+[23;80Hcision': 1}}]
+num 198
+dataset_name 'gpqa_diamond'
+model_name 'step'
+
+--- /data/yyy/evalscope-bf16/runs/20261025_mmmu_round1/outputs/20261025_052014/r
+[23;80Hreports/step/mmmu_pro.json
+keys ['schema_version', 'name', 'dataset_name', 'dataset_pretty_name', 'dataset_
+[23;80H_description', 'model_name', 'metrics', 'analysis', 'perf_metrics', 'primary_metr
+[23;80Hric_identity', 'primary_metric_unavailable_reason', 'judge_summary', 'execution_s
+[23;80Hsummary', 'num']
+metrics [{'identity': {'name': 'accuracy', 'aggregation': 'mean', 'dimensions': 
+[23;80H {}}, 'legacy_name': None, 'num': 1730, 'score': 0.7572, 'macro_score': 0.7572, '
+[23;80H'categories': [{'name': ['default'], 'num': 1730, 'score': 0.7572, 'macro_score':
+[23;80H: 0.7574, 'subsets': [{'name': 'Accounting', 'score': 0.8793, 'num': 58, 'is_aggr
+[23;80Hregate': False}, {'name': 'Agriculture', 'score': 0.55, 'num': 60, 'is_aggregate'
+[23;80H': False}, {'name': 'Architecture_and_Engineering', 'score': 0.8167, 'num': 60, '
+[23;80H'is_aggregate': False}, {'name': 'Art', 'score': 0.7547, 'num': 53, 'is_aggregate
+[23;80He': False}, {'name': 'Art_Theory', 'score': 0.8909, 'num': 55, 'is_aggregate': Fa
+[23;80Halse}, {'name': 'Basic_Medical_Science', 'score': 0.6923, 'num': 52, 'is_aggregat
+[23;80Hte': False}, {'name': 'Biology', 'score': 0.661, 'num': 59, 'is_aggregate': False
+[23;80He}, {'name': 'Chemistry', 'score': 0.8, 'num': 60, 'is_aggregate': False}, {'name
+[23;80He': 'Clinical_Medicine', 'score': 0.6102, 'num': 59, 'is_aggregate': False}, {'na
+[23;80Hame': 'Computer_Science', 'score': 0.8, 'num': 60, 'is_aggregate': False}, {'name
+[23;80He': 'Design', 'score': 0.85, 'num': 60, 'is_aggregate': False}, {'name': 'Diagnos
+[23;80Hstics_and_Laboratory_Medicine', 'score': 0.5, 'num': 60, 'is_aggregate': False}, 
+[23;80H {'name': 'Economics', 'score': 0.8644, 'num': 59, 'is_aggregate': False}, {'name
+[23;80He': 'Electronics', 'score': 0.9167, 'num': 60, 'is_aggregate': False}, {'name': '
+[23;80H'Energy_and_Power', 'score': 0.8276, 'num': 58, 'is_aggregate': False}, {'name': 
+[23;80H 'Finance', 'score': 0.9667, 'num': 60, 'is_aggregate': False}, {'nam
+num 1730
+dataset_name 'mmmu_pro'
+model_name 'step'
+[root@localhost ~]#[1C

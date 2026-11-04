@@ -1,0 +1,44 @@
+Source session: C:\Users\admin\.codex\sessions\2026\10\25\rollout-2026-10-25T10-52-49-01a170f9-9cd6-7b32-94eb-a4188a8ec59b.jsonl
+Source JSONL line: 5208
+Timestamp: 2026-10-27T07:55:59.903Z
+Record SHA256: 963f6aaaeff23f41cde5effca1b001c06e57ce2d46b2c32eed5e86e68f802872
+Evidence type: historical command output, 2026-10-27 observation of old service and resume scripts
+Extraction: first two scripts only; omitted following unrelated 8-layer script and contributor policy. EP16 is inferred from TP4 x DP4 with EP enabled, not a separate launch flag.
+
+
+Authorized users only. All activities may be monitored and reported.
+#!/bin/bash
+set -euo pipefail
+source /home/yyy/gpqa_eval_env.sh
+export VLLM_HOST_IP=177.2.25.1
+export HCCL_IF_IP=177.2.25.1
+echo $$ > /home/yyy/gpqa_vllm_225.pid
+exec vllm serve /data/Step-5-Preview-BF16 \
+  --host 0.0.0.0 --port 18084 \
+  --served-model-name Step-5-Preview-BF16 --dtype bfloat16 \
+  --tensor-parallel-size 4 --data-parallel-size 4 \
+  --data-parallel-size-local 2 \
+  --data-parallel-backend ray \
+  --distributed-executor-backend ray \
+  --enable-expert-parallel --trust-remote-code \
+  --allowed-local-media-path /data/ais-bench/ais_bench/datasets/textvqa \
+  --max-model-len 16384 --max-num-batched-tokens 8192 \
+  --max-num-seqs 16 --gpu-memory-utilization 0.9 \
+  --no-enable-prefix-caching --no-async-scheduling --enforce-eager#!/bin/bash
+set -euo pipefail
+source /home/yyy/gpqa_eval_env.sh
+cd /home/yyy/evalscope-bf16
+echo $$ > /home/yyy/gpqa_resume.pid
+exec /home/yyy/evalscope-bf16/.venv/bin/evalscope eval \
+  --model Step-5-Preview-BF16 \
+  --api-url http://177.2.25.1:18084/v1 \
+  --api-key EMPTY \
+  --eval-type openai_api \
+  --datasets gpqa_diamond \
+  --eval-batch-size 128 \
+  --repeats 4 \
+  --dataset-args '{"gpqa_diamond":{"local_path":"/home/yyy/evalscope-bf16/local_datasets/gpqa_diamond"}}' \
+  --generation-config do_sample=true,temperature=1.0,top_p=0.95,top_k=0,timeout=360000 \
+  --work-dir /home/yyy/evalscope-bf16/runs/20261020_gpqa_resume \
+  --use-cache /home/yyy/evalscope-bf16/runs/20261019_125836/gpqa_diamond/outputs/20261019_125927 \
+  --rerun-review

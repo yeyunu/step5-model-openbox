@@ -1,0 +1,30 @@
+[
+  {
+    "number": 16959,
+    "url": "https://github.com/vllm-project/vllm-ascend/pull/16959",
+    "merged": true,
+    "merge_commit_sha": "4004d10e9b82b6bb36d7093a8e8ae19bdb97a1f6",
+    "merged_at": "2026-09-22T01:47:05Z"
+  },
+  {
+    "number": 17154,
+    "url": "https://github.com/vllm-project/vllm-ascend/pull/17154",
+    "merged": true,
+    "merge_commit_sha": "cee16e8dbe44b417fee456c5fbc52490d4f5540e",
+    "merged_at": "2026-09-23T06:43:20Z"
+  },
+  {
+    "number": 18848,
+    "url": "https://github.com/vllm-project/vllm-ascend/pull/18848",
+    "merged": true,
+    "merge_commit_sha": "e992aa2e60bcd1dc99440958d5bd33bc4c6833e2",
+    "merged_at": "2026-10-22T01:11:27Z"
+  },
+  {
+    "number": 18944,
+    "url": "https://github.com/vllm-project/vllm-ascend/pull/18944",
+    "merged": true,
+    "merge_commit_sha": "ec26d2541fcbec6b4d719de1524c45d75b26c386",
+    "merged_at": "2026-10-27T06:09:44Z"
+  }
+]

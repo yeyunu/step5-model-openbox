@@ -1,0 +1,32 @@
+{
+  "scope": "8-layer functional verification, not full-model accuracy",
+  "status": "passed",
+  "weight_update_exact_pairs": {
+    "checkpoint_reload": 8,
+    "hccl_weight_update": 8,
+    "npu_ipc_weight_update": 8
+  },
+  "features": {
+    "baseline": {
+      "dual_api_cases": 8,
+      "status": "passed"
+    },
+    "routing_replay": {
+      "dual_api_cases": 8,
+      "status": "passed"
+    },
+    "sp": {
+      "dual_api_cases": 8,
+      "status": "passed"
+    },
+    "pp": {
+      "dual_api_cases": 8,
+      "status": "passed"
+    }
+  },
+  "producer_and_reload_exit_codes": {
+    "hccl": 0,
+    "ipc": 0,
+    "reload": 0
+  }
+}

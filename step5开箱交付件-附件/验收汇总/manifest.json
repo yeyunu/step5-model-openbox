@@ -1,0 +1,341 @@
+{
+  "purpose": "2026-11-02文档重整所用既有证据快照；本次未重新运行模型",
+  "files": [
+    {
+      "source": "C:\\Users\\admin\\Documents\\Obsidian Vault\\step5开箱交付件.md.template-20261019-160456.bak",
+      "copy": "原始交付模板.md",
+      "bytes": 7624,
+      "sha256": "05e424283bac6a3d3b04d4bfac8d6dd03f3ec6de8680aa4ac422077b65520d9e"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\Step5交付重整-20261102\\原始验收要求摘录.md",
+      "copy": "原始验收要求摘录.md",
+      "bytes": 2792,
+      "sha256": "f6902e0a57b408cd80007f931e33d41e2229e63a64f0be65587f0057b7a7849b"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\report.md",
+      "copy": "多模态32K-4K/report.md",
+      "bytes": 7387,
+      "sha256": "da35f8e95d22d849457332a22190cbb780aa419ccca37e3d245b00a12d9a0676"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\run-service.sh",
+      "copy": "多模态32K-4K/run-service.sh",
+      "bytes": 1045,
+      "sha256": "018eac606e547d93ebb91d3281636bb6cd67e35c447af45a1bb211c77e6c835f"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\run-service-prefill-prof.sh",
+      "copy": "多模态32K-4K/run-service-prefill-prof.sh",
+      "bytes": 1296,
+      "sha256": "723dbbb7dedb15a8a6390c0334c83b31d70c606b0ad1d534aa8cbde6b322a20c"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\run-service-decode-prof.sh",
+      "copy": "多模态32K-4K/run-service-decode-prof.sh",
+      "bytes": 1298,
+      "sha256": "d3e45e2899a7d91baca461fa323e20195c8ea0ae3426e0533d1c18c68a8dcacf"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\score_profile.py",
+      "copy": "多模态32K-4K/score_profile.py",
+      "bytes": 7436,
+      "sha256": "86f62ad7b69fba6ddcd4b7cd86235f0e7b027f85d967ac87e5596ab0fed586b8"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\acceptance-summary.json",
+      "copy": "多模态32K-4K/results/acceptance-summary.json",
+      "bytes": 2661,
+      "sha256": "a7952f4a80a66a5a1d0755f81010ace39b404dc70b06e21a5520c17adeb98fb7"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-full.log",
+      "copy": "多模态32K-4K/results/c1-full.log",
+      "bytes": 7534,
+      "sha256": "bee05c92a9340e59a2cfa0bdc20d0684552768921483dc0cb2ea0bab28379aac"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-seed101.log",
+      "copy": "多模态32K-4K/results/c1-seed101.log",
+      "bytes": 7725,
+      "sha256": "0c72cb369333884e55de30b3143ab4533f03e6d4e45d8abb4544c10742c0c8ee"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-seed102.log",
+      "copy": "多模态32K-4K/results/c1-seed102.log",
+      "bytes": 7725,
+      "sha256": "3385c8d2287b00cd603155a55478ce4db1f240a82ce92c930f7dad0ffb935db1"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-seed103.log",
+      "copy": "多模态32K-4K/results/c1-seed103.log",
+      "bytes": 7725,
+      "sha256": "10c3782edfeec492aafcaed405bd7264c873ddd5fe130b846ee3bb1076f24513"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c2.log",
+      "copy": "多模态32K-4K/results/c2.log",
+      "bytes": 7591,
+      "sha256": "e43f83c60845ca39ec8d5f60093d483024ce826ad3a900dbd4fdd7cc1faaba90"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c4.log",
+      "copy": "多模态32K-4K/results/c4.log",
+      "bytes": 7529,
+      "sha256": "f28a60979193246db63573bc2fd233af3bd0c62e330a588465d2270d30d11c8e"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\calibration-32000.log",
+      "copy": "多模态32K-4K/results/calibration-32000.log",
+      "bytes": 7751,
+      "sha256": "eb931364bac6339bf47488808923150c6832146d5f4fc5fb3fe3402ab38d9096"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\calibration-32768.log",
+      "copy": "多模态32K-4K/results/calibration-32768.log",
+      "bytes": 7751,
+      "sha256": "9fda4fa6758aa841e57a337a485c2df649cee06e5231b2674e5e49f2bc1ab33f"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-decode-full.log",
+      "copy": "多模态32K-4K/results/profile-decode-full.log",
+      "bytes": 7798,
+      "sha256": "00a0b9ffa9b598e2aae3256d4f4bc8a8bbddd897f344972734e51c1b320c46a4"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-decode-warmup-32000.log",
+      "copy": "多模态32K-4K/results/profile-decode-warmup-32000.log",
+      "bytes": 7723,
+      "sha256": "2bdaf97e20e6b478a49d7db9e2a73f43f9ba7759609e974174af2d9773ad2134"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-prefill-full.log",
+      "copy": "多模态32K-4K/results/profile-prefill-full.log",
+      "bytes": 7791,
+      "sha256": "5749ffe25921fb7159508336afccf29a6ef0adfd17a8dadc428ac46f40688e67"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-prefill-warmup1.log",
+      "copy": "多模态32K-4K/results/profile-prefill-warmup1.log",
+      "bytes": 7955,
+      "sha256": "dbed44669d66c96116a1269bb98d3201a58fd613e5087dcab845923eb6989072"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-prefill.log",
+      "copy": "多模态32K-4K/results/profile-prefill.log",
+      "bytes": 7751,
+      "sha256": "65e6a3163d1ccf7a7aef9dfb4ced90fde853fca480fdd46d83807da26483e220"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-warmup-32000.log",
+      "copy": "多模态32K-4K/results/profile-warmup-32000.log",
+      "bytes": 7716,
+      "sha256": "efb745b2c1cd99060869c4ed2dd3d523d72da86112553c7a1b64f34e07d1cd25"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-full\\openai-chat-infqps-concurrency1-step5-8layer-20261022-214953.json",
+      "copy": "多模态32K-4K/results/c1-full/openai-chat-infqps-concurrency1-step5-8layer-20261022-214953.json",
+      "bytes": 97178,
+      "sha256": "1caefb7a82ffe2fa67f00440061438b27d862ab6e5f4c6a4ce5a76613326debc"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-three-rounds\\c1-seed101.json",
+      "copy": "多模态32K-4K/results/c1-three-rounds/c1-seed101.json",
+      "bytes": 385646,
+      "sha256": "a293b26a4d924072b48098abd261c1a903fea75470899814013f406d104c2efb"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-three-rounds\\c1-seed102.json",
+      "copy": "多模态32K-4K/results/c1-three-rounds/c1-seed102.json",
+      "bytes": 385999,
+      "sha256": "1c2164e70687f4bb4254ea2efa4f01ee7840426d16bc181c1f683cf8912908e9"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\c1-three-rounds\\c1-seed103.json",
+      "copy": "多模态32K-4K/results/c1-three-rounds/c1-seed103.json",
+      "bytes": 385755,
+      "sha256": "3488e15ff516147b309145173a3c72a951cb5d0795d4a82f35f1335afdeea53f"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\calibration-32000\\openai-chat-infqps-concurrency1-step5-8layer-20261022-214902.json",
+      "copy": "多模态32K-4K/results/calibration-32000/openai-chat-infqps-concurrency1-step5-8layer-20261022-214902.json",
+      "bytes": 1134,
+      "sha256": "c42ecba00cc3b7aac41303934558c4c6a5271b943dbb30c8566af91e1dd6ec43"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\calibration-32768\\openai-chat-infqps-concurrency1-step5-8layer-20261022-214921.json",
+      "copy": "多模态32K-4K/results/calibration-32768/openai-chat-infqps-concurrency1-step5-8layer-20261022-214921.json",
+      "bytes": 1134,
+      "sha256": "29a342d03c23444eb5cc03e9a9626ff144b91e20f9072d571bcb461249fb1f8a"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\concurrency\\c2.json",
+      "copy": "多模态32K-4K/results/concurrency/c2.json",
+      "bytes": 386099,
+      "sha256": "57e858216bbd967712274dd168efe64975eafab2b21f32e189c000cafd5f4c82"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\concurrency\\c4.json",
+      "copy": "多模态32K-4K/results/concurrency/c4.json",
+      "bytes": 386186,
+      "sha256": "e47f5b08fa52719fb4d8118676f57f423f3716f0579b0ba829ef2b71fb1cfa31"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-decode\\analyse.log",
+      "copy": "多模态32K-4K/results/profile-decode/analyse.log",
+      "bytes": 5665,
+      "sha256": "e18b173c973b7a887580228f059bfbc0ca055bac63d244d7b875fe2b1fe2ece2"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-decode\\profile-decode-full.json",
+      "copy": "多模态32K-4K/results/profile-decode/profile-decode-full.json",
+      "bytes": 97231,
+      "sha256": "dcc2ae9e7f8b02f6fd5ff25d506780af3fc5c9f4c70ddba1d48ed3da3f3b70d3"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-decode\\profile-decode-warmup-32000.json",
+      "copy": "多模态32K-4K/results/profile-decode/profile-decode-warmup-32000.json",
+      "bytes": 951,
+      "sha256": "6dafd4a5891afeb13aa0b658adf692255716520b92d9012518a4ecd70da679e3"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-decode\\score.json",
+      "copy": "多模态32K-4K/results/profile-decode/score.json",
+      "bytes": 26571,
+      "sha256": "faf21b5a0754858fdedfd0f3d4f8250cdbedd4da3aebf23c2c852c6ab2cd8705"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-prefill\\profile-prefill-full.json",
+      "copy": "多模态32K-4K/results/profile-prefill/profile-prefill-full.json",
+      "bytes": 1121,
+      "sha256": "5f18a5639e3b4697d6f34db8346d2245dd792eccce5aefc1db9cdfda63e92b5e"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-prefill\\profile-warmup-32000.json",
+      "copy": "多模态32K-4K/results/profile-prefill/profile-warmup-32000.json",
+      "bytes": 1132,
+      "sha256": "a9d1410a1e70b6f84778bd0a84e4c1d618f1eddf99f8134e892e0091a8f07444"
+    },
+    {
+      "source": "C:\\Users\\admin\\Desktop\\mm-32k-4k-a5-20261022\\results\\profile-prefill\\score.json",
+      "copy": "多模态32K-4K/results/profile-prefill/score.json",
+      "bytes": 38854,
+      "sha256": "9183c105654524099d34fc29c7d2e3a4499b0741a3229390c597bccbe9feff07"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\all-runs-counts-and-mmmu-audit.txt",
+      "copy": "精度会话证据/all-runs-counts-and-mmmu-audit.txt",
+      "bytes": 19065,
+      "sha256": "28224cb7fe3e524980cfffe47ab139065cec296018297a8038dd1bc841eee92d"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\five-complete-reports.txt",
+      "copy": "精度会话证据/five-complete-reports.txt",
+      "bytes": 9060,
+      "sha256": "d79e8e42273b9f2e324d85b7ade32d9ff3513e1ef010665581ceb6f4568c1ee4"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\full-model-config-observation.txt",
+      "copy": "精度会话证据/full-model-config-observation.txt",
+      "bytes": 10671,
+      "sha256": "2f4fcf8d8e25297e827c87aeb4c25a72f5c119501927e8cc9162fe284e4970e4"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\full-model-service-scripts-observation.txt",
+      "copy": "精度会话证据/full-model-service-scripts-observation.txt",
+      "bytes": 8949,
+      "sha256": "0bf65d57fd53477c7e8d1b44157232d18179e9b842cb9ba418e1c9fe2a65088e"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\historical-summary.txt",
+      "copy": "精度会话证据/historical-summary.txt",
+      "bytes": 915,
+      "sha256": "a3663cf50fabc2f49d12a9069fbba777f7f762940f52a2948ba9453af8564f40"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\manifest.json",
+      "copy": "精度会话证据/manifest.json",
+      "bytes": 4880,
+      "sha256": "1ee2181dd28fe33725c210efedf82ba036e1d4cb23dd5214622d899872ad6a3e"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\partial-round-conclusion.txt",
+      "copy": "精度会话证据/partial-round-conclusion.txt",
+      "bytes": 1275,
+      "sha256": "4292a8a506fe0d93f8906b1d77065e338f4c0522517721a4caf09cf92e174021"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\partial-round-coverage.txt",
+      "copy": "精度会话证据/partial-round-coverage.txt",
+      "bytes": 2303,
+      "sha256": "a84328bdfb12d2fdbccfc99a176a710aa5c6dc3373277573205ed314aec2b6aa"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\partial-round-old-service-config.txt",
+      "copy": "精度会话证据/partial-round-old-service-config.txt",
+      "bytes": 2168,
+      "sha256": "b65af02c3a47f3eb8581df98900f68025351533dfb5463258d0250b453d8ec50"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\partial-round-score-match.txt",
+      "copy": "精度会话证据/partial-round-score-match.txt",
+      "bytes": 2308,
+      "sha256": "9108b541203cca6c7eeb60c3e8c0fa9b098b9495c97049c012bad719136486b4"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\round-counts.txt",
+      "copy": "精度会话证据/round-counts.txt",
+      "bytes": 9172,
+      "sha256": "75769cf018e00bad13d479ed98bf92749e5bfa53e71f5f0640ce9e16fa5cc399"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\user-partial-round-choice-1.txt",
+      "copy": "精度会话证据/user-partial-round-choice-1.txt",
+      "bytes": 561,
+      "sha256": "8f223f837cdc8ab74586ccbbcf793eb6369770bf628b3a228dd9572eeef94e25"
+    },
+    {
+      "source": "C:\\Users\\admin\\Documents\\ChatGPT\\项目总结\\step5-evidence-audit-20261102\\user-partial-round-choice-2.txt",
+      "copy": "精度会话证据/user-partial-round-choice-2.txt",
+      "bytes": 448,
+      "sha256": "dd1dac2e2b202809186c3acf528f0ca5906ace6f909805c60dd521ab1b4646e0"
+    },
+    {
+      "source": "C:\\Users\\admin\\step5-bf16-20261027\\result-summary.json",
+      "copy": "BF16摘要适配1027/result-summary.json",
+      "bytes": 3995,
+      "sha256": "3058bdf33dfa10c3dbfdd0ac11dae1c5a6a49a5fead853f6dfeaa57d094ad3db"
+    },
+    {
+      "source": "C:\\Users\\admin\\step5-bf16-20261027\\audit.json",
+      "copy": "BF16摘要适配1027/audit.json",
+      "bytes": 1734,
+      "sha256": "0537a0848946ed4a8bf5a276a0b7d7dbc5a14e35fc498e2f2f034d23dfd8216d"
+    },
+    {
+      "source": "C:\\Users\\admin\\step5-bf16-20261027\\gpqa_diamond.json",
+      "copy": "BF16摘要适配1027/gpqa_diamond.json",
+      "bytes": 8969,
+      "sha256": "4f56968d8b4da3e5c9f71aa99eec8d52409f166574c294c34596818efad1f910"
+    },
+    {
+      "source": "C:\\Users\\admin\\step5-bf16-20261027\\cache-allocation-fix.diff",
+      "copy": "BF16摘要适配1027/cache-allocation-fix.diff",
+      "bytes": 6168,
+      "sha256": "18cb22fd23f536fc4abcdfab98762ad51a1ced265c3ab2c602c4736db5b67721"
+    },
+    {
+      "source": "C:\\Users\\admin\\step5-bf16-20261027\\run_eval.sh",
+      "copy": "BF16摘要适配1027/run_eval.sh",
+      "bytes": 1313,
+      "sha256": "06d8bf4eea90efa4ac146107118f71d906709213c00e8f58e662918748bcfc79"
+    },
+    {
+      "source": "C:\\Users\\admin\\step5-bf16-20261027\\check_summary_bf16.py",
+      "copy": "BF16摘要适配1027/check_summary_bf16.py",
+      "bytes": 2271,
+      "sha256": "ae4409dd7efeab74ffb5d321185313b5d8bbb6c734b16ea0eda24762e536d9d8"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+evalscope 最大输出参数核验
+
+核验对象：
+- 运行环境：225 上 /home/yyy/evalscope-bf16
+- evalscope 版本：1.13.0（五份完整轮次归档的 evalscope_version）
+- 查询方式：只读查看已安装源码、正式命令行和归档 task_config.yaml；未启动模型或评测。
+
+正式轮次命令：
+- GPQA 命令包含：
+  --generation-config "do_sample=true,temperature=1.0,top_p=0.95,top_k=0,timeout=360000"
+- MMMU-Pro 命令包含：
+  --generation-config "do_sample=true,temperature=1.0,top_p=0.95,top_k=0,timeout=360000,logprobs=true"
+- 五份正式命令均未包含 max_tokens。
+- 五份归档 task_config.yaml 的 generation_config 也均未记录 max_tokens。
+
+源码行为：
+1. api/model/generate_config.py:66
+   max_tokens: Optional[int] = Field(default=None)
+
+2. config.py:73-75
+   DEFAULT_TEXT_GEN_SERVICE_CONFIG = {
+       'temperature': 0.0,
+   }
+   openai_api 的默认生成配置没有设置 max_tokens。
+
+3. api/model/model.py:113-124
+   ModelAPI.max_tokens() 与 ModelAPI.max_tokens_for_config() 的基类默认返回值均为 None；
+   OpenAICompatibleAPI 未覆盖这两个方法。
+
+4. api/model/model.py:272-276
+   当 config.max_tokens 为 None 时，依次向模型 API 询问默认值；
+   由于 openai_api 实现仍返回 None，预处理后 config.max_tokens 保持 None。
+
+5. models/utils/openai.py:260-261
+   if config.max_tokens is not None:
+       params['max_tokens'] = config.max_tokens
+   即值为 None 时不向 OpenAI 兼容接口发送 max_tokens。
+
+6. benchmarks/_meta/gpqa_diamond.json 与 benchmarks/_meta/mmmu_pro.json
+   均未定义 max_tokens 默认值。
+
+结论：
+- evalscope 提供 generation_config.max_tokens 配置能力。
+- 本次 GPQA Diamond 与 MMMU-Pro 的五份正式完整轮次没有设置固定最大输出长度。
+- 正式请求未发送 max_tokens；实际可生成长度由服务端上下文预算决定，不能将 max-model-len=153300 写成固定输出上限。
+- 10/27 补充 GPQA 是另一次配置，显式使用 max_tokens=149204。

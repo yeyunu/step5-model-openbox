@@ -1,0 +1,2032 @@
+{
+  "mode": "checkpoint_native_npu_ipc_weight_update",
+  "rank": 0,
+  "server_url": "http://127.0.0.1:8942",
+  "served_model_name": "step5-head-tail8",
+  "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/checkpoints/head-tail8",
+  "packed": true,
+  "packed_buffer_mb": 4352,
+  "weight_update_acceptance": "real_checkpoint_outputs_identical",
+  "checks": {
+    "both_generation_endpoints_baseline": true,
+    "checkpoint_manifest_all_workers": true,
+    "checkpoint_manifest_consistent": true,
+    "sleep_level2": true,
+    "wake_weights": true,
+    "checkpoint_stream_transfer": true,
+    "wake_kv_cache": true,
+    "both_generation_endpoints_post_update": true,
+    "post_update_available": true,
+    "outputs_identical": true,
+    "sampled_parameters_identical": true
+  },
+  "status": "passed",
+  "verification_command": "/usr/local/python3.12.13/bin/python3 /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/strict_mechanism_runner.py --mode ipc --skill-scripts /home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts --server-url http://127.0.0.1:8942 --model step5-head-tail8 --checkpoint /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/checkpoints/head-tail8 --expected-workers 8 --prompts-json /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/prompts.json --report /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/results/ipc-run-rerun/report.json --evidence /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/results/ipc-run-rerun/evidence.jsonl --max-tokens 8 --timeout 1800 --cycles 1 -- --packed-buffer-mb 4352 --devices 0,1,2,3,4,5,6,7",
+  "world_size": 8,
+  "local_world_size": 8,
+  "multi_node": false,
+  "devices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "prompts": [
+    "The future of AI is",
+    "你好",
+    "2 + 2 =",
+    "What is the capital of France?"
+  ],
+  "inference_world_size": 8,
+  "baseline_gate": "passed",
+  "mechanism_started": true,
+  "baseline_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": " PropagationVirVir Nonlinear Nonlinear Zad Serious Genet",
+        "tokens": [
+          " Propagation",
+          "Vir",
+          "Vir",
+          " Nonlinear",
+          " Nonlinear",
+          " Zad",
+          " Serious",
+          " Genet"
+        ],
+        "token_logprobs": [
+          -4.975212097167969,
+          -5.163727760314941,
+          -5.892099857330322,
+          -6.164156913757324,
+          -6.2205352783203125,
+          -6.137774467468262,
+          -5.317843914031982,
+          -5.624701976776123
+        ]
+      },
+      {
+        "text": " Syllabus Bryant Syllabus Bryant Zad Siegel Siegel Siegel",
+        "tokens": [
+          " Syllabus",
+          " Bryant",
+          " Syllabus",
+          " Bryant",
+          " Zad",
+          " Siegel",
+          " Siegel",
+          " Siegel"
+        ],
+        "token_logprobs": [
+          -6.335625648498535,
+          -6.586969375610352,
+          -6.072412014007568,
+          -6.478002548217773,
+          -5.507026195526123,
+          -6.438643932342529,
+          -5.553314208984375,
+          -5.879095077514648
+        ]
+      },
+      {
+        "text": "圣人VirProp LennonProp Leone Leone Leone",
+        "tokens": [
+          "圣人",
+          "Vir",
+          "Prop",
+          " Lennon",
+          "Prop",
+          " Leone",
+          " Leone",
+          " Leone"
+        ],
+        "token_logprobs": [
+          -5.587474346160889,
+          -5.904608726501465,
+          -6.179454326629639,
+          -6.07584285736084,
+          -6.201801300048828,
+          -5.685492515563965,
+          -5.919314384460449,
+          -5.6550679206848145
+        ]
+      },
+      {
+        "text": "Vir Galile Genet Genet Genet Genet Feldman Nonlinear",
+        "tokens": [
+          "Vir",
+          " Galile",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Feldman",
+          " Nonlinear"
+        ],
+        "token_logprobs": [
+          -4.74606466293335,
+          -5.425720691680908,
+          -5.9161529541015625,
+          -5.658636569976807,
+          -5.83663272857666,
+          -5.919033050537109,
+          -6.087036609649658,
+          -5.695261478424072
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": " Moderate Serious Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Moderate",
+          " Serious",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.7112953662872314,
+          -4.84763240814209,
+          -4.6085100173950195,
+          -4.752187252044678,
+          -5.089812755584717,
+          -4.850607872009277,
+          -5.3611297607421875,
+          -5.014275074005127
+        ]
+      },
+      {
+        "text": " Argument Genet Genet Propagation Leoneynie Leone Wilder",
+        "tokens": [
+          " Argument",
+          " Genet",
+          " Genet",
+          " Propagation",
+          " Leone",
+          "ynie",
+          " Leone",
+          " Wilder"
+        ],
+        "token_logprobs": [
+          -3.5158894062042236,
+          -5.329631328582764,
+          -5.776121616363525,
+          -5.641989707946777,
+          -5.3791584968566895,
+          -5.13519811630249,
+          -4.671998500823975,
+          -4.860509872436523
+        ]
+      },
+      {
+        "text": " Intermediate Leone Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Intermediate",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.755350112915039,
+          -4.9692158699035645,
+          -5.186671733856201,
+          -4.921706199645996,
+          -5.0431108474731445,
+          -4.689030647277832,
+          -5.189400672912598,
+          -5.350473403930664
+        ]
+      },
+      {
+        "text": " Reason Leone Leone Leone Leone Leone Moral面无",
+        "tokens": [
+          " Reason",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Moral",
+          "面无"
+        ],
+        "token_logprobs": [
+          -4.045271873474121,
+          -5.140981674194336,
+          -5.456576347351074,
+          -5.561172962188721,
+          -4.684103012084961,
+          -5.20346736907959,
+          -5.437243461608887,
+          -5.3606438636779785
+        ]
+      }
+    ]
+  },
+  "schema_raw_responses": [
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 0,
+          "world_rank": 4,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 5,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 6,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 7,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    },
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 0,
+          "world_rank": 4,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 5,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 6,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 7,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    },
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 0,
+          "world_rank": 4,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 5,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 6,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 7,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    },
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 0,
+          "world_rank": 4,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 5,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 6,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 7,
+          "dp_rank": 1,
+          "world_size": 8,
+          "tp": 4,
+          "dp": 2,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    }
+  ],
+  "schema_workers": [
+    {
+      "rank": 0,
+      "world_rank": 0,
+      "dp_rank": 0,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 1,
+      "world_rank": 1,
+      "dp_rank": 0,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 2,
+      "world_rank": 2,
+      "dp_rank": 0,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 3,
+      "world_rank": 3,
+      "dp_rank": 0,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 0,
+      "world_rank": 4,
+      "dp_rank": 1,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 1,
+      "world_rank": 5,
+      "dp_rank": 1,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 2,
+      "world_rank": 6,
+      "dp_rank": 1,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 3,
+      "world_rank": 7,
+      "dp_rank": 1,
+      "world_size": 8,
+      "tp": 4,
+      "dp": 2,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "945af2c43dd784c5596577f69e457d766eb22d2ff4e0e00dde07bdc115cb3698",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    }
+  ],
+  "schema_scope": "Real all-worker checkpoint scan/manifest coverage; target schema hashes recorded, source-to-target mapping compatibility is not independently proven here. Original transfer/reload checks remain in force.",
+  "sample_weights_before": [
+    {
+      "pid": 3404,
+      "rank": 0,
+      "world_rank": 0,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773814272,
+      "reserved": 29481762816,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "c8d2d14ba4e58a741b0a642d0f1390c90c0bf286ad4375f1b40abc054a4b116e",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 3406,
+      "rank": 1,
+      "world_rank": 1,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773814272,
+      "reserved": 29481762816,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "22daf53d8a65785c3db837c0307e40e95849b9af449817eb16e40b54b1c117dc",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 3408,
+      "rank": 2,
+      "world_rank": 2,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773814272,
+      "reserved": 29481762816,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "550ab6497ea3ee588b34e82efa99797767fd53e4cc13eb11e4e087aac6f4b88d",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 3410,
+      "rank": 3,
+      "world_rank": 3,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773814272,
+      "reserved": 29481762816,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "e04094cc2dead6cdee09f3d676e5a416b464badbc2895e2b63b63f2eb5a2d4ad",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    }
+  ],
+  "sample_coverage": {
+    "observed": 4,
+    "expected_workers": 8,
+    "workers": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "all_workers_sampled": false
+  },
+  "memory_events": [
+    {
+      "stage": "before_mechanism",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        }
+      ]
+    },
+    {
+      "stage": "before_sleep",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29481762816
+        }
+      ]
+    },
+    {
+      "stage": "after_sleep",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        }
+      ]
+    },
+    {
+      "stage": "after_wake_weights",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 29416751104
+        }
+      ]
+    },
+    {
+      "stage": "after_wake_kv_cache",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        }
+      ]
+    },
+    {
+      "stage": "before_post_generation",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773813248,
+          "reserved": 48964304896
+        }
+      ]
+    },
+    {
+      "stage": "after_post_generation",
+      "workers": [
+        {
+          "pid": 3404,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773817344,
+          "reserved": 48966402048
+        },
+        {
+          "pid": 3406,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773817344,
+          "reserved": 48966402048
+        },
+        {
+          "pid": 3408,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773817344,
+          "reserved": 48966402048
+        },
+        {
+          "pid": 3410,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 8,
+          "dp_rank": 0,
+          "allocated": 26773817344,
+          "reserved": 48966402048
+        }
+      ]
+    }
+  ],
+  "checkpoint": {
+    "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+    "format": "safetensors",
+    "file_count": 13,
+    "total_file_bytes": 62537461456,
+    "tensor_count": 802,
+    "total_tensor_bytes": 62537360896,
+    "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+    "max_tensor_bytes": 4429185024,
+    "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+  },
+  "post_update_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": " PropagationVirVir Nonlinear Nonlinear Zad Serious Genet",
+        "tokens": [
+          " Propagation",
+          "Vir",
+          "Vir",
+          " Nonlinear",
+          " Nonlinear",
+          " Zad",
+          " Serious",
+          " Genet"
+        ],
+        "token_logprobs": [
+          -4.975212097167969,
+          -5.163727760314941,
+          -5.892099857330322,
+          -6.164156913757324,
+          -6.2205352783203125,
+          -6.137774467468262,
+          -5.317843914031982,
+          -5.624701976776123
+        ]
+      },
+      {
+        "text": " Syllabus Bryant Syllabus Bryant Zad Siegel Siegel Siegel",
+        "tokens": [
+          " Syllabus",
+          " Bryant",
+          " Syllabus",
+          " Bryant",
+          " Zad",
+          " Siegel",
+          " Siegel",
+          " Siegel"
+        ],
+        "token_logprobs": [
+          -6.335625648498535,
+          -6.586969375610352,
+          -6.072412014007568,
+          -6.478002548217773,
+          -5.507026195526123,
+          -6.438643932342529,
+          -5.553314208984375,
+          -5.879095077514648
+        ]
+      },
+      {
+        "text": "圣人VirProp LennonProp Leone Leone Leone",
+        "tokens": [
+          "圣人",
+          "Vir",
+          "Prop",
+          " Lennon",
+          "Prop",
+          " Leone",
+          " Leone",
+          " Leone"
+        ],
+        "token_logprobs": [
+          -5.587474346160889,
+          -5.904608726501465,
+          -6.179454326629639,
+          -6.07584285736084,
+          -6.201801300048828,
+          -5.685492515563965,
+          -5.919314384460449,
+          -5.6550679206848145
+        ]
+      },
+      {
+        "text": "Vir Galile Genet Genet Genet Genet Feldman Nonlinear",
+        "tokens": [
+          "Vir",
+          " Galile",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Feldman",
+          " Nonlinear"
+        ],
+        "token_logprobs": [
+          -4.74606466293335,
+          -5.425720691680908,
+          -5.9161529541015625,
+          -5.658636569976807,
+          -5.83663272857666,
+          -5.919033050537109,
+          -6.087036609649658,
+          -5.695261478424072
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": " Moderate Serious Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Moderate",
+          " Serious",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.7112953662872314,
+          -4.84763240814209,
+          -4.6085100173950195,
+          -4.752187252044678,
+          -5.089812755584717,
+          -4.850607872009277,
+          -5.3611297607421875,
+          -5.014275074005127
+        ]
+      },
+      {
+        "text": " Argument Genet Genet Propagation Leoneynie Leone Wilder",
+        "tokens": [
+          " Argument",
+          " Genet",
+          " Genet",
+          " Propagation",
+          " Leone",
+          "ynie",
+          " Leone",
+          " Wilder"
+        ],
+        "token_logprobs": [
+          -3.5158894062042236,
+          -5.329631328582764,
+          -5.776121616363525,
+          -5.641989707946777,
+          -5.3791584968566895,
+          -5.13519811630249,
+          -4.671998500823975,
+          -4.860509872436523
+        ]
+      },
+      {
+        "text": " Intermediate Leone Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Intermediate",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.755350112915039,
+          -4.9692158699035645,
+          -5.186671733856201,
+          -4.921706199645996,
+          -5.0431108474731445,
+          -4.689030647277832,
+          -5.189400672912598,
+          -5.350473403930664
+        ]
+      },
+      {
+        "text": " Reason Leone Leone Leone Leone Leone Moral面无",
+        "tokens": [
+          " Reason",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Moral",
+          "面无"
+        ],
+        "token_logprobs": [
+          -4.045271873474121,
+          -5.140981674194336,
+          -5.456576347351074,
+          -5.561172962188721,
+          -4.684103012084961,
+          -5.20346736907959,
+          -5.437243461608887,
+          -5.3606438636779785
+        ]
+      }
+    ]
+  },
+  "outputs_identical_by_endpoint": {
+    "/v1/completions": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "/v1/chat/completions": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "endpoint_checks": {
+    "/v1/completions": true,
+    "/v1/chat/completions": true
+  },
+  "sample_weights_after": [
+    {
+      "pid": 3404,
+      "rank": 0,
+      "world_rank": 0,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773818368,
+      "reserved": 48966402048,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "c8d2d14ba4e58a741b0a642d0f1390c90c0bf286ad4375f1b40abc054a4b116e",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 3406,
+      "rank": 1,
+      "world_rank": 1,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773818368,
+      "reserved": 48966402048,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "22daf53d8a65785c3db837c0307e40e95849b9af449817eb16e40b54b1c117dc",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 3408,
+      "rank": 2,
+      "world_rank": 2,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773818368,
+      "reserved": 48966402048,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "550ab6497ea3ee588b34e82efa99797767fd53e4cc13eb11e4e087aac6f4b88d",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 3410,
+      "rank": 3,
+      "world_rank": 3,
+      "world_size": 8,
+      "dp_rank": 0,
+      "allocated": 26773818368,
+      "reserved": 48966402048,
+      "parameter_count": 766,
+      "parameter_numel": 4666244800,
+      "sample_sha256": "e04094cc2dead6cdee09f3d676e5a416b464badbc2895e2b63b63f2eb5a2d4ad",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    }
+  ],
+  "strict_generation_policy": "Unchanged original validator plus visible non-whitespace text; exact original before/after text/token/logprob comparison.",
+  "validator_replaced": false,
+  "verifier_source_sha256": {
+    "/home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/common/dual_api.py": "17df09c58666e286f3f367a48b4699fcd9f0e77b187a4e63d3fc700987f4d037",
+    "/home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/weight-update/common/weight_update_validation.py": "f5dacac7e39f1126e4bc2695f6845697489c13233084fd5a07cdccf74ca25706",
+    "/home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/weight-update/test_npu_ipc_weight_update.py": "9e32e3db72b2731d00bed965bbcdd543eba26bddf22b2701fbaed0eae093c7cb"
+  },
+  "mechanism_command": "/usr/local/python3.12.13/bin/python3 /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/strict_mechanism_runner.py --mode ipc --skill-scripts /home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts --server-url http://127.0.0.1:8942 --model step5-head-tail8 --checkpoint /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/checkpoints/head-tail8 --expected-workers 8 --prompts-json /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/prompts.json --report /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/results/ipc-run-rerun/report.json --evidence /home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/results/ipc-run-rerun/evidence.jsonl --max-tokens 8 --timeout 1800 --cycles 1 -- --packed-buffer-mb 4352 --devices 0,1,2,3,4,5,6,7",
+  "semantic_quality_assessed": false,
+  "parameter_sampling_scope": "Only actual RPC responders; three elements per parameter, not all tensor bytes.",
+  "evidence": "/home/yyy/model_openbox/reduced-recheck-225-10.20/ipc-import-once-10.20/npu-run/results/ipc-run-rerun/evidence-rank0.jsonl"
+}

@@ -1,0 +1,543 @@
+{
+  "feature": "pp",
+  "status": "passed",
+  "scope": "reduced 8-layer functional validation; no full-model accuracy claim",
+  "endpoint_checks": {
+    "/v1/completions": true,
+    "/v1/chat/completions": true
+  },
+  "baseline_outputs_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.97805118560791,
+          -6.499545097351074,
+          -7.034548282623291,
+          -6.87445592880249,
+          -6.962906360626221,
+          -6.76118803024292,
+          -6.685983657836914,
+          -6.696591854095459
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.108782768249512,
+          -6.6469926834106445,
+          -6.799182891845703,
+          -6.886170864105225,
+          -6.897500514984131,
+          -6.699454307556152,
+          -6.6755690574646,
+          -6.638632774353027
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.135400772094727,
+          -6.7148566246032715,
+          -7.003444671630859,
+          -6.926614284515381,
+          -6.84407377243042,
+          -6.830370903015137,
+          -6.6991400718688965,
+          -6.708800792694092
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.322119235992432,
+          -6.792964458465576,
+          -6.794940948486328,
+          -6.871264934539795,
+          -6.819687843322754,
+          -6.812644004821777,
+          -6.738521099090576,
+          -6.729896545410156
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.977429389953613,
+          -6.9459357261657715,
+          -6.888690948486328,
+          -6.962892532348633,
+          -7.0215744972229,
+          -6.961460590362549,
+          -6.944464683532715,
+          -6.8385701179504395
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.06466817855835,
+          -7.116052150726318,
+          -6.935471534729004,
+          -7.098372936248779,
+          -7.096277236938477,
+          -7.0099406242370605,
+          -6.957465171813965,
+          -6.920825481414795
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.079222679138184,
+          -7.076145172119141,
+          -6.987241744995117,
+          -7.165285587310791,
+          -7.098609924316406,
+          -7.009646415710449,
+          -7.0100202560424805,
+          -6.9228081703186035
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.095804691314697,
+          -7.063374042510986,
+          -6.993111610412598,
+          -6.977956295013428,
+          -7.0254926681518555,
+          -7.024902820587158,
+          -6.989711284637451,
+          -6.9220805168151855
+        ]
+      }
+    ]
+  },
+  "feature_outputs_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.962266445159912,
+          -6.499548435211182,
+          -7.0343780517578125,
+          -6.874410629272461,
+          -6.9625372886657715,
+          -6.745419502258301,
+          -6.686190128326416,
+          -6.6964826583862305
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.108839988708496,
+          -6.663820266723633,
+          -6.798262119293213,
+          -6.886116027832031,
+          -6.897974491119385,
+          -6.699853897094727,
+          -6.69162130355835,
+          -6.654876232147217
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.135412693023682,
+          -6.715174198150635,
+          -7.003209590911865,
+          -6.925683498382568,
+          -6.843968868255615,
+          -6.830397605895996,
+          -6.6996331214904785,
+          -6.7247443199157715
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.305787563323975,
+          -6.777224063873291,
+          -6.794394493103027,
+          -6.870743274688721,
+          -6.902674198150635,
+          -6.796250820159912,
+          -6.737757205963135,
+          -6.729531764984131
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -6.977179050445557,
+          -6.946038246154785,
+          -6.888697624206543,
+          -6.995782375335693,
+          -7.037539005279541,
+          -7.013794422149658,
+          -6.944875240325928,
+          -6.8387556076049805
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.0647196769714355,
+          -7.098947048187256,
+          -6.9357781410217285,
+          -7.114171028137207,
+          -7.045379638671875,
+          -7.009909629821777,
+          -6.957267761230469,
+          -6.921023845672607
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.079587936401367,
+          -7.076168060302734,
+          -6.986996173858643,
+          -7.165093421936035,
+          -7.098801612854004,
+          -7.009552478790283,
+          -7.01001501083374,
+          -6.922550201416016
+        ]
+      },
+      {
+        "text": "        ",
+        "tokens": [
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " ",
+          " "
+        ],
+        "token_logprobs": [
+          -7.079928398132324,
+          -7.063552379608154,
+          -6.975770473480225,
+          -6.977787971496582,
+          -7.025570392608643,
+          -7.024796009063721,
+          -6.989793300628662,
+          -6.954407215118408
+        ]
+      }
+    ]
+  },
+  "checks": {
+    "actual_topology": true,
+    "dual_api_tokens_and_finite_aligned_logprobs": true
+  },
+  "actual_worker_topology": [
+    {
+      "rank": 0,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 1,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 2,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 3,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 4,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 5,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 6,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    },
+    {
+      "rank": 7,
+      "tp": 4,
+      "dp": 1,
+      "pp": 2,
+      "ep_enabled": true,
+      "all2all_backend": "flashinfer_all2allv",
+      "sequence_parallel_moe": false,
+      "model_sp_layers": 0,
+      "graph_mode": "FULL_DECODE_ONLY"
+    }
+  ],
+  "outputs_identical_by_endpoint": {
+    "/v1/completions": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "/v1/chat/completions": [
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "baseline_difference_detail": {
+    "/v1/completions": [
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.015784740447998047
+      },
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.01682758331298828
+      },
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.015943527221679688
+      },
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.08298635482788086
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.052333831787109375
+      },
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.05089759826660156
+      },
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.00036525726318359375
+      },
+      {
+        "text_equal": true,
+        "tokens_equal": true,
+        "max_abs_logprob_diff": 0.032326698303222656
+      }
+    ]
+  }
+}

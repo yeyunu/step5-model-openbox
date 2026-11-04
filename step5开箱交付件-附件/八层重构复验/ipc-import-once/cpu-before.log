@@ -1,0 +1,99 @@
+FF                                                                       [100%]
+================================== FAILURES ===================================
+_ test_packed_export_imported_once_with_fresh_payload_and_release[finish_weight_update] _
+
+cleanup = 'finish_weight_update'
+
+    @pytest.mark.parametrize("cleanup", ["finish_weight_update", "shutdown"])
+    def test_packed_export_imported_once_with_fresh_payload_and_release(cleanup):
+        """Multiple chunks share an import, but load fresh independent weights."""
+    
+        def fake_base_init(self, config, vllm_config, device, model):
+            self.device, self.model = device, model
+            self.model_config = None
+    
+        model = MagicMock()
+        with patch.object(WeightTransferEngine, "__init__", fake_base_init):
+            engine = NPUIPCWeightTransferEngine(None, None, torch.device("cpu:0"), model)
+        engine.packed = True
+        staging = torch.tensor([1.0, 2.0])
+        imports, loaded = [], []
+    
+        def rebuild(*args):
+            assert args[6] == 0
+            mapping = staging.view(torch.uint8)
+            imports.append(weakref.ref(mapping))
+            return mapping
+    
+        model.load_weights.side_effect = lambda weights: loaded.append(weights[0][1])
+        info = engine.update_info_cls(
+            names=["w"],
+            dtype_names=["float32"],
+            shapes=[[2]],
+            tensor_sizes=[8],
+            ipc_handles={"node-0": (None,) * 6 + (999, "export-1")},
+        )
+        with (
+            _patch_rebuild_npu_tensor(rebuild),
+            _patch_reload_module(),
+            patch(f"{_MODULE}.npu_generate_uuid", return_value="node-0"),
+        ):
+            engine.receive_weights(info)
+            staging.copy_(torch.tensor([3.0, 4.0]))
+            engine.receive_weights(info)
+>           assert len(imports) == 1
+E           assert 2 == 1
+E            +  where 2 = len([<weakref at 0x000001CFE77C97B0; dead>, <weakref at 0x000001CFE77C9B70; dead>])
+
+..\项目总结\Step5八层重构复验-10.20\ipc-import-once-10.20\candidate\tests\ut\distributed\weight_transfer\test_npu_ipc_engine.py:416: AssertionError
+__ test_packed_export_imported_once_with_fresh_payload_and_release[shutdown] __
+
+cleanup = 'shutdown'
+
+    @pytest.mark.parametrize("cleanup", ["finish_weight_update", "shutdown"])
+    def test_packed_export_imported_once_with_fresh_payload_and_release(cleanup):
+        """Multiple chunks share an import, but load fresh independent weights."""
+    
+        def fake_base_init(self, config, vllm_config, device, model):
+            self.device, self.model = device, model
+            self.model_config = None
+    
+        model = MagicMock()
+        with patch.object(WeightTransferEngine, "__init__", fake_base_init):
+            engine = NPUIPCWeightTransferEngine(None, None, torch.device("cpu:0"), model)
+        engine.packed = True
+        staging = torch.tensor([1.0, 2.0])
+        imports, loaded = [], []
+    
+        def rebuild(*args):
+            assert args[6] == 0
+            mapping = staging.view(torch.uint8)
+            imports.append(weakref.ref(mapping))
+            return mapping
+    
+        model.load_weights.side_effect = lambda weights: loaded.append(weights[0][1])
+        info = engine.update_info_cls(
+            names=["w"],
+            dtype_names=["float32"],
+            shapes=[[2]],
+            tensor_sizes=[8],
+            ipc_handles={"node-0": (None,) * 6 + (999, "export-1")},
+        )
+        with (
+            _patch_rebuild_npu_tensor(rebuild),
+            _patch_reload_module(),
+            patch(f"{_MODULE}.npu_generate_uuid", return_value="node-0"),
+        ):
+            engine.receive_weights(info)
+            staging.copy_(torch.tensor([3.0, 4.0]))
+            engine.receive_weights(info)
+>           assert len(imports) == 1
+E           assert 2 == 1
+E            +  where 2 = len([<weakref at 0x000001CFE77F3380; dead>, <weakref at 0x000001CFE77F0F40; dead>])
+
+..\项目总结\Step5八层重构复验-10.20\ipc-import-once-10.20\candidate\tests\ut\distributed\weight_transfer\test_npu_ipc_engine.py:416: AssertionError
+=========================== short test summary info ===========================
+FAILED ..\项目总结\Step5八层重构复验-10.20\ipc-import-once-10.20\candidate\tests\ut\distributed\weight_transfer\test_npu_ipc_engine.py::test_packed_export_imported_once_with_fresh_payload_and_release[finish_weight_update]
+FAILED ..\项目总结\Step5八层重构复验-10.20\ipc-import-once-10.20\candidate\tests\ut\distributed\weight_transfer\test_npu_ipc_engine.py::test_packed_export_imported_once_with_fresh_payload_and_release[shutdown]
+2 failed, 17 deselected in 0.10s
+CPU source harness: no torch_npu imported; no CUDA initialized.

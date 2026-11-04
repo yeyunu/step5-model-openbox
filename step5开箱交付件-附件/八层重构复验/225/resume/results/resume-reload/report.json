@@ -1,0 +1,1445 @@
+{
+  "mode": "checkpoint_weight_update",
+  "server_url": "http://127.0.0.1:8940",
+  "served_model_name": "step5-head-tail8",
+  "updated_model": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+  "load_format": "auto",
+  "weight_update_acceptance": "real_checkpoint_outputs_identical",
+  "checks": {
+    "both_generation_endpoints_baseline": true,
+    "checkpoint_manifest_all_workers": true,
+    "sleep_level2": true,
+    "wake_weights": true,
+    "checkpoint_reload": true,
+    "wake_kv_cache": true,
+    "both_generation_endpoints_post_update": true,
+    "post_update_available": true,
+    "outputs_identical": true,
+    "sampled_parameters_identical": true
+  },
+  "status": "passed",
+  "verification_command": "/home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/reduced-recheck-225-10.20/strict_mechanism_runner.py --mode reload --skill-scripts /home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts --validator-sha256 17df09c58666e286f3f367a48b4699fcd9f0e77b187a4e63d3fc700987f4d037 --server-url http://127.0.0.1:8940 --model step5-head-tail8 --checkpoint /home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8 --expected-workers 4 --prompts-json /home/yyy/model_openbox/reduced-recheck-225-10.20/prompts.json --max-tokens 8 --timeout 1200 --cycles 5 --report /home/yyy/model_openbox/reduced-recheck-225-10.20/results/resume-reload-10-20/report.json --evidence /home/yyy/model_openbox/reduced-recheck-225-10.20/results/resume-reload-10-20/events.jsonl",
+  "prompts": [
+    "The future of AI is",
+    "你好",
+    "2 + 2 =",
+    "What is the capital of France?"
+  ],
+  "baseline_gate": "passed",
+  "mechanism_started": true,
+  "baseline_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": " PropagationVirVir Nonlinear Nonlinear Zad Serious Genet",
+        "tokens": [
+          " Propagation",
+          "Vir",
+          "Vir",
+          " Nonlinear",
+          " Nonlinear",
+          " Zad",
+          " Serious",
+          " Genet"
+        ],
+        "token_logprobs": [
+          -5.020313739776611,
+          -5.217005729675293,
+          -5.945528030395508,
+          -6.23098611831665,
+          -6.223852634429932,
+          -6.204017639160156,
+          -5.3594207763671875,
+          -5.671105861663818
+        ]
+      },
+      {
+        "text": " Syllabus Bryant Syllabus Bryant Zad Siegel Siegel Siegel",
+        "tokens": [
+          " Syllabus",
+          " Bryant",
+          " Syllabus",
+          " Bryant",
+          " Zad",
+          " Siegel",
+          " Siegel",
+          " Siegel"
+        ],
+        "token_logprobs": [
+          -6.335625648498535,
+          -6.586969375610352,
+          -6.072412014007568,
+          -6.478002548217773,
+          -5.507026195526123,
+          -6.438643932342529,
+          -5.553314208984375,
+          -5.879095077514648
+        ]
+      },
+      {
+        "text": "圣人Vir LeoneProp Leone Leone Leone Leone",
+        "tokens": [
+          "圣人",
+          "Vir",
+          " Leone",
+          "Prop",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone"
+        ],
+        "token_logprobs": [
+          -5.62786865234375,
+          -5.868325710296631,
+          -6.129631042480469,
+          -6.250585079193115,
+          -5.78883171081543,
+          -5.7738165855407715,
+          -5.565212249755859,
+          -5.413992881774902
+        ]
+      },
+      {
+        "text": "Vir Galile Genet Genet Genet Genet Nonlinear Genet",
+        "tokens": [
+          "Vir",
+          " Galile",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Nonlinear",
+          " Genet"
+        ],
+        "token_logprobs": [
+          -4.8449387550354,
+          -5.39595365524292,
+          -6.015028953552246,
+          -5.632374286651611,
+          -5.530783653259277,
+          -5.872467041015625,
+          -6.12302303314209,
+          -5.78249979019165
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": " Moderate Serious Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Moderate",
+          " Serious",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.678833484649658,
+          -4.813478469848633,
+          -4.59259033203125,
+          -4.781153202056885,
+          -4.786850929260254,
+          -4.856502056121826,
+          -5.411288261413574,
+          -5.050071716308594
+        ]
+      },
+      {
+        "text": " Qualitative Genet Genetynieynie Leoneynie Leone",
+        "tokens": [
+          " Qualitative",
+          " Genet",
+          " Genet",
+          "ynie",
+          "ynie",
+          " Leone",
+          "ynie",
+          " Leone"
+        ],
+        "token_logprobs": [
+          -3.8748161792755127,
+          -5.359394550323486,
+          -5.810780048370361,
+          -5.522716522216797,
+          -5.38413143157959,
+          -5.0877299308776855,
+          -4.844022274017334,
+          -4.75746488571167
+        ]
+      },
+      {
+        "text": " Intermediate Leone Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Intermediate",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.75056791305542,
+          -5.019367694854736,
+          -5.218287467956543,
+          -5.009299278259277,
+          -4.983262538909912,
+          -4.711666107177734,
+          -5.21907377243042,
+          -5.348895072937012
+        ]
+      },
+      {
+        "text": " Responsible Leone Leone Leone Leone Leone Moral面无",
+        "tokens": [
+          " Responsible",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Moral",
+          "面无"
+        ],
+        "token_logprobs": [
+          -3.469139337539673,
+          -5.288978576660156,
+          -4.678061485290527,
+          -5.393932819366455,
+          -4.833685398101807,
+          -5.232358455657959,
+          -5.411604404449463,
+          -5.28941535949707
+        ]
+      }
+    ]
+  },
+  "inference_world_size": 4,
+  "schema_raw_responses": [
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    },
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    },
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    },
+    {
+      "all_workers": [
+        {
+          "rank": 0,
+          "world_rank": 0,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 1,
+          "world_rank": 1,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 2,
+          "world_rank": 2,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        },
+        {
+          "rank": 3,
+          "world_rank": 3,
+          "dp_rank": 0,
+          "world_size": 4,
+          "tp": 4,
+          "dp": 1,
+          "pp": 1,
+          "ep_enabled": true,
+          "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+          "checkpoint": {
+            "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+            "format": "safetensors",
+            "file_count": 13,
+            "total_file_bytes": 62537461456,
+            "tensor_count": 802,
+            "total_tensor_bytes": 62537360896,
+            "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+            "max_tensor_bytes": 4429185024,
+            "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+          },
+          "target_parameter_count": 766,
+          "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+          "model_class": "AscendStep5ForConditionalGeneration",
+          "strict_load_default": true,
+          "mapper_class": "WeightsMapper",
+          "load_format": "auto"
+        }
+      ],
+      "gather": "real_world_cpu_all_gather_object"
+    }
+  ],
+  "schema_workers": [
+    {
+      "rank": 0,
+      "world_rank": 0,
+      "dp_rank": 0,
+      "world_size": 4,
+      "tp": 4,
+      "dp": 1,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 1,
+      "world_rank": 1,
+      "dp_rank": 0,
+      "world_size": 4,
+      "tp": 4,
+      "dp": 1,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 2,
+      "world_rank": 2,
+      "dp_rank": 0,
+      "world_size": 4,
+      "tp": 4,
+      "dp": 1,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    },
+    {
+      "rank": 3,
+      "world_rank": 3,
+      "dp_rank": 0,
+      "world_size": 4,
+      "tp": 4,
+      "dp": 1,
+      "pp": 1,
+      "ep_enabled": true,
+      "checkpoint_path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+      "checkpoint": {
+        "path": "/home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8",
+        "format": "safetensors",
+        "file_count": 13,
+        "total_file_bytes": 62537461456,
+        "tensor_count": 802,
+        "total_tensor_bytes": 62537360896,
+        "max_tensor_name": "model.layers.3.moe.down_proj.weight",
+        "max_tensor_bytes": 4429185024,
+        "manifest_sha256": "a4ad7b5df66ad7d5afeb2e6fa9b9596e9e41dd218a7717b3726e020b9b1db7bf"
+      },
+      "target_parameter_count": 766,
+      "target_schema_sha256": "7c917a208028394bdacaa7f651a4cf67be06c5af6f22738d30db80814ff99455",
+      "model_class": "AscendStep5ForConditionalGeneration",
+      "strict_load_default": true,
+      "mapper_class": "WeightsMapper",
+      "load_format": "auto"
+    }
+  ],
+  "schema_scope": "Real all-worker checkpoint scan/manifest coverage; target schema hashes recorded, source-to-target mapping compatibility is not independently proven here. Original transfer/reload checks remain in force.",
+  "sample_weights_before": [
+    {
+      "pid": 590,
+      "rank": 0,
+      "world_rank": 0,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 55815700480,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "de6be12b1b8b14dbb864dab45183e26fdc704cd81d7b66df869bd7cdc5c4f5db",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 591,
+      "rank": 1,
+      "world_rank": 1,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 55815700480,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "c1d05520333dcd348843471171043f47ba719a36eb0b79a1c01c3e6304b082f6",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 592,
+      "rank": 2,
+      "world_rank": 2,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 55815700480,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "5e671efec3f0d83686a0accb0b9e3b23a9800f8bba71a5c824c014a79ee372cb",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 593,
+      "rank": 3,
+      "world_rank": 3,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 55815700480,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "f910cacd9a9296622f5bf8eea2522a3f16c5dd0d37b4f7881ce9950cb4cc3c79",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    }
+  ],
+  "sample_coverage": {
+    "observed": 4,
+    "expected_workers": 4,
+    "workers": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "all_workers_sampled": true
+  },
+  "memory_events": [
+    {
+      "stage": "before_mechanism",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        }
+      ]
+    },
+    {
+      "stage": "before_sleep",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 55815700480
+        }
+      ]
+    },
+    {
+      "stage": "after_sleep",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        }
+      ]
+    },
+    {
+      "stage": "after_wake_weights",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 31773949952
+        }
+      ]
+    },
+    {
+      "stage": "after_wake_kv_cache",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        }
+      ]
+    },
+    {
+      "stage": "before_post_generation",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38681968640
+        }
+      ]
+    },
+    {
+      "stage": "after_post_generation",
+      "workers": [
+        {
+          "pid": 590,
+          "rank": 0,
+          "world_rank": 0,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38686162944
+        },
+        {
+          "pid": 591,
+          "rank": 1,
+          "world_rank": 1,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38686162944
+        },
+        {
+          "pid": 592,
+          "rank": 2,
+          "world_rank": 2,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38686162944
+        },
+        {
+          "pid": 593,
+          "rank": 3,
+          "world_rank": 3,
+          "world_size": 4,
+          "dp_rank": 0,
+          "allocated": 26910001152,
+          "reserved": 38686162944
+        }
+      ]
+    }
+  ],
+  "post_update_by_endpoint": {
+    "/v1/completions": [
+      {
+        "text": " PropagationVirVir Nonlinear Nonlinear Zad Serious Genet",
+        "tokens": [
+          " Propagation",
+          "Vir",
+          "Vir",
+          " Nonlinear",
+          " Nonlinear",
+          " Zad",
+          " Serious",
+          " Genet"
+        ],
+        "token_logprobs": [
+          -5.020313739776611,
+          -5.217005729675293,
+          -5.945528030395508,
+          -6.23098611831665,
+          -6.223852634429932,
+          -6.204017639160156,
+          -5.3594207763671875,
+          -5.671105861663818
+        ]
+      },
+      {
+        "text": " Syllabus Bryant Syllabus Bryant Zad Siegel Siegel Siegel",
+        "tokens": [
+          " Syllabus",
+          " Bryant",
+          " Syllabus",
+          " Bryant",
+          " Zad",
+          " Siegel",
+          " Siegel",
+          " Siegel"
+        ],
+        "token_logprobs": [
+          -6.335625648498535,
+          -6.586969375610352,
+          -6.072412014007568,
+          -6.478002548217773,
+          -5.507026195526123,
+          -6.438643932342529,
+          -5.553314208984375,
+          -5.879095077514648
+        ]
+      },
+      {
+        "text": "圣人Vir LeoneProp Leone Leone Leone Leone",
+        "tokens": [
+          "圣人",
+          "Vir",
+          " Leone",
+          "Prop",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone"
+        ],
+        "token_logprobs": [
+          -5.62786865234375,
+          -5.868325710296631,
+          -6.129631042480469,
+          -6.250585079193115,
+          -5.78883171081543,
+          -5.7738165855407715,
+          -5.565212249755859,
+          -5.413992881774902
+        ]
+      },
+      {
+        "text": "Vir Galile Genet Genet Genet Genet Nonlinear Genet",
+        "tokens": [
+          "Vir",
+          " Galile",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Genet",
+          " Nonlinear",
+          " Genet"
+        ],
+        "token_logprobs": [
+          -4.8449387550354,
+          -5.39595365524292,
+          -6.015028953552246,
+          -5.632374286651611,
+          -5.530783653259277,
+          -5.872467041015625,
+          -6.12302303314209,
+          -5.78249979019165
+        ]
+      }
+    ],
+    "/v1/chat/completions": [
+      {
+        "text": " Moderate Serious Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Moderate",
+          " Serious",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.678833484649658,
+          -4.813478469848633,
+          -4.59259033203125,
+          -4.781153202056885,
+          -4.786850929260254,
+          -4.856502056121826,
+          -5.411288261413574,
+          -5.050071716308594
+        ]
+      },
+      {
+        "text": " Qualitative Genet Genetynieynie Leoneynie Leone",
+        "tokens": [
+          " Qualitative",
+          " Genet",
+          " Genet",
+          "ynie",
+          "ynie",
+          " Leone",
+          "ynie",
+          " Leone"
+        ],
+        "token_logprobs": [
+          -3.8748161792755127,
+          -5.359394550323486,
+          -5.810780048370361,
+          -5.522716522216797,
+          -5.38413143157959,
+          -5.0877299308776855,
+          -4.844022274017334,
+          -4.75746488571167
+        ]
+      },
+      {
+        "text": " Intermediate Leone Leone Leone Leone Leone Leone Serious",
+        "tokens": [
+          " Intermediate",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Serious"
+        ],
+        "token_logprobs": [
+          -3.75056791305542,
+          -5.019367694854736,
+          -5.218287467956543,
+          -5.009299278259277,
+          -4.983262538909912,
+          -4.711666107177734,
+          -5.21907377243042,
+          -5.348895072937012
+        ]
+      },
+      {
+        "text": " Responsible Leone Leone Leone Leone Leone Moral面无",
+        "tokens": [
+          " Responsible",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Leone",
+          " Moral",
+          "面无"
+        ],
+        "token_logprobs": [
+          -3.469139337539673,
+          -5.288978576660156,
+          -4.678061485290527,
+          -5.393932819366455,
+          -4.833685398101807,
+          -5.232358455657959,
+          -5.411604404449463,
+          -5.28941535949707
+        ]
+      }
+    ]
+  },
+  "outputs_identical_by_endpoint": {
+    "/v1/completions": [
+      true,
+      true,
+      true,
+      true
+    ],
+    "/v1/chat/completions": [
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "endpoint_checks": {
+    "/v1/completions": true,
+    "/v1/chat/completions": true
+  },
+  "sample_weights_after": [
+    {
+      "pid": 590,
+      "rank": 0,
+      "world_rank": 0,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 38686162944,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "de6be12b1b8b14dbb864dab45183e26fdc704cd81d7b66df869bd7cdc5c4f5db",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 591,
+      "rank": 1,
+      "world_rank": 1,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 38686162944,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "c1d05520333dcd348843471171043f47ba719a36eb0b79a1c01c3e6304b082f6",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 592,
+      "rank": 2,
+      "world_rank": 2,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 38686162944,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "5e671efec3f0d83686a0accb0b9e3b23a9800f8bba71a5c824c014a79ee372cb",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    },
+    {
+      "pid": 593,
+      "rank": 3,
+      "world_rank": 3,
+      "world_size": 4,
+      "dp_rank": 0,
+      "allocated": 26910002176,
+      "reserved": 38686162944,
+      "parameter_count": 766,
+      "parameter_numel": 7988133568,
+      "sample_sha256": "f910cacd9a9296622f5bf8eea2522a3f16c5dd0d37b4f7881ce9950cb4cc3c79",
+      "scope": "Three elements per parameter on returned workers; not a full-weight hash."
+    }
+  ],
+  "strict_generation_policy": "Unchanged original validator plus visible non-whitespace text; exact original before/after text/token/logprob comparison.",
+  "validator_replaced": false,
+  "verifier_source_sha256": {
+    "/home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/common/dual_api.py": "17df09c58666e286f3f367a48b4699fcd9f0e77b187a4e63d3fc700987f4d037",
+    "/home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/weight-update/common/weight_update_validation.py": "f5dacac7e39f1126e4bc2695f6845697489c13233084fd5a07cdccf74ca25706",
+    "/home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts/weight-update/test_reload_weights.py": "f6c3860147007a3df0b901b84df0064cff0fafa1395852f8d62286495934ded9"
+  },
+  "mechanism_command": "/home/yyy/model_openbox/.venv/bin/python /home/yyy/model_openbox/reduced-recheck-225-10.20/strict_mechanism_runner.py --mode reload --skill-scripts /home/yyy/MindSpeed-Agent/skills/inference-model-skills/deployment/model-rl-case-guard/scripts --validator-sha256 17df09c58666e286f3f367a48b4699fcd9f0e77b187a4e63d3fc700987f4d037 --server-url http://127.0.0.1:8940 --model step5-head-tail8 --checkpoint /home/yyy/model_openbox/reduced-recheck-225-10.20/checkpoints/head-tail8 --expected-workers 4 --prompts-json /home/yyy/model_openbox/reduced-recheck-225-10.20/prompts.json --max-tokens 8 --timeout 1200 --cycles 5 --report /home/yyy/model_openbox/reduced-recheck-225-10.20/results/resume-reload-10-20/report.json --evidence /home/yyy/model_openbox/reduced-recheck-225-10.20/results/resume-reload-10-20/events.jsonl",
+  "semantic_quality_assessed": false,
+  "parameter_sampling_scope": "Only actual RPC responders; three elements per parameter, not all tensor bytes.",
+  "evidence": "/home/yyy/model_openbox/reduced-recheck-225-10.20/results/resume-reload-10-20/events-rank0.jsonl"
+}

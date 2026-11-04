@@ -1,0 +1,70 @@
+{
+  "phase": "formal",
+  "expected": 198,
+  "recorded": 198,
+  "successful_responses": 198,
+  "failures": [],
+  "missing": 0,
+  "duplicate_indices": 0,
+  "length_limited": [
+    127
+  ],
+  "finish_reasons": {
+    "stop": 197,
+    "max_tokens": 1
+  },
+  "max_total_tokens": 151787,
+  "exit_code": 0,
+  "metrics": [
+    {
+      "identity": {
+        "name": "accuracy",
+        "aggregation": "mean",
+        "dimensions": {}
+      },
+      "legacy_name": null,
+      "num": 198,
+      "score": 0.9293,
+      "macro_score": 0.9293,
+      "categories": [
+        {
+          "name": [
+            "default"
+          ],
+          "num": 198,
+          "score": 0.9293,
+          "macro_score": 0.9293,
+          "subsets": [
+            {
+              "name": "default",
+              "score": 0.9293,
+              "num": 198,
+              "is_aggregate": false
+            }
+          ]
+        }
+      ],
+      "semantics": {
+        "semantic_id": "quality.accuracy.ratio",
+        "metric_name": "Accuracy",
+        "display_name": null,
+        "kind": "quality",
+        "direction": "higher_is_better",
+        "raw_unit": null,
+        "value_range": {
+          "min": 0.0,
+          "max": 1.0
+        },
+        "display_kind": "percent",
+        "display_multiplier": 100.0,
+        "display_unit": "%",
+        "display_precision": 1
+      }
+    }
+  ],
+  "prediction_file": "/data/yyy/step5_bf16_gpqa_20261027_1600/formal/outputs/20261027_162150/predictions/step/gpqa_diamond_default.jsonl",
+  "report_files": [
+    "/data/yyy/step5_bf16_gpqa_20261027_1600/formal/outputs/20261027_162150/reports/step/gpqa_diamond.json"
+  ],
+  "note": "All samples retained; no failed or empty response is excluded from the evaluation."
+}

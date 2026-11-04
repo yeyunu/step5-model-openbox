@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "scope": "8-layer reduced checkpoint static config and tensor schema verification",
+  "layer_count": 8,
+  "source_layers": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "per_layer_config_checks": {
+    "rope_theta": true,
+    "layer_types": true,
+    "partial_rotary_factors": true,
+    "swiglu_limits": true,
+    "swiglu_limits_shared": true
+  },
+  "tensors": 807,
+  "all_shapes_and_dtypes_match_source": true,
+  "strict_native_loading_evidence": "baseline-graph-v2.log (prior successful graph-mode startup)"
+}
